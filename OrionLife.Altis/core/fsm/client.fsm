@@ -1,0 +1,145 @@
+/*%FSM<COMPILE "C:\Program Files (x86)\Steam\steamapps\common\Arma 3 Tools\FSMEditor\scriptedFSM.cfg, Life Client FSM">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"Main_Init",0,250,-40.348839,-141.279068,49.651161,-91.279068,0.000000,"Main Init"};
+item1[] = {"pay",4,218,-205.819290,192.186859,-115.819313,242.186920,0.000000,"pay"};
+item2[] = {"setup",4,4314,-55.717743,-58.201370,34.282318,-8.201340,0.000000,"setup"};
+item3[] = {"Split",2,250,-62.965378,61.959503,27.034637,111.959503,0.000000,"Split"};
+item4[] = {"cleanup",4,218,92.236694,195.907532,182.236755,245.907562,0.000000,"cleanup"};
+item5[] = {"group__cleanup",4,218,-56.132751,197.673828,33.867310,247.673859,0.000000,"group " \n "cleanup"};
+link0[] = {0,2};
+link1[] = {1,3};
+link2[] = {2,3};
+link3[] = {3,1};
+link4[] = {3,4};
+link5[] = {3,5};
+link6[] = {4,3};
+link7[] = {5,3};
+globals[] = {0.000000,0,0,0,0,640,480,1,32,6316128,1,-456.200378,358.065338,379.837494,-151.171021,922,894,1};
+window[] = {2,-1,-1,-1,-1,1055,797,1757,237,3,940};
+*//*%FSM</HEAD>*/
+class FSM
+{
+        fsmName = "Life Client FSM";
+        class States
+        {
+                /*%FSM<STATE "Main_Init">*/
+                class Main_Init
+                {
+                        name = "Main_Init";
+                        itemno = 0;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "setup">*/
+                                class setup
+                                {
+                                        itemno = 2;
+                                        priority = 0.000000;
+                                        to="Split";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/"diag_log ""RC-FSM Condition 'setup'"";" \n
+                                         "" \n
+                                         "private [""_lastcheck"",""_food"",""_water"",""_lastsync""];" \n
+                                         "_lastcheck = time;" \n
+                                         "_food = time;" \n
+                                         "_water = time;" \n
+                                         "_lastsync = time;" \n
+                                         "" \n
+                                         "_marketTime = time;" \n
+                                         "_cleanTime = time;" \n
+                                         "_lastcheck = time;" \n
+                                         "_gangCleanTime = time;"/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Split">*/
+                class Split
+                {
+                        name = "Split";
+                        itemno = 3;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "cleanup">*/
+                                class cleanup
+                                {
+                                        itemno = 4;
+                                        priority = 0.000000;
+                                        to="Split";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(time - _cleanTime > (5 * 60)"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/"_CleanUpTime = 600;" \n
+                                         "_objects = 0; _objectsDel = 0; " \n
+                                         "{ " \n
+                                         "    if ((typeOf _x) == ""Land_LuggageHeap_02_F"" && !isNil {_x getVariable ""CurrentTime""}) then {" \n
+                                         "        if (serverTime - (_x getVariable ""CurrentTime"") > _CleanUpTime) then {" \n
+                                         "            deleteVehicle _x;" \n
+                                         "            _objectsDel = _objectsDel + 1;" \n
+                                         "        };" \n
+                                         "        _objects = _objects + 1;" \n
+                                         "    };" \n
+                                         "} forEach allMissionObjects """"; " \n
+                                         "diag_log format[""Cleanup:(%1 Objects) Deleted %2 - Time | %3"", _objects, _objectsDel, serverTime];" \n
+                                         "" \n
+                                         "_cleanTime = time;"/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "group__cleanup">*/
+                                class group__cleanup
+                                {
+                                        itemno = 5;
+                                        priority = 0.000000;
+                                        to="Split";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(time - _gangCleanTime > (5 * 60)"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/"//Group clean (Local)" \n
+                                         "{" \n
+                                         "    if (local _x && {(units _x isEqualTo [])}) then {" \n
+                                         "        deleteGroup _x;" \n
+                                         "    };" \n
+                                         "} forEach allGroups;" \n
+                                         "" \n
+                                         "_gangCleanTime = time;"/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "pay">*/
+                                class pay
+                                {
+                                        itemno = 1;
+                                        priority = 0.000000;
+                                        to="Split";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(time - _lastcheck) > ((getNumber(missionConfigFile >> ""Life_Settings"" >> ""paycheck_period"")) * 60)"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/"if (!alive player) then {" \n
+                                         "    systemChat localize ""STR_FSM_MissedPay"";" \n
+                                         "} else {" \n
+                                         "    if (player distance (getMarkerPos ""fed_reserve"") < 120 && playerSide isEqualTo west) then {" \n
+                                         "        systemChat format [localize ""STR_FSM_ReceivedPay"",[(call life_paycheck) + 1500] call life_fnc_numberText];" \n
+                                         "        life_errorCheckStatus = life_errorCheckStatus + (call life_paycheck) + 1500;" \n
+                                         "    } else {" \n
+                                         "        life_errorCheckStatus = life_errorCheckStatus + (call life_paycheck);" \n
+                                         "        systemChat format [localize ""STR_FSM_ReceivedPay"",[(call life_paycheck)] call life_fnc_numberText];" \n
+                                         "    };" \n
+                                         "};" \n
+                                         "" \n
+                                         "_lastcheck = time;" \n
+                                         "" \n
+                                         ""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+        };
+        initState="Main_Init";
+        finalStates[] =
+        {
+        };
+};
+/*%FSM</COMPILE>*/
