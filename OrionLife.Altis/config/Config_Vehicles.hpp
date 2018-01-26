@@ -1271,8 +1271,8 @@ will modify the virtual space and the price of the vehicle, but other informatio
         conditions = "license_civ_pilot || {license_med_mAir} || {(playerSide isEqualTo west)}";
         price = 450000;
         textures[] = {
-            { "Black", "cop", {
-                "images\textures\Vehicles\MP\MP_orca.paa"
+            { "Police", "cop", {
+                "images\textures\Vehicles\Cop\police_orca.paa"
             }, "" },
             { "White / Blue", "civ", {
                 "\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_civilian_co.paa"
