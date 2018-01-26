@@ -29,6 +29,7 @@ class WeaponShops {
             { "optic_Hamr", "", 2500, -1, "" }, //rco
 			{ "optic_DMS", "", 10000, -1, "" }, //dms
 			{ "acc_flashlight", "", 750, 375, "" }, //flashlight
+			{ "acc_pointer_IR", "", 2500, 375, "" }, //laser
 			{ "acc_flashlight_pistol", "", 750, 375, "" }, //flashlight
 			{ "bipod_01_F_blk", "", 2500, -1, "" } //bipod
         };
@@ -96,6 +97,7 @@ class WeaponShops {
             { "optic_Hamr", "", 2500, -1, "" }, //rco
       		{ "optic_DMS", "", 10000, -1, "mav_ttm_var_rebel >= 2" }, //dms
       		{ "acc_flashlight", "", 750, 375, "" }, //flashlight
+			{ "acc_pointer_IR", "", 2500, 375, "" }, //laser
       		{ "acc_flashlight_pistol", "", 750, 375, "" }, //flashlight
       		{ "bipod_01_F_blk", "", 2500, -1, "mav_ttm_var_rebel >= 2" } //bipod
         };
@@ -143,6 +145,7 @@ class WeaponShops {
 			{ "optic_MRCO", "", 2500, -1, "" }, //mrco
             { "optic_Hamr", "", 2500, -1, "" }, //rco
 			{ "optic_DMS", "", 10000, -1, "" }, //dms
+			{ "acc_pointer_IR", "", 2500, 375, "" }, //laser
 			{ "acc_flashlight", "", 750, 375, "" }, //flashlight
 			{ "acc_flashlight_pistol", "", 750, 375, "" }, //flashlight
 			{ "bipod_01_F_blk", "", 2500, -1, "" } //bipod
@@ -178,6 +181,7 @@ class WeaponShops {
 			{ "optic_MRCO", "", 2500, -1, "" }, //mrco
             { "optic_Hamr", "", 2500, -1, "" }, //rco
 			{ "optic_DMS", "", 10000, -1, "" }, //dms
+			{ "acc_pointer_IR", "", 2500, 375, "" }, //laser		
 			{ "acc_flashlight", "", 750, 375, "" }, //flashlight
 			{ "acc_flashlight_pistol", "", 750, 375, "" }, //flashlight
 			{ "bipod_01_F_blk", "", 2500, -1, "" } //bipod
@@ -249,8 +253,7 @@ class WeaponShops {
 			{ "arifle_MX_SW_Black_F", "", 15000, -1, "call life_coplevel >= 5" }, //mxsw
             { "srifle_DMR_07_blk_F", "", 14000, -1, "call life_coplevel >= 4" }, //cmr
             { "arifle_SPAR_03_blk_F", "", 14000, -1, "call life_coplevel >= 5" }, //spar17
-            { "srifle_DMR_03_F", "", 18000, -1, "call life_coplevel >= 6" }, //mk1
-			{ "srifle_DMR_05_blk_F", "", 18000, -1, "call life_coplevel >= 11" } //Cyrus
+            { "srifle_DMR_03_F", "", 18000, -1, "call life_coplevel >= 6" } //mk1
         };
         mags[] = {
 			{ "11Rnd_45ACP_Mag", "Rubber Bullets", 20, -1, "call life_coplevel >= 1" }, //4five
@@ -262,14 +265,14 @@ class WeaponShops {
             { "20Rnd_650x39_Cased_Mag_F", "", 20, -1, "call life_coplevel >= 4" }, //cmr
 			{ "30Rnd_45ACP_Mag_SMG_01", "", 20, -1, "call life_coplevel >= 4" }, //vermin
 			{ "100Rnd_65x39_caseless_mag", "", 300, 150, "call life_coplevel >= 5" }, //mxsw
-            { "20Rnd_762x51_Mag", "", 30, -1, "call life_coplevel >= 5" }, //mk1, mk14, mk18, spar17
-			{ "10Rnd_93x64_DMR_05_Mag", "", 50, -1, "call life_coplevel >= 11" } //Cyrus
+            { "20Rnd_762x51_Mag", "", 30, -1, "call life_coplevel >= 5" } //mk1, mk14, mk18, spar17
         };
         accs[] = {
             { "muzzle_snds_acp", "", 750, 375, "call life_coplevel >= 1" }, //45 supresser
 			{ "optic_MRD", "", 2750, 1375, "call life_coplevel >= 1" }, //mrd
 			{ "acc_flashlight", "", 750, 375, "call life_coplevel >= 1" }, //flashlight
 			{ "acc_flashlight_pistol", "", 750, 375, "call life_coplevel >= 1" }, //flashlight
+			{ "acc_pointer_IR", "", 2500, 375, "" }, //laser
 			{ "optic_ACO_grn_smg", "", 2500, 1250, "" }, //aco
 			{ "optic_Arco", "", 2500, -1, "" }, //arco
 			{ "optic_Arco_blk_F", "", 2500, -1, "" }, //black arco
@@ -307,6 +310,7 @@ class WeaponShops {
 			{ "optic_Arco", "", 2500, -1, "" }, //arco
 			{ "optic_Arco_blk_F", "", 2500, -1, "" }, //black arco
 			{ "optic_ERCO_blk_F", "", 2500, -1, "" }, //black erco
+			{ "acc_pointer_IR", "", 2500, 375, "" }, //laser
 			{ "optic_Holosight_blk_F", "", 2500, -1, "" }, //black holo
 			{ "optic_Holosight_smg_blk_F", "", 2500, -1, "" }, //black holo smg
 			{ "optic_MRCO", "", 2500, -1, "" }, //mrco
@@ -427,7 +431,6 @@ class WeaponShops {
 			{ "optic_Arco", "", 2500, -1, "" }, //arco
 			{ "optic_Arco_blk_F", "", 2500, -1, "" }, //black arco
 			{ "optic_ERCO_blk_F", "", 2500, -1, "" }, //black erco
-			{ "optic_AMS", "", 2500, -1, "" }, //black AMS
 			{ "optic_Holosight_blk_F", "", 2500, -1, "" }, //black holo
 			{ "optic_Holosight_smg_blk_F", "", 2500, -1, "" }, //black holo smg
 			{ "optic_MRCO", "", 2500, -1, "" }, //mrco
@@ -450,22 +453,26 @@ class WeaponShops {
 			{ "arifle_Katiba_F", "DTU ONLY Katibia", 12000, -1, "call life_coplevel >= 4" }, //katibia
 			{ "arifle_AKM_F", "DTU ONLY AKM", 17500, -1, "call life_coplevel >= 4" }, //AKM
 			{ "srifle_DMR_07_ghex_F", "DTU ONLY CMR", 17500, -1, "call life_coplevel >= 4" }, //AKM
+			{ "arifle_MXC_Black_F", "", 7000, -1, "call life_coplevel >= 2" }, //mxc
+            { "arifle_MX_Black_F", "", 8000, -1, "call life_coplevel >= 3" }, //mx
+            { "arifle_MXM_Black_F", "", 12000, -1, "call life_coplevel >= 4" } //mxm
         };
         mags[] = {
 			{ "30Rnd_762x39_Mag_F", "7.62 RubberBullets", 200, 100, "call life_coplevel >= 4" }, //akm
 			{ "30Rnd_65x39_caseless_green", "6.5 RubberBullets", 50, 50, "call life_coplevel >= 4" }, //katibia
 			{ "20Rnd_650x39_Cased_Mag_F", "6.5 RubberBullets", 50, 50, "call life_coplevel >= 4" }, //cmr
+			{ "30Rnd_65x39_caseless_mag_Tracer", "Rubber Bullets", 20, -1, "call life_coplevel >= 2" } //MXC/MX/MXM RUBBERS
         };
         accs[] = {
 			{ "acc_flashlight", "", 750, 375, "call life_coplevel >= 1" }, //flashlight
 			{ "acc_flashlight_pistol", "", 750, 375, "call life_coplevel >= 1" }, //flashlight
 			{ "optic_ACO_grn_smg", "", 2500, 1250, "" }, //aco
 			{ "optic_Arco", "", 2500, -1, "" }, //arco
+			{ "acc_pointer_IR", "", 2500, 375, "" }, //laser
 			{ "muzzle_snds_H", "", 750, 375, "" }, //6.5 Supressor
 			{ "muzzle_snds_B", "", 750, 375, "" }, //7.62 Supressor
 			{ "optic_Arco_blk_F", "", 2500, -1, "" }, //black arco
 			{ "optic_ERCO_blk_F", "", 2500, -1, "" }, //black erco
-			{ "optic_AMS", "", 2500, -1, "" }, //black AMS
 			{ "optic_Holosight_blk_F", "", 2500, -1, "" }, //black holo
 			{ "optic_Holosight_smg_blk_F", "", 2500, -1, "" }, //black holo smg
 			{ "optic_MRCO", "", 2500, -1, "" }, //mrco
