@@ -12,13 +12,8 @@ _type = lbData[2401,(lbCurSel 2401)];
 _price = lbValue[2401,(lbCurSel 2401)];
 _amount = ctrlText 2404;
 
-_marketprice = [_type] call life_fnc_marketGetBuyPrice;
-if(_marketprice != -1) then
-{
-	_price = _marketprice;
-};
-
 if (!([_amount] call TON_fnc_isnumber)) exitWith {[localize "STR_Shop_Virt_NoNum",true,"slow"] call life_fnc_notificationSystem;};
+if (_amount >= 100) exitWith {["You can't buy more than 100 items",true,"slow"] call life_fnc_notificationSystem;};
 _diff = [_type,parseNumber(_amount),life_carryWeight,life_maxWeight] call life_fnc_calWeightDiff;
 _amount = parseNumber(_amount);
 if (_diff <= 0) exitWith {hint localize "STR_NOTF_NoSpace"};
@@ -58,12 +53,14 @@ if ([true,_type,_amount] call life_fnc_handleInv) then {
             if ((_price * _amount) > findNearestPerson) exitWith {[false,_type,_amount] call life_fnc_handleInv; [localize "STR_NOTF_NotEnoughMoney",true,"slow"] call life_fnc_notificationSystem;};
             hint format[localize "STR_Shop_Virt_BoughtItem",_amount,(localize _name),[(_price * _amount)] call life_fnc_numberText];
             [player,"buy"] remoteexeccall ["say3D",0];
+            ["buy", getPlayerUID player, "virtual", _type, _price] remoteExecCall ["DB_fnc_insertData",2];
             findNearestPerson = findNearestPerson - _price * _amount;
         };
     } else {
         if ((_price * _amount) > findNearestPerson) exitWith {[localize "STR_NOTF_NotEnoughMoney",true,"slow"] call life_fnc_notificationSystem; [false,_type,_amount] call life_fnc_handleInv;};
         hint format[localize "STR_Shop_Virt_BoughtItem",_amount,(localize _name),[(_price * _amount)] call life_fnc_numberText];
         [player,"buy"] remoteexeccall ["say3D",0];
+        ["buy", getPlayerUID player, "virtual", _type, _price] remoteExecCall ["DB_fnc_insertData",2];
         findNearestPerson = findNearestPerson - _price * _amount;
     };
 	
