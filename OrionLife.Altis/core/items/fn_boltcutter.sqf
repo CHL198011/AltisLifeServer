@@ -17,8 +17,8 @@ private _pos = [[["Altis", _altisArray], ["Malden", _maldenArray], ["Tanoa", _ta
 
 if (isNull _building) exitWith {};
 if (!(_building isKindOf "House_F")) exitWith {[localize "STR_ISTR_Bolt_NotNear",true,"slow"] call life_fnc_notificationSystem;};
-if (((nearestObject [_pos,"Land_Dome_Small_F"]) == _building || (nearestObject [_pos,_vaultHouse]) == _building) && (west countSide playableUnits < (LIFE_SETTINGS(getNumber,"minimum_cops")))) exitWith {
-    hint format [localize "STR_Civ_NotEnoughCops",(LIFE_SETTINGS(getNumber,"minimum_cops"))];
+if (((nearestObject [_pos,"Land_Dome_Small_F"]) == _building || (nearestObject [_pos,_vaultHouse]) == _building) && (west countSide playableUnits < (LIFE_SETTINGS(getNumber,"minimum_cops_bank")))) exitWith {
+    hint format [localize "STR_Civ_NotEnoughCops",(LIFE_SETTINGS(getNumber,"minimum_cops_bank"))];
 };
 if ((typeOf _building) == _vaultHouse && (nearestObject [_pos,"Land_Dome_Small_F"]) getVariable ["locked",true]) exitWith {hint localize "STR_ISTR_Bolt_Exploit"};
 if (isNil "life_boltcutter_uses") then {life_boltcutter_uses = 0;};
