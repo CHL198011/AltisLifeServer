@@ -70,6 +70,8 @@ switch (true) do {
 	};
 
 	case (_item isEqualTo "cyanideCapsule"): {
+		if (life_istazed) exitWith {hint "Can't use Cyanide Capsule while tazed!";}; //Tazed
+    	if (life_isknocked) exitWith {hint "Can't use Cyanide Capsule while knocked!";}; //Knocked
 		if(([false,_item,1] call life_fnc_handleInv)) then {
 		[] spawn {
 				hint "Goodbye cruel world...";
@@ -81,16 +83,14 @@ switch (true) do {
 	};
 	
 	//Organs
-	case (_item == "kidney"):
-	{
-		if (([false, _item, 1] call life_fnc_handleInv)) then
-	{
+	case (_item == "kidney"): {
+		if (([false, _item, 1] call life_fnc_handleInv)) then {
 			player setVariable ["missingOrgan", false, true];
 			life_thirst = 100;
 			life_hunger = 100;
 			player setFatigue .5;
-	};
- };
+		};
+ 	};
  
 	case (_item isEqualTo "gokart"):
 	{

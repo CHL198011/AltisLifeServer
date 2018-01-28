@@ -28,5 +28,5 @@ player addEventHandler["Killed", {vis_saveNow = true}];
 [] spawn {
 	waitUntil{!isNull (findDisplay 38500)}; //Wait for the spawn selection to be open.
 	waitUntil{isNull (findDisplay 38500)}; //Wait for the spawn selection to be done.
-	player addEventHandler["onPlayerDisconnected", {_this call SOCK_fnc_updateRequest}];
+	player addEventHandler["PlayerDisconnected", {_this call SOCK_fnc_updateRequest}];
 };
