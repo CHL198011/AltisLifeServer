@@ -2371,11 +2371,11 @@
         </Key>
         <Key ID="STR_GNOTF_DisbandGangPro">
             <Original>Disbanding the gang... wait 10 seconds and relog OR click disband gang again in the gang menu!</Original>
-            <Czech>Rozpuštění gang ... wait 10 seconds and relog<</Czech>
-            <Spanish>Desmantelando la Pandilla... wait 10 seconds and relog<</Spanish>
+            <Czech>Rozpuštění gang ... wait 10 seconds and relog</Czech>
+            <Spanish>Desmantelando la Pandilla... wait 10 seconds and relog</Spanish>
             <Russian></Russian>
             <German>Gang wird aufgelöst...</German>
-            <French>Démantèlement du gang... wait 10 seconds and relog<</French>
+            <French>Démantèlement du gang... wait 10 seconds and relog</French>
             <Italian>Sciogliendo la Gang...</Italian>
             <Portuguese>Desfazendo a gangue...</Portuguese>
             <Polish>Rozwiąż gang</Polish>
@@ -5119,9 +5119,6 @@
         <Key ID="STR_NOTF_cannotStoreRelic">
             <Original>You cannot store these type of items into vehicles!</Original>
         </Key>
-        <Key ID="STR_NOTF_cannotStoreRelic">
-            <Original>You cannot give these types of items to other people!</Original>
-        </Key>
         <Key ID="STR_NOTF_notEnoughCashToStoreInVeh">
             <Original>You don't have that much cash on you to store in the vehicle!</Original>
             <Czech>Nemáte tolik peněz na vás uložit do vozidla!</Czech>
@@ -7010,11 +7007,6 @@
 		</Key>
 		<Key ID="STR_Item_Vase">
 				<Original>Vase</Original>
-		</Key>
-		//Box's Additions 
-		//|||||||||||||||||
-		<Key ID="STR_Item_Bprimer">
-				<Original>Bullet Primer</Original>
 		</Key>
 		<Key ID="STR_Item_Nitro">
 				<Original>Nitro</Original>
@@ -10547,9 +10539,6 @@
             <German>Polizei HQ</German>
             <Portuguese>QG Policial</Portuguese>
             <Polish>KG Policji Altis</Polish>
-        </Key>
-		<Key ID="STR_MAR_Mil_HQ">
-            <Original>Military Police HQ</Original>
         </Key>
 		<Key ID="STR_MAR_Mil_HQ">
             <Original>DTU HQ</Original>
