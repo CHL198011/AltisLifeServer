@@ -687,7 +687,8 @@ class Clothing {
         };
         goggles[] = {
             { "NONE", $STR_C_Remove_goggles, 0, "" },
-            { "G_Shades_Blue", "", 10, "" }
+            { "G_Shades_Blue", "", 10, "" },
+			{ "G_Diving", "", 10, "" }
         };
         vests[] = {
             { "NONE", $STR_C_Remove_vests, 0, "" },
