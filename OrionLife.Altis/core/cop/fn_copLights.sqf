@@ -173,6 +173,16 @@ switch (_type) do
         [false, "white", [-0.45, 0.55, -0.573]] call _attach; /*front right*/
     };
 	
+	case "B_GEN_Van_02_vehicle_F":
+	{
+        [false, "red", [0.842, 1.673, -1.60]] call _attach; /*front left*/
+        [true, "blue", [-0.842, 1.673, -1.60]] call _attach; /*front right*/
+        [true, "red", [0.75, -2.909, -1.67]] call _attach; /*back left*/
+        [false, "blue", [-0.75, -2.909, -1.67]] call _attach; /*back right*/	
+        [true, "white", [0.842, 1.673, -1.60]] call _attach; /*front left*/
+        [false, "white", [-0.842, 1.673, -1.60]] call _attach; /*front right*/
+    };
+	
 };
 
 _lightsOn = true;
