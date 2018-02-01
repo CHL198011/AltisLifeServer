@@ -165,22 +165,22 @@ switch (_type) do
 	
 	case "B_Quadbike_01_F":
 	{
-        [false, "red", [0.35, 0.55, -0.573]] call _attach; /*front left*/
-        [true, "blue", [-0.45, 0.55, -0.573]] call _attach; /*front right*/
-        [true, "red", [0.45, -0.85, -0.475]] call _attach; /*back left*/
+        [false, "red", [0.155, 0.951, -0.6]] call _attach; /*front left*/
+        [true, "blue", [-0.17, 0.951, -0.6]] call _attach; /*front right*/
+        [true, "red", [0.4, -1.05, -0.425]] call _attach; /*back left*/
         [false, "blue", [-0.45, -0.85, -0.4]] call _attach; /*back right*/
-        [true, "white", [0.35, 0.55, -0.573]] call _attach; /*front left*/
-        [false, "white", [-0.45, 0.55, -0.573]] call _attach; /*front right*/
+        [true, "white", [0.155, 0.951, -0.6]] call _attach; /*front left*/
+        [false, "white", [-0.17, 0.951, -0.6]] call _attach; /*front right*/
     };
 	
 	case "B_GEN_Van_02_vehicle_F":
 	{
-        [false, "red", [0.842, 1.673, -1.60]] call _attach; /*front left*/
-        [true, "blue", [-0.842, 1.673, -1.60]] call _attach; /*front right*/
-        [true, "red", [0.75, -2.909, -1.67]] call _attach; /*back left*/
-        [false, "blue", [-0.75, -2.909, -1.67]] call _attach; /*back right*/	
-        [true, "white", [0.842, 1.673, -1.60]] call _attach; /*front left*/
-        [false, "white", [-0.842, 1.673, -1.60]] call _attach; /*front right*/
+        [false, "red", [0.8, 1.694, -1.60]] call _attach; /*front left*/
+        [true, "blue", [-0.7, 1.691, -1.60]] call _attach; /*front right*/
+        [true, "red", [0.8, -2.906, -1.655]] call _attach; /*back left*/
+        [false, "blue", [-0.8, -2.91, -1.655]] call _attach; /*back right*/	
+        [true, "white", [0.8, 1.694, -1.60]] call _attach; /*front left*/
+        [false, "white", [-0.7, 1.691, -1.60]] call _attach; /*front right*/
     };
 	
 };
