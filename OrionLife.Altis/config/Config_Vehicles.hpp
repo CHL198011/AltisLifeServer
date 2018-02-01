@@ -136,6 +136,7 @@ class CarShops {
             { "C_SUV_01_F", "call life_coplevel >= 2" },
 			{ "C_Hatchback_01_F", "call life_coplevel >= 2" },
             { "C_Hatchback_01_sport_F", "call life_coplevel >= 3" },
+			{ "B_GEN_Van_02_vehicle_F", "call life_coplevel >= 4" },
             { "C_Offroad_02_unarmed_black_F", "call life_coplevel >= 4" }
         };
     };
@@ -753,6 +754,16 @@ class LifeCfgVehicles {
         price = 20000;
         textures[] = { };
     };
+	class B_GEN_Van_02_vehicle_F {
+        vItemSpace = 150;
+        conditions = "";
+        price = 20000;
+        textures[] = {
+            { "DOC Van", "cop", {
+                "images\Textures\Vehicles\Cop\doctransport.paa"
+            }, "" }
+        };
+	}
 	class C_Van_02_medevac_F {
         vItemSpace = 150;
         conditions = "license_civ_driver || {!(playerSide isEqualTo civilian)}";
