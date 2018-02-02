@@ -118,7 +118,7 @@ class CarShops {
         side = "med";
         conditions = "mav_ttm_var_air == 1;";
         vehicles[] = {
-            { "B_Heli_Light_01_F", "call life_mediclevel >= 4" },
+            { "B_Heli_Light_01_F", "call life_mediclevel >= 3" },
             { "O_Heli_Light_02_unarmed_F", "call life_mediclevel >= 4" },
             { "I_Heli_light_03_unarmed_F", "call life_mediclevel >= 5" },
 			{ "O_Heli_Transport_04_medevac_black_F", "call life_mediclevel >= 6" },
