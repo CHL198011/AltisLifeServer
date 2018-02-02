@@ -1102,4 +1102,76 @@ class Clothing {
             { "NONE", $STR_C_Remove_backpacks, 0, "" }
         };
     };
+	
+	class copstafflicense {
+        title = "Cop Staff Clothing";
+        conditions = "license_cop_copstafflicense";
+        side = "cop";
+        uniforms[] = {
+            { "NONE", $STR_C_Remove_uniforms, 0, "" },
+            { "U_I_Protagonist_VR", "Moderator & Senior Moderator", 2000, "" },
+			{ "U_B_Protagonist_VR", "Admin", 2000, "" },
+			{ "U_O_Protagonist_VR", "SA+", 2000, "" }
+        };
+        headgear[] = {
+            { "NONE", $STR_C_Remove_headgear, 0, "" }
+        };
+        goggles[] = {
+            { "NONE", $STR_C_Remove_goggles, 0, "" }
+        };
+        vests[] = {
+            { "NONE", $STR_C_Remove_vests, 0, "" }
+        };
+        backpacks[] = {
+            { "NONE", $STR_C_Remove_backpacks, 0, "" }
+        };
+    };
+	
+	class medstafflicense {
+        title = "Medic Staff Clothing";
+        conditions = "license_med_medstafflicense";
+        side = "med";
+        uniforms[] = {
+            { "NONE", $STR_C_Remove_uniforms, 0, "" },
+            { "U_I_Protagonist_VR", "Moderator & Senior Moderator", 2000, "" },
+			{ "U_B_Protagonist_VR", "Admin", 2000, "" },
+			{ "U_O_Protagonist_VR", "SA+", 2000, "" }
+        };
+        headgear[] = {
+            { "NONE", $STR_C_Remove_headgear, 0, "" }
+        };
+        goggles[] = {
+            { "NONE", $STR_C_Remove_goggles, 0, "" }
+        };
+        vests[] = {
+            { "NONE", $STR_C_Remove_vests, 0, "" }
+        };
+        backpacks[] = {
+            { "NONE", $STR_C_Remove_backpacks, 0, "" }
+        };
+    };
+	
+	class civstafflicense {
+        title = "Civilian Staff Clothing";
+        conditions = "license_civ_civstafflicense";
+        side = "civ";
+        uniforms[] = {
+            { "NONE", $STR_C_Remove_uniforms, 0, "" },
+            { "U_I_Protagonist_VR", "Moderator & Senior Moderator", 2000, "" },
+			{ "U_B_Protagonist_VR", "Admin", 2000, "" },
+			{ "U_O_Protagonist_VR", "SA+", 2000, "" }
+        };
+        headgear[] = {
+            { "NONE", $STR_C_Remove_headgear, 0, "" }
+        };
+        goggles[] = {
+            { "NONE", $STR_C_Remove_goggles, 0, "" }
+        };
+        vests[] = {
+            { "NONE", $STR_C_Remove_vests, 0, "" }
+        };
+        backpacks[] = {
+            { "NONE", $STR_C_Remove_backpacks, 0, "" }
+        };
+    };
 };
