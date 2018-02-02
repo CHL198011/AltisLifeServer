@@ -285,4 +285,28 @@ class Licenses {
         illegal = false;
         side = "civ";
     };
+	
+	class copstafflicense {
+		variable = "copstafflicense";
+		displayName = "Cop Staff License";
+		price = 999999999;
+		illegal = false;
+		side = "cop";
+	};
+	
+	class medstafflicense {
+		variable = "medstafflicense";
+		displayName = "Medic Staff License";
+		price = 999999999;
+		illegal = false;
+		side = "med";
+	}
+	
+	class civstafflicense {
+		variable = "civstafflicense";
+		displayName = "Civilian Staff License";
+		price = 999999999;
+		illegal = false;
+		side = "civ";
+	}
 };
