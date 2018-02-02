@@ -1105,7 +1105,7 @@ class Clothing {
 	
 	class copstafflicense {
         title = "Cop Staff Clothing";
-        conditions = "license_cop_copstafflicense";
+        conditions = "call life_adminlevel >= 1";
         side = "cop";
         uniforms[] = {
             { "NONE", $STR_C_Remove_uniforms, 0, "" },
@@ -1129,7 +1129,7 @@ class Clothing {
 	
 	class medstafflicense {
         title = "Medic Staff Clothing";
-        conditions = "license_med_medstafflicense";
+        conditions = "call life_adminlevel >= 1";
         side = "med";
         uniforms[] = {
             { "NONE", $STR_C_Remove_uniforms, 0, "" },
@@ -1153,7 +1153,7 @@ class Clothing {
 	
 	class civstafflicense {
         title = "Civilian Staff Clothing";
-        conditions = "license_civ_civstafflicense";
+        conditions = "call life_adminlevel >= 1";
         side = "civ";
         uniforms[] = {
             { "NONE", $STR_C_Remove_uniforms, 0, "" },
