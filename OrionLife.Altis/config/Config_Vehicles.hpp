@@ -1145,10 +1145,28 @@ will modify the virtual space and the price of the vehicle, but other informatio
             }, "call life_donorlevel >= 1" },
 			{ "Graffiti", "civ", {
                 "images\Textures\Donator\GraffitiSUV.paa"
+            }, "call life_donorlevel >= 1" },		
+			{ "Rust Bucket", "civ", {
+                "images\Textures\Donator\SUV_Rust_Bucket.paa"
             }, "call life_donorlevel >= 1" },
-			{ "Pokemon", "civ", {
-                "images\Textures\Donator\PokemonSUV.paa"
+			{ "Pink Digital", "civ", {
+                "images\Textures\Donator\SUV_Pink_Digital.paa"
+            }, "call life_donorlevel >= 1" },
+			{ "Poly", "civ", {
+                "images\Textures\Donator\SUV_Poly.paa"
+            }, "call life_donorlevel >= 1" },
+			{ "Doodle", "civ", {
+                "images\Textures\Donator\SUV_Doodle.paa"
+            }, "call life_donorlevel >= 1" },
+			{ "Washrag", "civ", {
+                "images\Textures\Donator\SUV_Washrag.paa"
             }, "call life_donorlevel >= 2" },
+			{ "Woodland", "civ", {
+                "images\Textures\Donator\SUV_Camo.paa"
+            }, "call life_donorlevel >= 2" },
+			{ "Red Tiger", "civ", {
+                "images\Textures\Donator\SUV_Red_Tiger.paa"
+            }, "call life_donorlevel >= 3" },			
 			{ "Weeaboo", "civ", {
                 "images\Textures\Donator\WEEABOOSUV.paa"
             }, "call life_donorlevel >= 2" }
