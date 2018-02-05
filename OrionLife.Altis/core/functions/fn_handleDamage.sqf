@@ -20,13 +20,13 @@ _currdamage = damage player;
 if (!isNull _source) then {
     if (vehicle _source == _source) then { 
 		if (_source != _unit) then {
-			if (currentWeapon _source in ["hgun_Pistol_heavy_01_F","SMG_02_F","arifle_MXC_Black_F","arifle_MX_Black_F","arifle_MXM_Black_F"] && currentMagazine _source in ["30Rnd_65x39_caseless_mag_Tracer","11Rnd_45ACP_Mag","30Rnd_9x21_Mag_SMG_02"]) then {
+			if (currentWeapon _source in ["hgun_Pistol_heavy_01_F","SMG_02_F","arifle_MXC_Black_F","arifle_MX_Black_F","arifle_MXM_Black_F","arifle_SPAR_01_blk_F"] && currentMagazine _source in ["30Rnd_65x39_caseless_mag_Tracer","11Rnd_45ACP_Mag","30Rnd_9x21_Mag_SMG_02","30Rnd_556x45_Stanag_Tracer_Red"]) then {
 				if (side _source isEqualTo west && playerSide isEqualTo civilian) then {
 					_damage = 0;
 					if (alive player && !life_istazed && !life_isknocked && !(_unit getVariable ["restrained",false])) then {
 						private ["_distance"];
 						_distance = 100;
-						if (currentMagazine _source in ["30Rnd_65x39_caseless_mag_Tracer"]) then {_distance = 600;};
+						if (currentMagazine _source in ["30Rnd_65x39_caseless_mag_Tracer","30Rnd_556x45_Stanag_Tracer_Red"]) then {_distance = 300;};
 						if (_unit distance _source < _distance) then {
 							if !(isNull objectParent player) then {
 								if (typeOf (vehicle player) == "B_Quadbike_01_F") then {
