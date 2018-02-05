@@ -244,7 +244,8 @@ class WeaponShops {
 			{ "SmokeShellGreen", "Tear Gas", 2500, 50, "call life_coplevel >= 5" },        //TearGas
             { "hgun_Pistol_heavy_01_F", $STR_W_items_StunPistol, 4000, -1, "" }, //TASER
             { "SMG_02_F", "Sting Tazer", 3000, -1, "call life_coplevel >= 1" }, //sting
-            { "arifle_SPAR_01_blk_F", "", 6000, -1, "call life_coplevel >= 2" }, //spar16
+            { "arifle_SPAR_01_blk_F", "", 4000, -1, "call life_coplevel >= 1" }, //spar16
+			{ "arifle_TRG21_F", "", 5000, -1, "call life_coplevel >= 1" }, //TRG
 			{ "arifle_MXC_Black_F", "", 7000, -1, "call life_coplevel >= 2" }, //mxc
             { "arifle_MX_Black_F", "", 8000, -1, "call life_coplevel >= 3" }, //mx
 			{ "arifle_CTAR_blk_F", "", 8000, -1, "call life_coplevel >= 3" }, //car95
@@ -259,7 +260,8 @@ class WeaponShops {
 			{ "11Rnd_45ACP_Mag", "Rubber Bullets", 20, -1, "call life_coplevel >= 1" }, //4five
 			{ "30Rnd_65x39_caseless_mag_Tracer", "Rubber Bullets", 20, -1, "call life_coplevel >= 2" }, //MXC/MX/MXM RUBBERS
 			{ "30Rnd_9x21_Mag_SMG_02", "Rubber Bullets", 13, -1, "call life_coplevel >= 1" }, //sting
-			{ "30Rnd_556x45_Stanag", "", 13, -1, "call life_coplevel >= 2" }, //sdar,mk20c,trg21,spar16
+			{ "30Rnd_556x45_Stanag_Tracer_Red", "Rubber Bullets", 13, -1, "call life_coplevel >= 1" }, //spar16 Rubbers
+			{ "30Rnd_556x45_Stanag", "", 13, -1, "call life_coplevel >= 1" }, //sdar,mk20c,trg21,spar16
 			{ "30Rnd_580x42_Mag_F", "", 13, -1, "call life_coplevel >= 3" }, //car95
             { "30Rnd_65x39_caseless_mag", "", 20, -1, "call life_coplevel >= 2" }, //mxc, mx, mxm
             { "20Rnd_650x39_Cased_Mag_F", "", 20, -1, "call life_coplevel >= 4" }, //cmr
@@ -333,6 +335,7 @@ class WeaponShops {
     };
 
 	//Military Police
+	/*
 	class mp_gun {
         name = "Military Police Weapon Shop";
         side = "cop";
@@ -439,6 +442,7 @@ class WeaponShops {
 			{ "bipod_01_F_blk", "", 2500, -1, "" } //bipod
         };
     };
+	*/
 	//Military Police
 
 	//DTU
