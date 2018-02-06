@@ -26,7 +26,7 @@ if (!isNull _source) then {
 					if (alive player && !life_istazed && !life_isknocked && !(_unit getVariable ["restrained",false])) then {
 						private ["_distance"];
 						_distance = 100;
-						if (currentMagazine _source in ["30Rnd_65x39_caseless_mag_Tracer","30Rnd_556x45_Stanag_Tracer_Red"]) then {_distance = 300;};
+						if (currentMagazine _source in ["30Rnd_65x39_caseless_mag_Tracer","30Rnd_556x45_Stanag_Tracer_Red"]) then {_distance = 150;};
 						if (_unit distance _source < _distance) then {
 							if !(isNull objectParent player) then {
 								if (typeOf (vehicle player) == "B_Quadbike_01_F") then {
