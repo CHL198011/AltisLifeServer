@@ -45,7 +45,7 @@ class VirtualShops {
         name = "STR_Shops_Gang";
         side = "civ";
         conditions = "";
-        items[] = { "debitcard", "bandages", "gokart", "protest", "flashlight", "morphine", "waterBottle", "rabbit", "apple", "redgull", "tbacon", "lockpick", "zipties", "blindfold", "cprKit", "pickaxe", "toolkit", "fuelFull", "peach", "boltcutter", "blastingcharge", "demolitioncharge" };
+        items[] = { "debitcard", "bandages", "protest", "flashlight", "campfire", "gokart", "airhorn", "axe", "timber", "pdrill", "pickaxe", "toolkit", "fuelFull", "peach", "cloth", "lockpick", "boltcutter", "zipties", "goldcoin", "waterBottle", "apple", "pepsi", "cocaCola", "monsterEnergy", "doritos", "shittynoodles", "kfc", "easterEggs", "beer", "whiskey", "moonshine", "redgull", "tbacon", "rabbit_raw", "hen_raw", "rooster_raw", "sheep_raw", "goat_raw" };
     };
 
     class wongs {
