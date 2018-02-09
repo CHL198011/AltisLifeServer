@@ -105,6 +105,10 @@ if (_gangNum == "Gang_Area_3") then {
     "gang_cap_3" setMarkerText _pText;
 };
 
+if (_gangNum == "Gang_Area_4") then {
+    "gang_cap_4" setMarkerText _pText;
+};
+
 _area setVariable ["inCapture",false,true];
 _area setVariable ["gangOwner",group player,true];
 
