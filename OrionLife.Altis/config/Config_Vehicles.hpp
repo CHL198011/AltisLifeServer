@@ -87,7 +87,7 @@ class CarShops {
             { "B_Quadbike_01_F", "" },
             { "B_G_Offroad_01_F", "" },
             { "O_MRAP_02_F", "mav_ttm_var_rebel >= 2" }, //Ifrit
-            { "B_G_Offroad_01_armed_F", "mav_ttm_var_rebel > 3=" }, //Offroad Armed
+            { "O_G_Offroad_01_armed_F", "mav_ttm_var_rebel >= 3" }, //Offroad Armed
             { "O_T_LSV_02_unarmed_F", "" },
             { "B_T_LSV_01_unarmed_F", "" },
             { "B_G_Van_02_vehicle_F", "" },
@@ -145,10 +145,10 @@ class CarShops {
         side = "cop";
         conditions = "mav_ttm_var_advCop == 1;";
         vehicles[] = {
-            { "O_Truck_03_covered_F", "call life_coplevel >= 5" },
-            { "B_MRAP_01_F", "call life_coplevel >= 6" },
-            { "B_G_Offroad_01_armed_F", "call life_coplevel >= 6" },
-            { "B_T_LSV_01_unarmed_black_F", "call life_coplevel >= 5" }
+            { "O_T_Truck_03_covered_ghex_F", "call life_coplevel >= 5" }, //Tempest Transport
+            { "B_MRAP_01_F", "call life_coplevel >= 6" }, //Hunter
+            { "B_G_Offroad_01_armed_F", "call life_coplevel >= 6" }, //Offroad Armed
+            { "B_T_LSV_01_unarmed_black_F", "call life_coplevel >= 5" } //Prowler
         };
     };
 
@@ -156,7 +156,7 @@ class CarShops {
         side = "cop";
         conditions = "mav_ttm_var_air == 1;";
         vehicles[] = {
-            { "B_Heli_Light_01_F", "call life_coplevel >= 2" },
+            { "B_Heli_Light_01_F", "call life_coplevel >= 3" },
 			{ "O_Heli_Light_02_unarmed_F", "call life_coplevel >= 4" },
             { "O_T_VTOL_02_infantry_grey_F", "call life_coplevel >= 9" },
             { "B_Heli_Transport_03_unarmed_F", "call life_coplevel >= 5" },
@@ -428,7 +428,7 @@ class LifeCfgVehicles {
     };
 
 	//Apex
-		 class C_Offroad_02_unarmed_black_F {
+	class C_Offroad_02_unarmed_black_F {
         vItemSpace = 100;
         conditions = "";
         price = 40000;
@@ -442,10 +442,10 @@ class LifeCfgVehicles {
 	//Apex
 
 	//Cop Prowler
-	 class B_T_LSV_01_unarmed_black_F {
+	class B_T_LSV_01_unarmed_black_F {
         vItemSpace = 100;
         conditions = "";
-        price = 65000;
+        price = 30000;
         textures[] = {{ "Police Prowler", "cop", {
                 "images\textures\Vehicles\Cop\cop_prowler1.paa"
             }, "" }
@@ -457,6 +457,7 @@ class LifeCfgVehicles {
 	
 	// Medical Taru
 	class O_Heli_Transport_04_medevac_black_F {
+        vItemSpace = 350;
         vItemSpace = 350;
         conditions = "";
         price = 40000;
@@ -506,7 +507,7 @@ class LifeCfgVehicles {
         };
     };
 
-	    class B_LSV_01_unarmed_black_F {
+	class B_LSV_01_unarmed_black_F {
         vItemSpace = 150;
         conditions = "";
         price = 65000;
@@ -688,6 +689,19 @@ class LifeCfgVehicles {
     class B_G_Offroad_01_armed_F {
         vItemSpace = 65;
         conditions = "";
+        price = 90000;
+        textures[] = {
+            { "Black", "cop", {
+                "#(argb,8,8,3)color(0.05,0.05,0.05,1)",
+                "#(argb,8,8,3)color(0.05,0.05,0.05,1)"
+            }, "" }
+        };
+    };
+	
+	
+	class O_G_Offroad_01_armed_F {
+        vItemSpace = 65;
+        conditions = "";
         price = 900000;
         textures[] = {
             { "Black", "cop", {
@@ -754,6 +768,7 @@ class LifeCfgVehicles {
         price = 20000;
         textures[] = { };
     };
+	
 	class B_GEN_Van_02_vehicle_F {
         vItemSpace = 150;
         conditions = "";
@@ -764,6 +779,7 @@ class LifeCfgVehicles {
             }, "" }
         };
 	}
+	
 	class C_Van_02_medevac_F {
         vItemSpace = 150;
         conditions = "license_civ_driver || {!(playerSide isEqualTo civilian)}";
@@ -1057,7 +1073,20 @@ will modify the virtual space and the price of the vehicle, but other informatio
         };
     };
 
-    class O_Truck_03_covered_F {
+    class O_T_Truck_03_covered_ghex_F {
+        vItemSpace = 300;
+        conditions = "license_civ_trucking || {!(playerSide isEqualTo civilian)}";
+        price = 120000;
+        textures[] = {
+            { "Black", "cop", {
+                "#(argb,8,8,3)color(0.05,0.05,0.05,1)",
+                "#(argb,8,8,3)color(0.05,0.05,0.05,1)",
+                "#(argb,8,8,3)color(0.05,0.05,0.05,1)"
+            }, "" }
+        };
+    };
+
+	class O_Truck_03_covered_F {
         vItemSpace = 300;
         conditions = "license_civ_trucking || {!(playerSide isEqualTo civilian)}";
         price = 450000;
@@ -1069,7 +1098,7 @@ will modify the virtual space and the price of the vehicle, but other informatio
             }, "" }
         };
     };
-
+	
     class C_Hatchback_01_F {
         vItemSpace = 40;
         conditions = "license_civ_driver || {!(playerSide isEqualTo civilian)}";
@@ -1206,7 +1235,7 @@ will modify the virtual space and the price of the vehicle, but other informatio
     class B_MRAP_01_F {
         vItemSpace = 85;
         conditions = "";
-        price = 90000;
+        price = 50000;
         textures[] = {
             { "Special Ops", "cop", {
                 "images\Textures\Vehicles\Cop\police_hunterFront.paa",
