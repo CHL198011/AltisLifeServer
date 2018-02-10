@@ -458,7 +458,6 @@ class LifeCfgVehicles {
 	// Medical Taru
 	class O_Heli_Transport_04_medevac_black_F {
         vItemSpace = 350;
-        vItemSpace = 350;
         conditions = "";
         price = 40000;
         textures[] = {};
