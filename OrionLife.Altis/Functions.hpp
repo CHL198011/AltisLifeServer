@@ -321,20 +321,6 @@ class Life_Client_Core {
 		class marketGetPriceRow {};
 		class marketSetPriceRow {};
 	};
-
-    class BountyHunters {
-        file = "core\BountyHunters";
-        class bountyAddMenu {};
-        class bountyAddP {};
-        class bountyBuy {};
-        class bountyGrab {};
-        class bountyHunterReceive {};
-        class bountyInfo {};
-        class bountyKill {};
-        class bountyList {};
-        class bountyMenu {};
-        class markers {};
-	};
     //CUSTOM END
 
     class Actions {
