@@ -49,9 +49,7 @@ _fnc_water = {
 _illegalmarkers = ["marker1","marker2","marker3"]; 
 
 if (playerSide == west) then { 
-
-{ deleteMarkerLocal _x; } forEach _illegalmarkers; 
-
+    { deleteMarkerLocal _x; } forEach _illegalmarkers; 
 };
 
 //addiction
@@ -65,7 +63,7 @@ if (playerSide == west) then {
 			{
 				sleep 60;
 				[] spawn life_fnc_addicted;
-				["You should find a medical personell, you don't feel too good.",false,"slow"] call life_fnc_notificationSystem;
+				["You should find a medical personnel, you don't feel too good.",false,"slow"] call life_fnc_notificationSystem;
 				sleep 240;
 			};
 		};
@@ -75,8 +73,7 @@ if (playerSide == west) then {
 
 // Regenerate health over time 
 [] spawn {
-	private["_fnc_regen"];
-	_fnc_regen =
+	private _fnc_regen =
 	{
 		if((life_hunger >= 70) && (life_thirst >= 70)) then
 		{

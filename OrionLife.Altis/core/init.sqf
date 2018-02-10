@@ -12,13 +12,13 @@ life_firstSpawn = true;
 life_session_completed = false;
 disableUserInput true;
 [] call mav_introcam_fnc_startCinematicCam;
-sleep 2;
+sleep 1;
 [0, "Loading Mission."] call mav_introcam_fnc_updateCinematicStatus;
-sleep 0.5;
+sleep 0.1;
 [0, "Loading Mission.."] call mav_introcam_fnc_updateCinematicStatus;
-sleep 0.5;
+sleep 0.2;
 [0, "Loading Mission..."] call mav_introcam_fnc_updateCinematicStatus;
-sleep 0.5;
+sleep 0.3;
 //0 cutFadeOut 9999999;
 
 _timeStamp = diag_tickTime;
@@ -64,7 +64,6 @@ waitUntil {life_session_completed};
 [0, "Loading Perks"] call mav_introcam_fnc_updateCinematicStatus;
 waitUntil {(missionNamespace getVariable ["life_perksInitialized", true])};
 
-sleep 2;
 [0, "Waiting For Anti-Hack"] call mav_introcam_fnc_updateCinematicStatus;
 sleep 0.2;
 [0, "Waiting For Anti-Hack."] call mav_introcam_fnc_updateCinematicStatus;
