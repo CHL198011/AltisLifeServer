@@ -1,7 +1,7 @@
 #include "..\..\script_macros.hpp"
 
-if !(side player == west) then {hint "You are not a cop!"};
-if(!(JailRepairWALL getVariable["prison_open",false])) exitWith {hint "Looks like the wall is already fixed.";};
+if !(side player == west) exitWith {hint "You are not a cop!"};
+if (!(JailRepairWALL getVariable["prison_open",false])) exitWith {hint "Looks like the wall is already fixed.";};
 
 life_action_inUse = true;
 

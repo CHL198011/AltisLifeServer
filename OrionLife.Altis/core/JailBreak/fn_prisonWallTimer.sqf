@@ -6,7 +6,7 @@ disableSerialization;
 "lifeTimer" cutRsc ["life_timer","PLAIN"];
 private _uiDisp = uiNamespace getVariable "life_timer";
 private _timer = _uiDisp displayCtrl 38301;
-private _time = time + (60 * 7);
+private _time = time + (60 * 7); //Time until breakout
 remoteExec ['life_fnc_AAN_Jail',-2];
 for "_i" from 0 to 1 step 0 do {
     if (isNull _uiDisp) then {
@@ -17,7 +17,7 @@ for "_i" from 0 to 1 step 0 do {
     };
     if (round(_time - time) < 1) exitWith {};
     if (!(_prisonvaultVariables getVariable ["pchargeplaced",false])) exitWith {};
-    _timer ctrlSetText format ["Jail Break: %1",[(_time - time),"MM:SS.MS"] call BIS_fnc_secondsToString];
-    sleep 0.25;
+    _timer ctrlSetText format ["Jail Break: %1",[(_time - time),"MM:SS"] call BIS_fnc_secondsToString];
+    sleep 0.75;
 };
 "lifeTimer" cutText["","PLAIN"];
