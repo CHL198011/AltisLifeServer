@@ -33,6 +33,8 @@ class CfgRemoteExec {
         F(life_fnc_impoundMenu,CLIENT)
         F(life_fnc_jail,CLIENT)
         F(life_fnc_jailMe,CLIENT)
+        F(life_fnc_wallCharge,CLIENT)
+        F(life_fnc_prisonFix,CLIENT)
         F(life_fnc_knockedOut,CLIENT)
         F(life_fnc_licenseCheck,CLIENT)
         F(life_fnc_licensesRead,CLIENT)

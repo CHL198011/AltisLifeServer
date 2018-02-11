@@ -63,19 +63,8 @@ if ([true,_type,_amount] call life_fnc_handleInv) then {
         ["buy", getPlayerUID player, "virtual", _type, _price] remoteExecCall ["DB_fnc_insertData",2];
         findNearestPerson = findNearestPerson - _price * _amount;
     };
-	
-	if(_marketprice != -1) then 
-		{ 
-			[_type, _amount] spawn
-			{
-				sleep 120;
-				[_this select 0,_this select 1] call life_fnc_marketBuy;
-			};			
-		};
-		
     
 	[] call life_fnc_virt_update;
-
 };
 
 [0] call SOCK_fnc_updatePartial;
