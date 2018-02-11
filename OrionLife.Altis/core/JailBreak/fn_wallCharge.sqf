@@ -12,12 +12,14 @@ if (!([false,"demolitioncharge",1] call life_fnc_handleInv)) exitWith {hint "You
 
 JailRepairWALL setVariable["pchargeplaced",true,true];
 
-[PrisonWALL,"chargeSound"] remoteexeccall ["say3D",0];
+[PrisonWALL, "chargeSound"] remoteexeccall ["say3D",0];
 
-Loudspeak_1 say3D "jailbreak";
-Loudspeak_2 say3D "jailbreak";
-Loudspeak_3 say3D "jailbreak";
-Loudspeak_4 say3D "jailbreak";
+//Alarms
+_AlarmDistance = 500;
+_AlarmSpeakers = [Loudspeak_1,Loudspeak_2,Loudspeak_3,Loudspeak_4]; //Alarms Array
+{
+	[_x, ["jailbreak", _AlarmDistance]] remoteexeccall ["say3D",0];
+} forEach _AlarmSpeakers;
 
 _toSend = [];
 _toSend pushBack player;
@@ -34,5 +36,5 @@ _toSend pushBack player;
 	};
 } forEach playableUnits;
 
-[PrisonWALL, JailRepairWALL] remoteExec ["life_fnc_JailBreakHandle",2];
-[JailRepairWALL] remoteExec ["life_fnc_prisonWallTimer",_toSend]; //Show jail break timer for Cops & Civs in jail
+[PrisonWALL, PrisonSpikes, JailRepairWALL] remoteExec ["life_fnc_JailBreakHandle",2];
+[JailRepairWALL] remoteExec ["life_fnc_prisonWallTimer",_toSend];
