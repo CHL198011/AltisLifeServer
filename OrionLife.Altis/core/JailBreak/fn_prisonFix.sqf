@@ -1,9 +1,8 @@
 #include "..\..\script_macros.hpp"
 
-_prisonvaultVariablesPos = [10044.836,6061.898,-1.612];
-_prisonvaultVariables = nearestObject [_prisonvaultVariablesPos,"Land_Canal_WallSmall_10m_F"];
+if !(side player == west) then {hint "You are not a cop!"};
+if(!(JailRepairWALL getVariable["prison_open",false])) exitWith {hint "Looks like the wall is already fixed.";};
 
-if(!(_prisonvaultVariables getVariable["prison_open",false])) exitWith {hint "Looks like the wall is already fixed.";};
 life_action_inUse = true;
 
 //Setup the progress bar
@@ -42,9 +41,8 @@ player playActionNow "stop";
 if(!alive player) exitWith {life_action_inUse = false;};
 if(life_interrupted) exitWith {life_interrupted = false; titleText[localize "STR_NOTF_ActionCancel","PLAIN"]; life_action_inUse = false;};
 life_action_inUse = false;
-_prisonvaultVariables setVariable["prison_open",false,true];
-[_prisonvaultVariables] remoteExec ["life_fnc_JailBreakFix", RSERV];
+JailRepairWALL setVariable["prison_open",false,true];
+[] remoteExec ["life_fnc_JailBreakFix", RSERV];
 [5,"<t color='#FFFF00'><t size='1.5'>The jail has been secured and repaired!</t></t>"] remoteExecCall ["life_fnc_broadcast",-2];
 deleteMarker "MarkerJailbreak";
 deleteMarker "MarkerTextJailbreak";
-
