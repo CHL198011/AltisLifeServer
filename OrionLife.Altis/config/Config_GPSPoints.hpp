@@ -10,7 +10,7 @@
 */
 class CfgGPSPoints {
 
-    class Malden {
+    class Altis {
         class Civilian {
             class Athira {
                 displayName = "Athira";
@@ -47,15 +47,15 @@ class CfgGPSPoints {
             };
 			
 			class Hospital {
-                displayName = "Hospital";
-                gpsMarker = "hospital_marker_1";
+                displayName = "Kavala Hospital";
+                gpsMarker = "safezone_Kavala_Hospital";
                 icon = "\a3\ui_f\data\map\MapControl\hospital_ca.paa";
                 conditions = "";
             };
 			
 			class Airshop {
                 displayName = "Air Shop";
-                gpsMarker = "safezone_AS";
+                gpsMarker = "safezone_Airport";
                 icon = "images\icons\ico_airfield.paa";
                 conditions = "";
             };
@@ -255,44 +255,44 @@ class CfgGPSPoints {
 		
 		
         class Cop {
-            class LePortHQ {
+            class Kavala {
                 displayName = "Kavala HQ";
                 gpsMarker = "cop_spawn_1";
                 icon = "\a3\ui_f\data\map\MapControl\watertower_ca.paa";
                 conditions = "";
             };
 
-            class AthiraHQ {
-                displayName = "Athira HQ";
-                gpsMarker = "cop_spawn_3";
+            class Sofia {
+                displayName = "Sofia HQ";
+                gpsMarker = "cop_spawn_9";
                 icon = "\a3\ui_f\data\map\MapControl\fuelstation_ca.paa";
                 conditions = "";
             };
 
-            class PygrosHQ {
+            class Pygros {
                 displayName = "Pygros HQ";
                 gpsMarker = "cop_spawn_2";
                 icon = "\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa";
                 conditions = "";
             };
 
-            class LePort {
-                displayName = "LePort";
-                gpsMarker = "Port_safezone";
+            class Athira {
+                displayName = "Athira HQ";
+                gpsMarker = "cop_spawn_3";
                 icon = "\a3\ui_f\data\map\MapControl\watertower_ca.paa";
                 conditions = "";
             };
 
 			class LaPessagne {
-                displayName = "LaPessagne";
-                gpsMarker = "safezone_Pessagne";
+                displayName = "Training Grounds";
+                gpsMarker = "cop_training";
                 icon = "\a3\ui_f\data\map\MapControl\watertower_ca.paa";
                 conditions = "";
             };
 
             class LaTrinite {
-                displayName = "La Trinite";
-                gpsMarker = "safezone_Trinite";
+                displayName = "Department of Corrections";
+                gpsMarker = "cop_spawn_doc";
                 icon = "\a3\ui_f\data\map\MapControl\watertower_ca.paa";
                 conditions = "";
             };
@@ -305,15 +305,15 @@ class CfgGPSPoints {
             };
             
 			class Hospital {
-                displayName = "Hospital";
-                gpsMarker = "hospital_marker_1";
+                displayName = "Kavala Hospital";
+                gpsMarker = "safezone_Kavala_Hospital";
                 icon = "\a3\ui_f\data\map\MapControl\hospital_ca.paa";
                 conditions = "";
             };
 			
 			class Airshop {
-                displayName = "$STR_MAR_Air_Shop";
-                gpsMarker = "airshop";
+                displayName = "Airport";
+                gpsMarker = "safezone_Airport";
                 icon = "images\icons\ico_airfield.paa";
                 conditions = "";
             };
@@ -514,30 +514,30 @@ class CfgGPSPoints {
 		
         class Medic {
 
-              class LePort {
-                displayName = "LePort";
-                gpsMarker = "Port_safezone";
+              class Kavala {
+                displayName = "Kavala Hospital";
+                gpsMarker = "medic_spawn_1";
                 icon = "\a3\ui_f\data\map\MapControl\watertower_ca.paa";
                 conditions = "";
             };
 
-			class LaPessagne {
-                displayName = "LaPessagne";
-                gpsMarker = "safezone_Pessagne";
+			class Pyrgos {
+                displayName = "Pyrgos Hospital";
+                gpsMarker = "medic_spawn_5";
                 icon = "\a3\ui_f\data\map\MapControl\watertower_ca.paa";
                 conditions = "";
             };
 
-            class LaTrinite {
-                displayName = "La Trinite";
-                gpsMarker = "safezone_Trinite";
+            class MedicAirport {
+                displayName = "Airport Hospital";
+                gpsMarker = "medic_spawn_2";
                 icon = "\a3\ui_f\data\map\MapControl\watertower_ca.paa";
                 conditions = "";
             };
 
             class Rebel {
-                displayName = "$STR_MAR_Rebel_Outpost";
-                gpsMarker = "Rebelop";
+                displayName = "Training Grounds";
+                gpsMarker = "cop_training";
                 icon = "\a3\ui_f\data\map\MapControl\bunker_ca.paa";
                 conditions = "";
             };
