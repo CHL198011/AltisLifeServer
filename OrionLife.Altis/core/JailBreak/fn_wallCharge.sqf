@@ -8,16 +8,16 @@ if (isNull PrisonWALL) exitWith {systemChat "PrisonWALL Null"};
 if !(typeOf PrisonWALL == "Land_Canal_WallSmall_10m_F") exitWith {hint "PrisonWALL ! === Land_Canal_WallSmall_10m_F"};
 if (JailRepairWALL getVariable["prison_open",false]) exitWith {hint "The wall has already been destroyed!"};
 if (JailRepairWALL getVariable["pchargeplaced",false]) exitWith {hint "A charge has already been placed. Back off!"};
-if (!([false,"demolitioncharge",1] call life_fnc_handleInv)) exitWith {hint "You require a blasting charge!"};
+if (!([false,"demolitioncharge",1] call life_fnc_handleInv)) exitWith {hint "You require a demolition charge!"};
 
 JailRepairWALL setVariable["pchargeplaced",true,true];
 
 [PrisonWALL,"chargeSound"] remoteexeccall ["say3D",0];
 
-Loudspeak_1 say3D "jail";
-Loudspeak_2 say3D "jail";
-Loudspeak_3 say3D "jail";
-Loudspeak_4 say3D "jail";
+Loudspeak_1 say3D "jailbreak";
+Loudspeak_2 say3D "jailbreak";
+Loudspeak_3 say3D "jailbreak";
+Loudspeak_4 say3D "jailbreak";
 
 _toSend = [];
 _toSend pushBack player;

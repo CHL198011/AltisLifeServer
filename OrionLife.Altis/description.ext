@@ -86,9 +86,9 @@ class CfgSounds {
       titles[] = {};
     };
 
-    class jail {
+    class jailbreak {
       name = "jail";
-      sound[] = {"\sounds\jail.ogg", 1, 1};
+      sound[] = {"\sounds\jailbreak.ogg", 1, 1};
       titles[] = {};
     };
 

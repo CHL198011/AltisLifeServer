@@ -33,8 +33,6 @@ class CfgRemoteExec {
         F(life_fnc_impoundMenu,CLIENT)
         F(life_fnc_jail,CLIENT)
         F(life_fnc_jailMe,CLIENT)
-        F(life_fnc_wallCharge,CLIENT)
-        F(life_fnc_prisonFix,CLIENT)
         F(life_fnc_knockedOut,CLIENT)
         F(life_fnc_licenseCheck,CLIENT)
         F(life_fnc_licensesRead,CLIENT)
@@ -77,21 +75,21 @@ class CfgRemoteExec {
         F(life_fnc_AAN_Bank2,CLIENT)
         F(life_fnc_AAN_Jail,CLIENT)
         F(life_fnc_tieing,CLIENT)
-    		F(life_fnc_tieingb,CLIENT)
-    		F(life_fnc_gagged,CLIENT)
+    	F(life_fnc_tieingb,CLIENT)
+    	F(life_fnc_gagged,CLIENT)
         F(life_fnc_backupCall,CLIENT)
         F(fvs_fnc_persoBeantragen,CLIENT) // Perso
-    		F(fvs_fnc_persoErgebnis,CLIENT) // Perso
-    		F(fvs_fnc_zeigePerso,CLIENT) // Perso
+    	F(fvs_fnc_persoErgebnis,CLIENT) // Perso
+    	F(fvs_fnc_zeigePerso,CLIENT) // Perso
         F(life_fnc_perso_laden,CLIENT) // Perso
-    		F(life_fnc_persoBeantragen,CLIENT) // Perso
-    		F(life_fnc_persoCheck,CLIENT) // Perso
-    		F(life_fnc_persoErgebnis,CLIENT) // Perso
-    		F(life_fnc_persoNeu,CLIENT) // Perso
-    		F(life_fnc_updateMonat,CLIENT) // Perso
-    		F(life_fnc_updateTag,CLIENT) // Perso
-    		F(life_fnc_zeigePerso,CLIENT) // Perso
-    		F(life_fnc_updatePersoBild,CLIENT) // Perso
+    	F(life_fnc_persoBeantragen,CLIENT) // Perso
+    	F(life_fnc_persoCheck,CLIENT) // Perso
+    	F(life_fnc_persoErgebnis,CLIENT) // Perso
+    	F(life_fnc_persoNeu,CLIENT) // Perso
+    	F(life_fnc_updateMonat,CLIENT) // Perso
+    	F(life_fnc_updateTag,CLIENT) // Perso
+    	F(life_fnc_zeigePerso,CLIENT) // Perso
+    	F(life_fnc_updatePersoBild,CLIENT) // Perso
         F(fvs_fnc_taxiDialogRechnung,CLIENT) // Taxi
         F(fvs_fnc_taxiInitFahrer,CLIENT) // Taxi
         F(fvs_fnc_taxiMsgKunden,CLIENT) // Taxi
@@ -103,18 +101,21 @@ class CfgRemoteExec {
         F(life_fnc_visVehInfo,CLIENT)
         F(life_fnc_radArea,CLIENT)
         F(life_fnc_hideBody,CLIENT)
-    		F(life_fnc_prisonWallTimer,CLIENT)
-    		F(life_fnc_comRemovalWait,CLIENT)
+    	F(life_fnc_comRemovalWait,CLIENT)
         F(life_fnc_speedBomb,CLIENT)
-    		F(life_fnc_KilledPlayer,CLIENT)
-    		F(life_fnc_createGroup,CLIENT)
-    		F(life_fnc_joinGroup,CLIENT)
-    		F(life_fnc_kickGroup,CLIENT)
-    		F(life_fnc_clientGroupKick,CLIENT)
-    		F(life_fnc_clientGroupLeader,CLIENT)
-    		F(life_fnc_leaveGroup,CLIENT)
-    		F(life_fnc_groupBrowser,CLIENT)
-    		F(life_fnc_setGroupPass,CLIENT)
+    	F(life_fnc_KilledPlayer,CLIENT)
+    	F(life_fnc_createGroup,CLIENT)
+    	F(life_fnc_joinGroup,CLIENT)
+    	F(life_fnc_kickGroup,CLIENT)
+    	F(life_fnc_clientGroupKick,CLIENT)
+    	F(life_fnc_clientGroupLeader,CLIENT)
+    	F(life_fnc_leaveGroup,CLIENT)
+    	F(life_fnc_groupBrowser,CLIENT)
+    	F(life_fnc_setGroupPass,CLIENT)
+        //Jailbreak
+        F(life_fnc_wallCharge,CLIENT)
+    	F(life_fnc_prisonWallTimer,CLIENT)
+        F(life_fnc_prisonFix,CLIENT)
 
 
         /* Server only functions */
@@ -171,11 +172,11 @@ class CfgRemoteExec {
         F(life_fnc_vehicleInfoUpdate,SERVER)
         F(TON_fnc_vAH_update,SERVER)
 	    F(TON_fnc_vAH_init,SERVER)
-        //F(A3Log,SERVER)
         F(serverVehicleStore,SERVER)
+        //Jailbreak
         F(life_fnc_JailBreakRemove,SERVER)
         F(life_fnc_JailBreakFix,SERVER)
-
+        F(life_fnc_jailbreakhandle,SERVER)
 
 
         /* HeadlessClient only functions */
@@ -212,6 +213,7 @@ class CfgRemoteExec {
         F(HC_fnc_wantedProfUpdate,HC)
         F(HC_fnc_wantedRemove,HC)
         F(HC_fnc_insureCar,HC)
+
 
         /* Functions for everyone */
         F(BIS_fnc_effectKilledAirDestruction,ANYONE)
