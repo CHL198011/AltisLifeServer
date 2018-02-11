@@ -3,5 +3,7 @@ params [
 ];
 
 if (_wall isEqualTo objNull) exitWith {};
+if (PrisonSpikes isEqualTo objNull) exitWith {};
 
-deleteVehicle _wall; 
+deleteVehicle _wall;
+deleteVehicle PrisonSpikes;
