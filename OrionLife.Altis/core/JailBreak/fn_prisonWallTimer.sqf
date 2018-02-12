@@ -6,7 +6,7 @@ disableSerialization;
 "lifeTimer" cutRsc ["life_timer","PLAIN"];
 private _uiDisp = uiNamespace getVariable "life_timer";
 private _timer = _uiDisp displayCtrl 38301;
-private _time = time + (60 * 1); //Time until breakout
+private _time = time + (60 * 0.5); //Time until breakout
 remoteExec ['life_fnc_AAN_Jail',-2];
 for "_i" from 0 to 1 step 0 do {
     if (isNull _uiDisp) then {
