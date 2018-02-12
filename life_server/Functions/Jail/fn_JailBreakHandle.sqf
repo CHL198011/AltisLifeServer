@@ -8,7 +8,7 @@ params [
 	["_spikes", objNull, [objNull]],
 	["_prisonvaultVariables", objNull, [objNull]]
 ];
-private _time = time + (60 * 0.5); //Time until breakout
+private _time = time + (60 * 7); //Time until breakout
 waitUntil{(round(_time - time) < 1)};
 sleep 0.9;
 if (!(_prisonvaultVariables getVariable["pchargeplaced",false])) exitWith {};

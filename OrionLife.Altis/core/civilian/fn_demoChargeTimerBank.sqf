@@ -21,7 +21,7 @@ for "_i" from 0 to 1 step 0 do {
     };
     if (round(_time - time) < 1) exitWith {};
     if (!(fed_bank_1 getVariable ["chargeplaced",false])) exitWith {};
-    _timer ctrlSetText format ["Kavala Bank: %1",[(_time - time),"MM:SS.MS"] call BIS_fnc_secondsToString];
+    _timer ctrlSetText format ["Bank: %1",[(_time - time),"MM:SS.MS"] call BIS_fnc_secondsToString];
     sleep 0.08;
 };
 "lifeTimer" cutText["","PLAIN"];
