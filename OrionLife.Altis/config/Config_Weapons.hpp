@@ -109,7 +109,7 @@ class WeaponShops {
         };
     };
 
-
+/* Not in Use
 	class black {
         name = "Black Market Weapon Shop";
         side = "civ";
@@ -157,7 +157,7 @@ class WeaponShops {
 			{ "bipod_01_F_blk", "", 2500, -1, "" } //bipod
         };
     };
-
+*/
     class gang {
         name = "Hideout Armament";
         side = "civ";
@@ -354,8 +354,8 @@ class WeaponShops {
         };
     };
 
+	/* Not in Use
 	//Military Police
-	/*
 	class mp_gun {
         name = "Military Police Weapon Shop";
         side = "cop";
