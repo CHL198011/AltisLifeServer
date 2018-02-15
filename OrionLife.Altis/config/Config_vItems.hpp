@@ -26,14 +26,16 @@ class VirtualShops {
         conditions = "mav_ttm_var_rebel > 0";
         items[] = { "debitcard",  "cyanideCapsule", "speedbomb", "gokart", "gpstracker", "flashlight", "zipties", "pliers", "blindfold", "codeCracker", "bandages", "morphine", "cprKit", "waterBottle", "rabbit", "apple", "redgull", "tbacon", "lockpick", "pickaxe", "toolkit", "fuelFull", "peach", "boltcutter", "blastingcharge", "demolitioncharge" };
     };
-
+	
+	/*Not in Use
 	class black {
         name = "STR_Shops_Black";
         side = "civ";
         conditions = "";
         items[] = { "debitcard", "speedbomb", "gokart", "gpstracker", "flashlight", "zipties", "pliers", "blindfold", "lockpick", "bandages", "morphine", "cprKit", "waterBottle", "rabbit", "apple", "redgull", "tbacon", "pickaxe", "toolkit", "fuelFull", "peach", "barrel", "trigger", "butt", "sight", "steel", "iron_refined", "steelplate", "gunpowder", "sulfur", "cloth", "C4", "rubber", "BTip", "BShell", "BPowder", "BPrimer"};
     };
-
+	*/
+	
     class donator {
         name = "STR_Shops_Donator";
         side = "civ";
@@ -161,6 +163,7 @@ class VirtualShops {
         items[] = { "debitcard", "panicbutton", "dogwhistle", "gpstracker", "flashlight", "fueldart", "gokart", "morphine","bandages", "handcuffs", "keys", "donuts", "coffee", "spikeStrip", "waterBottle", "rabbit", "apple", "redgull", "toolkit", "fuelFull", "defusekit" , "cprKit" , "rabbit_raw", "hen_raw", "rooster_raw", "sheep_raw", "goat_raw" , "campfire" };
     };
 
+	/*Not in Use
     class counterfitCash {
         name = "STR_Shops_CounterfitCash";
         side = "civ";
@@ -168,7 +171,8 @@ class VirtualShops {
         level[] = { "", "", -1, "" };
         items[] = { "counterfitCash" };
     };
-
+	*/
+	
     class uranium {
         name = "STR_Shops_uranium";
         side = "civ";
@@ -200,7 +204,7 @@ class VirtualShops {
 };
 
 class VirtualItems {
-
+/*Not in Use
 	//organs
 	class kidney {
 		variable = "kidney";
@@ -214,6 +218,7 @@ class VirtualItems {
 	};
 	//case "kidney": {"life_inv_kidney"};
 	// case "kidney": {15};
+*/
     // test here 
     //relics
     class relic1 {
@@ -311,6 +316,7 @@ class VirtualItems {
         icon = "images\icons\ico_excavator.paa";
     };
 
+/*Not in Use
     class knife {
         variable = "knife";
         displayName = "STR_Item_knife";
@@ -321,7 +327,7 @@ class VirtualItems {
         edible = -1;
         icon = "images\icons\ico_knife.paa";
     };
-
+*/
 
     class cyanideCapsule {
         variable = "cyanideCapsule";
@@ -456,7 +462,7 @@ class VirtualItems {
         edible = -1;
         icon = "images\icons\ico_flashlight.paa";
     };
-
+/*Not in Use
     class head {
         variable = "head";
         displayName = "STR_Item_head";
@@ -467,7 +473,7 @@ class VirtualItems {
         edible = -1;
         icon = "images\icons\ico_head.paa";
     };
-
+*/
 
     class gpstracker {
         variable = "gpstracker";
@@ -501,7 +507,8 @@ class VirtualItems {
         edible = -1;
         icon = "images\icons\ico_gokart.paa";
     };
-
+	
+/*Not in Use
     class tent1 {
         variable = "tent1";
         displayName = "STR_Item_tent1";
@@ -512,6 +519,7 @@ class VirtualItems {
         edible = -1;
         icon = "images\icons\ico_tent.paa";
     };
+*/
 
     class protest {
         variable = "protest";
@@ -545,7 +553,8 @@ class VirtualItems {
         edible = -1;
         icon = "images\icons\ico_prize.paa";
     };
-
+	
+/*Not in Use
 	  class donatorcrate {
         variable = "donatorcrate";
         displayName = "STR_Item_donatorcrate";
@@ -556,6 +565,7 @@ class VirtualItems {
         edible = -1;
         icon = "images\icons\ico_donatorcrate.paa";
     };
+*/
 
     class uranium {
         variable = "uranium";
@@ -645,6 +655,7 @@ class VirtualItems {
         icon = "images\icons\craft\trigger.paa";
 	};
 
+/*Not in Use
 	class engine {
         variable = "engine";
         displayName = "STR_Item_Engine";
@@ -666,6 +677,7 @@ class VirtualItems {
         edible = -1;
         icon = "images\icons\craft\plans.paa";
 	};
+*/
 
     class rubberU {
 		variable = "rubberU";
@@ -949,7 +961,8 @@ class VirtualItems {
         edible = -1;
         icon = "images\icons\blindfold.paa";
     };
-
+	
+/*Not in Use
     class counterfitCash {
         variable = "counterfitCash";
         displayName = "STR_Item_counterfitCash";
@@ -960,6 +973,7 @@ class VirtualItems {
         edible = -1;
         icon = "images\icons\counterfitCash.paa";
     };
+*/
 
     class cprKit {
         variable = "cprKit";
