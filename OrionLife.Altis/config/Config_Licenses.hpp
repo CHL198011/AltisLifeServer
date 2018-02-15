@@ -245,6 +245,7 @@ class Licenses {
         side = "civ";
     };
 
+	/*Not in Use
     class cg {
         variable = "cg";
         displayName = "STR_License_CG";
@@ -252,6 +253,7 @@ class Licenses {
         illegal = false;
         side = "cop";
     };
+	
     
     class bountyH {  
         variable = "bountyH";  
@@ -260,7 +262,9 @@ class Licenses {
         illegal = false;  
         side = "civ";  
     };
-    
+    */
+	
+	//Part of the Citizen of Altis
     class einbuergerung {
         variable = "einbuergerung";
         displayName = "STR_License_Einb";
