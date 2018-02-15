@@ -3,16 +3,16 @@ class CarShops {
         side = "civ";
         conditions = "";
         vehicles[] = {
-            { "B_Quadbike_01_F", "" },
-            { "C_Hatchback_01_F", "" },
-            { "C_Offroad_01_F", "" },
-            { "C_SUV_01_F", "" },
-            { "C_Hatchback_01_sport_F", "" },
-            { "C_Van_01_transport_F", "" },
-            { "C_Offroad_02_unarmed_F", "" },
-            { "C_Van_02_transport_F", "" },
-            { "C_Van_02_vehicle_F", "" },
-            { "C_Van_02_service_F", "" }
+            { "B_Quadbike_01_F", "" }, //Quad Bike	
+            { "C_Hatchback_01_F", "" }, //Hatchback
+            { "C_Offroad_01_F", "" }, //Offroad
+            { "C_SUV_01_F", "" }, //SUV
+            { "C_Hatchback_01_sport_F", "" }, //Hatchback Sport
+            { "C_Van_01_transport_F", "" }, //Flatbed Truck
+            { "C_Offroad_02_unarmed_F", "" }, //MB 4WD	
+            { "C_Van_02_transport_F", "" }, //Van Transport	
+            { "C_Van_02_vehicle_F", "" }, //Van Cargo
+            { "C_Van_02_service_F", "" } //Van Services
         };
     };
 
@@ -20,10 +20,10 @@ class CarShops {
         side = "civ";
         conditions = "";
         vehicles[] = {
-            { "C_Kart_01_Blu_F", "" },
-            { "C_Kart_01_Fuel_F", "" },
-            { "C_Kart_01_Red_F", "" },
-            { "C_Kart_01_Vrana_F", "" }
+            { "C_Kart_01_Blu_F", "" }, //Blue Kart
+            { "C_Kart_01_Fuel_F", "" }, //Green Kart
+            { "C_Kart_01_Red_F", "" }, //Redstone Kart
+            { "C_Kart_01_Vrana_F", "" } //Vrana Kart
         };
     };
 	
@@ -32,7 +32,7 @@ class CarShops {
         side = "civ";
         conditions = "";
         vehicles[] = {
-            { "B_Quadbike_01_F", "" }
+            { "B_Quadbike_01_F", "" } //Quad Bike
         };
     };
 
@@ -40,17 +40,17 @@ class CarShops {
         side = "civ";
         conditions = "";
         vehicles[] = {
-            { "C_Van_01_box_F", "" },
-            { "I_Truck_02_transport_F", "" },
-            { "I_Truck_02_covered_F", "" },
-            { "B_Truck_01_transport_F", "" },
-            { "O_Truck_03_transport_F", "" },
-            { "O_Truck_03_covered_F", "" },
-            { "B_Truck_01_box_F", "" },
-            { "O_Truck_03_device_F", "" },
-            { "C_Van_01_fuel_F", "" },
-            { "I_Truck_02_fuel_F", "" },
-            { "B_Truck_01_fuel_F", "" }
+            { "C_Van_01_box_F", "" }, //Truck Boxer
+			{ "C_Van_01_fuel_F", "" }, //Fuel Truck
+            { "I_Truck_02_transport_F", "" }, //Zamak Transport
+            { "I_Truck_02_covered_F", "" }, //Zamak Transport Covered
+			{ "I_Truck_02_fuel_F", "" }, //Zamak Fuel
+            { "O_Truck_03_transport_F", "" }, //Tempest Transport
+            { "O_Truck_03_covered_F", "" }, //Tempest Transport Covered
+			{ "O_Truck_03_device_F", "" }, //Tempest Device
+			{ "B_Truck_01_transport_F", "" }, //HEMTT Transport
+            { "B_Truck_01_box_F", "" }, //HEMTT Box
+            { "B_Truck_01_fuel_F", "" } //HEMTT Fuel
         };
     };
 
@@ -58,13 +58,13 @@ class CarShops {
         side = "civ";
         conditions = "mav_ttm_var_air == 1;";
         vehicles[] = {
-            { "C_Heli_Light_01_civil_F", "" },
-            { "B_Heli_Light_01_F", "" },
-            { "O_Heli_Light_02_unarmed_F", "" },
-            { "C_Plane_Civil_01_F", "" },
-            { "B_Heli_Transport_03_unarmed_F", "" },
-            { "O_Heli_Transport_04_bench_F", "" },
-            { "O_Heli_Transport_04_box_F", "" }
+            { "C_Heli_Light_01_civil_F", "" }, //M-900
+            { "B_Heli_Light_01_F", "" }, //MH-9 Hummingbird
+            { "O_Heli_Light_02_unarmed_F", "" }, //PO-30 Orca Unarmed
+            { "C_Plane_Civil_01_F", "" }, //Caesar BTT
+            { "B_Heli_Transport_03_unarmed_F", "" }, //CH-67 Huron Unarmed
+            { "O_Heli_Transport_04_bench_F", "" }, //Mi-290 Taru Bench
+            { "O_Heli_Transport_04_box_F", "" } //Mi-290 Taru Cargo
         };
     };
 
@@ -72,11 +72,11 @@ class CarShops {
         side = "civ";
         conditions = "";
         vehicles[] = {
-            { "C_Rubberboat", "" },
-            { "C_Boat_Civil_01_F", "" },
-            { "B_SDV_01_F", "" },
-            { "C_Boat_Transport_02_F", "" },
-            { "C_Scooter_Transport_01_F", "" }
+            { "C_Rubberboat", "" }, //Rescue Boat
+            { "C_Boat_Civil_01_F", "" }, //Motorboat
+            { "B_SDV_01_F", "" }, //SDV
+            { "C_Boat_Transport_02_F", "" }, //RHIB
+            { "C_Scooter_Transport_01_F", "" } //Water Scooter
         };
     };
 
@@ -84,19 +84,19 @@ class CarShops {
         side = "civ";
         conditions = "mav_ttm_var_rebel >= 1";
         vehicles[] = {
-            { "B_Quadbike_01_F", "" },
-            { "B_G_Offroad_01_F", "" },
+            { "B_Quadbike_01_F", "" }, //Quad Bike
+            { "B_G_Offroad_01_F", "" }, //Offroad
             { "O_MRAP_02_F", "mav_ttm_var_rebel >= 2" }, //Ifrit
             { "O_G_Offroad_01_armed_F", "mav_ttm_var_rebel >= 3" }, //Offroad Armed
-            { "O_T_LSV_02_unarmed_F", "" },
-            { "B_T_LSV_01_unarmed_F", "" },
-            { "B_G_Van_02_vehicle_F", "" },
-            { "B_Heli_Light_01_stripped_F", "" },
-            { "I_Heli_light_03_unarmed_F", "" },
-            { "B_Heli_Transport_03_unarmed_F", "mav_ttm_var_rebel >= 2" },
-            { "O_Heli_Transport_04_bench_F", "mav_ttm_var_rebel >= 2" },
-            { "O_Heli_Transport_04_box_F", "mav_ttm_var_rebel >= 2" },
-            { "O_Heli_Light_02_unarmed_F", "" }
+            { "O_T_LSV_02_unarmed_F", "" }, //Qilin Unarmed
+            { "B_T_LSV_01_unarmed_F", "" }, //Prowler Unarmed
+            { "B_G_Van_02_vehicle_F", "" }, //Van Cargo
+            { "B_Heli_Light_01_stripped_F", "" }, //MH-9 Hummingbird Stripped
+            { "I_Heli_light_03_unarmed_F", "" }, //WY-55 Hellcat Unarmed
+            { "B_Heli_Transport_03_unarmed_F", "mav_ttm_var_rebel >= 2" }, //CH-67 Huron Unarmed
+            { "O_Heli_Transport_04_bench_F", "mav_ttm_var_rebel >= 2" }, //Mi-290 Taru Bench
+            { "O_Heli_Transport_04_box_F", "mav_ttm_var_rebel >= 2" },  //Mi-290 Taru Cargo
+            { "O_Heli_Light_02_unarmed_F", "" } //PO-30 Orca Unarmed
         };
     };
 
@@ -104,13 +104,13 @@ class CarShops {
         side = "med";
         conditions = "";
         vehicles[] = {
-            { "C_Offroad_01_F", "call life_mediclevel >= 3" },
-            { "C_IDAP_Van_02_medevac_F", "call life_mediclevel >= 3" },
-            { "C_Van_02_medevac_F", "call life_mediclevel >= 3" },
-            { "C_Van_01_box_F", "call life_mediclevel >= 1" },
-            { "C_SUV_01_F", "call life_mediclevel >= 1" },
-            { "Land_Pod_Heli_Transport_04_medevac_black_F", "call life_mediclevel >= 4" },
-            { "I_MRAP_03_F", "call life_mediclevel >= 6" }
+            { "C_Offroad_01_F", "call life_mediclevel >= 3" }, //Offroad
+            { "C_IDAP_Van_02_medevac_F", "call life_mediclevel >= 3" }, //IDAP Van
+            { "C_Van_02_medevac_F", "call life_mediclevel >= 3" }, //Van Ambulance
+            { "C_Van_01_box_F", "call life_mediclevel >= 1" }, //Truck Boxer
+            { "C_SUV_01_F", "call life_mediclevel >= 1" }, //SUV
+            { "Land_Pod_Heli_Transport_04_medevac_black_F", "call life_mediclevel >= 4" }, //Taru Medical Pod Black
+            { "I_MRAP_03_F", "call life_mediclevel >= 6" } //Strider
         };
     };
 
@@ -118,12 +118,12 @@ class CarShops {
         side = "med";
         conditions = "mav_ttm_var_air == 1;";
         vehicles[] = {
-            { "B_Heli_Light_01_F", "call life_mediclevel >= 3" },
-            { "O_Heli_Light_02_unarmed_F", "call life_mediclevel >= 4" },
-            { "I_Heli_light_03_unarmed_F", "call life_mediclevel >= 5" },
-			{ "O_Heli_Transport_04_medevac_black_F", "call life_mediclevel >= 6" },
-            { "I_Heli_Transport_02_F", "call life_mediclevel >= 7" },
-            { "B_Heli_Transport_03_unarmed_F", "call life_mediclevel >= 6" }
+            { "B_Heli_Light_01_F", "call life_mediclevel >= 3" }, //MH-9 Hummingbird
+            { "O_Heli_Light_02_unarmed_F", "call life_mediclevel >= 4" }, //PO-30 Orca Unarmed
+            { "I_Heli_light_03_unarmed_F", "call life_mediclevel >= 5" }, //WY-55 Hellcat Unarmed
+			{ "O_Heli_Transport_04_medevac_black_F", "call life_mediclevel >= 6" }, //Mi-280 Taru Medical Black
+            { "I_Heli_Transport_02_F", "call life_mediclevel >= 7" }, //CH-49 Mohawk
+            { "B_Heli_Transport_03_unarmed_F", "call life_mediclevel >= 6" } //CH-67 Huron Unarmed
         };
     };
 
@@ -131,13 +131,13 @@ class CarShops {
         side = "cop";
         conditions = "";
         vehicles[] = {
-            { "B_Quadbike_01_F", "call life_coplevel >= 1" },
-            { "C_Offroad_01_F", "call life_coplevel >= 1" },
-            { "C_SUV_01_F", "call life_coplevel >= 2" },
-			{ "C_Hatchback_01_F", "call life_coplevel >= 2" },
-            { "C_Hatchback_01_sport_F", "call life_coplevel >= 3" },
-			{ "B_GEN_Van_02_vehicle_F", "call life_coplevel >= 4" },
-            { "C_Offroad_02_unarmed_black_F", "call life_coplevel >= 4" }
+            { "B_Quadbike_01_F", "call life_coplevel >= 1" }, //Quad Bike
+            { "C_Offroad_01_F", "call life_coplevel >= 1" }, //Offroad
+            { "C_SUV_01_F", "call life_coplevel >= 2" }, //SUV
+			{ "C_Hatchback_01_F", "call life_coplevel >= 2" }, //Hatchback
+            { "C_Hatchback_01_sport_F", "call life_coplevel >= 3" }, //Hatchback Sport
+			{ "B_GEN_Van_02_vehicle_F", "call life_coplevel >= 4" }, //Police Van
+            { "C_Offroad_02_unarmed_black_F", "call life_coplevel >= 4" } //MB 4WD Black
         };
     };
 
@@ -156,15 +156,16 @@ class CarShops {
         side = "cop";
         conditions = "mav_ttm_var_air == 1;";
         vehicles[] = {
-            { "B_Heli_Light_01_F", "call life_coplevel >= 3" },
-			{ "O_Heli_Light_02_unarmed_F", "call life_coplevel >= 4" },
-            { "O_T_VTOL_02_infantry_grey_F", "call life_coplevel >= 9" },
-            { "B_Heli_Transport_03_unarmed_F", "call life_coplevel >= 5" },
-			{ "I_Heli_light_03_unarmed_F", "call life_coplevel >= 6" },
-            { "C_Plane_Civil_01_F", "call life_coplevel >= 3" }
+            { "B_Heli_Light_01_F", "call life_coplevel >= 3" }, //MH-9 Hummingbird
+			{ "O_Heli_Light_02_unarmed_F", "call life_coplevel >= 4" }, //PO-30 Orca Unarmed
+            { "O_T_VTOL_02_infantry_grey_F", "call life_coplevel >= 9" }, //Y-32 Xi'an Infantry Transport
+            { "B_Heli_Transport_03_unarmed_F", "call life_coplevel >= 5" }, //CH-67 Huron Unarmed
+			{ "I_Heli_light_03_unarmed_F", "call life_coplevel >= 6" }, //WY-55 Hellcat Unarmed
+            { "C_Plane_Civil_01_F", "call life_coplevel >= 3" } //Caesar BTT
         };
     };
-
+	
+/*No Longer in Use
 	//Military Police
 	class mp_car {
         side = "cop";
@@ -172,7 +173,7 @@ class CarShops {
         vehicles[] = {
             { "I_MRAP_03_F", "" },
 			{ "I_MRAP_03_hmg_F", ""},
-			{ "C_SUV_01_F", "" }
+			{ "C_SUV_01_F", "" } //SUV
         };
     };
 
@@ -185,16 +186,17 @@ class CarShops {
         };
     };
 	//Military Police
+*/
 
     class cop_boat {
         side = "cop";
         conditions = "";
         vehicles[] = {
-            { "C_Scooter_Transport_01_F", "" },
-            { "C_Boat_Civil_01_police_F", "" },
-            { "C_Boat_Transport_02_F", "" },
-            { "B_Boat_Armed_01_minigun_F", "call life_coplevel >= 3" },
-            { "B_SDV_01_F", "" }
+            { "C_Scooter_Transport_01_F", "" }, //Water Scooter
+            { "C_Boat_Civil_01_police_F", "" }, //Motorboat Police
+            { "C_Boat_Transport_02_F", "" }, //RHIB
+            { "B_Boat_Armed_01_minigun_F", "call life_coplevel >= 3" }, //Speedboat Minigun
+            { "B_SDV_01_F", "" } //SDV
         };
     };
 };
