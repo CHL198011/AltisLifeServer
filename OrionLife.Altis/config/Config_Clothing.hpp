@@ -218,6 +218,7 @@ class Clothing {
         };
     };
 
+/* No Longer Used
 	class black {
         title = "Black Market";
         conditions = "";
@@ -382,7 +383,7 @@ class Clothing {
             { "B_Bergen_tna_f", "", 6500, "" } //Apex DLC
         };
     };
-
+*/
     class cop {
         title = "STR_Shops_C_Police";
         conditions = "";
@@ -419,6 +420,7 @@ class Clothing {
         };
     };
 
+/* No Longer Used
 	class mp {
         title = "STR_Shops_C_MP";
         conditions = "";
@@ -449,7 +451,7 @@ class Clothing {
 			{ "I_UAV_01_backpack_F", "", 3500, "" } // UAV Terminal AAF
         };
     };
-
+*/
 	class dtu {
         title = "STR_Shops_C_DTU";
         conditions = "";
