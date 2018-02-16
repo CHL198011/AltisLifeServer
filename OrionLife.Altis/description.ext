@@ -40,7 +40,9 @@ class CfgServer {
     */
 };
 
+#include "maverick\maverick_master.cpp"
 class RscTitles {
+	#include "maverick\maverick_titles_master.cpp"
     #include "dialog\progress.hpp"
     #include "dialog\hud_nameTags.hpp"
     #include "dialog\hud_stats.hpp"
@@ -568,5 +570,4 @@ class CfgNotifications {
 	};
 };
 
-#include "maverick\maverick_master.cpp"
 #include "Custom\IDSystem\Config_Perso.hpp"
