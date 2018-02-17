@@ -8,6 +8,7 @@
 */
 
 private ["_handle","_timeStamp","_extDB_notLoaded"];
+private _life_banking_pin_active = false;
 life_firstSpawn = true;
 life_session_completed = false;
 disableUserInput true;
@@ -180,15 +181,18 @@ switch (playerSide) do {
     };
 };
 
-if(life_bankingpin == 0 && getNumber(missionConfigFile >> "Life_Banking" >> "pin_system") isEqualTo 1) then {
-  0 cutText["","BLACK FADED"];
-  [-1] spawn life_fnc_createPinMenu;
-  waitUntil{!isNull (findDisplay 45010)};
-  waitUntil{isNull (findDisplay 45010)};
-  waitUntil{!isNull (findDisplay 45000)};
-  waitUntil{isNull (findDisplay 45000)};
-};
 
+
+if (_life_banking_pin_active) then {
+	if(life_bankingpin == 0 && getNumber(missionConfigFile >> "Life_Banking" >> "pin_system") isEqualTo 1) then {
+	  0 cutText["","BLACK FADED"];
+	  [-1] spawn life_fnc_createPinMenu;
+	  waitUntil{!isNull (findDisplay 45010)};
+	  waitUntil{isNull (findDisplay 45010)};
+	  waitUntil{!isNull (findDisplay 45000)};
+	  waitUntil{isNull (findDisplay 45000)};
+	};
+};
 
 player setVariable ["restrained",false,true];
 player setVariable ["Escorting",false,true];
