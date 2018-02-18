@@ -63,6 +63,7 @@ class CarShops {
             { "O_Heli_Light_02_unarmed_F", "" }, //PO-30 Orca Unarmed
             { "C_Plane_Civil_01_F", "" }, //Caesar BTT
             { "B_Heli_Transport_03_unarmed_F", "" }, //CH-67 Huron Unarmed
+			{ "O_Heli_Transport_04_F", "" }, //Mi-290 Taru SkyCrane
             { "O_Heli_Transport_04_bench_F", "" }, //Mi-290 Taru Bench
             { "O_Heli_Transport_04_box_F", "" } //Mi-290 Taru Cargo
         };
@@ -94,6 +95,8 @@ class CarShops {
             { "B_Heli_Light_01_stripped_F", "" }, //MH-9 Hummingbird Stripped
             { "I_Heli_light_03_unarmed_F", "" }, //WY-55 Hellcat Unarmed
             { "B_Heli_Transport_03_unarmed_F", "mav_ttm_var_rebel >= 2" }, //CH-67 Huron Unarmed
+			{ "Land_Pod_Heli_Transport_04_covered_F", "mav_ttm_var_rebel >= 5" }, //Mi-290 Taru Pod		
+			{ "O_Heli_Transport_04_F", "mav_ttm_var_rebel >= 2" }, //Mi-290 Taru SkyCrane
             { "O_Heli_Transport_04_bench_F", "mav_ttm_var_rebel >= 2" }, //Mi-290 Taru Bench
             { "O_Heli_Transport_04_box_F", "mav_ttm_var_rebel >= 2" },  //Mi-290 Taru Cargo
             { "O_Heli_Light_02_unarmed_F", "" } //PO-30 Orca Unarmed
@@ -522,6 +525,20 @@ class LifeCfgVehicles {
         textures[] = {};
     };
 
+	class Land_Pod_Heli_Transport_04_covered_F {
+        vItemSpace = 100;
+        conditions = "";
+        price = 450000;
+        textures[] = {};
+    };
+	
+	class O_Heli_Transport_04_F {
+        vItemSpace = 175;
+        conditions = "";
+        price = 480250;
+        textures[] = {};
+    };
+	
     class O_Heli_Transport_04_bench_F {
         vItemSpace = 200;
         conditions = "";
