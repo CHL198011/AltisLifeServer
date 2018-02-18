@@ -883,39 +883,140 @@ class VirtualItems {
     //end food.drink
 
     //alchohol
+//beer
     class beer {
 		variable = "beer";
 		displayName = "STR_Item_beer";
 		weight = 2;
-		buyPrice = 2000;
+		buyPrice = -1;
 		sellPrice = 1000;
 		illegal = false;
 		edible = 100;
 		icon = "images\icons\ico_beer.paa";
 	};
+	
+	class maltedbarley {
+		variable = "maltedbarley";
+		displayName = "Malted Barley";
+		weight = 2;
+		buyPrice = -1;
+		sellPrice = -1;
+		illegal = false;
+		edible = -1;
+		icon = "images\icons\ico_beer.paa";
+	};
+	
+    class starch {
+		variable = "starch";
+		displayName = "Starch";
+		weight = 2;
+		buyPrice = -1;
+		sellPrice = -1;
+		illegal = false;
+		edible = 100;
+		icon = "images\icons\ico_beer.paa";
+	};
 
+    class bitterwort {
+		variable = "bitterwort";
+		displayName = "Bitter Wort";
+		weight = 2;
+		buyPrice = -1;
+		sellPrice = -1;
+		illegal = false;
+		edible = 100;
+		icon = "images\icons\ico_beer.paa";	
+//beer
+//Whiskey
 	class whiskey {
 		variable = "whiskey";
 		displayName = "STR_Item_whiskey";
 		weight = 2;
-		buyPrice = 3000;
+		buyPrice = -1;
 		sellPrice = 1500;
-		illegal = false;
+		illegal = true;
 		edible = 100;
 		icon = "images\icons\ico_whiskey.paa";
 	};
-
-	class moonshine {
-		variable = "moonshine";
-		displayName = "STR_Item_moonshine";
+	
+	class distilledwhiskey {
+		variable = "distilledwhiskey";
+		displayName = "Distilled Whiskey";
 		weight = 2;
-		buyPrice = 3000;
-		sellPrice = 2500;
+		buyPrice = -1;
+		sellPrice = -1;
+		illegal = true;
+		edible = -1;
+		icon = "images\icons\ico_whiskey.paa";
+	};
+	
+	class mixedwhiskey {
+		variable = "mixedwhiskey";
+		displayName = "Mixed Whiskey";
+		weight = 2;
+		buyPrice = -1;
+		sellPrice = -1;
+		illegal = true;
+		edible = -1;
+		icon = "images\icons\ico_whiskey.paa";
+	};	
+	
+	class yeast {
+		variable = "yeast";
+		displayName = "Yeast";
+		weight = 2;
+		buyPrice = -1;
+		sellPrice = -1;
+		illegal = false;
+		edible = -1;
+		icon = "images\icons\ico_whiskey.paa";
+	};	
+//Whiskey
+//moonshine
+	class corn {
+		variable = "corn";
+		displayName = "Corn";
+		weight = 2;
+		buyPrice = -1;
+		sellPrice = -1;
 		illegal = false;
 		edible = 100;
 		icon = "images\icons\ico_moonshine.paa";
 	};
 
+	class mash {
+		variable = "mash";
+		displayName = "Mash";
+		weight = 2;
+		buyPrice = -1;
+		sellPrice = -1;
+		illegal = false;
+		edible = 100;
+		icon = "images\icons\ico_moonshine.paa";
+	};
+
+	class fermentedmash {
+		variable = "fermentedmash";
+		displayName = "Fermented Mash";
+		weight = 2;
+		buyPrice = -1;
+		sellPrice = -1;
+		illegal = false;
+		edible = 100;
+		icon = "images\icons\ico_moonshine.paa";
+	};
+	
+	class moonshine {
+		variable = "moonshine";
+		displayName = "STR_Item_moonshine";
+		weight = 2;
+		buyPrice = -1;
+		sellPrice = 2500;
+		illegal = true;
+		edible = 100;
+		icon = "images\icons\ico_moonshine.paa";
+	};
+//moonshine
     //end alch
 
     class debitcard {
