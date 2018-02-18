@@ -200,7 +200,13 @@ class VirtualShops {
         conditions = "";
         items[] = {"kidney" };
     };
-
+//Alcohol
+	class OrionsSpirits {
+        name = "Orion's Spirits & Liquor Store";
+        side = "civ";
+        conditions = "";
+        items[] = { "beer", "whiskey", "moonshine" };
+    };
 };
 
 class VirtualItems {
