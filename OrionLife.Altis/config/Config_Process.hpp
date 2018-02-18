@@ -219,4 +219,81 @@ class ProcessAction {
         NoLicenseCost = 2000;
     };
 	//Box's Additions
+	
+	
+	//Orion's Spirits & Liquor Store
+	//Whiskey
+	class distilledwhiskey {
+        MaterialsReq[] = {{"yeast",2}};
+        MaterialsGive[] = {{"distilledwhiskey",1}};
+        Text = "Fermenting Yeast";
+        //ScrollText = "Fermenting Yeast";
+        NoLicenseCost = 2000;
+    };
+	
+	class mixedwhiskey {
+        MaterialsReq[] = {{"distilledwhiskey",1}};
+        MaterialsGive[] = {{"mixedwhiskey",1}};
+        Text = "Mixing Distilled Whiskey";
+        //ScrollText = "Mixing Distilled Whiskey";
+        NoLicenseCost = 2000;
+    };
+	
+	class whiskey {
+        MaterialsReq[] = {{"mixedwhiskey",1}};
+        MaterialsGive[] = {{"whiskey",1}};
+        Text = "Bottling Whiskey";
+        //ScrollText = "Bottling Whiskey";
+        NoLicenseCost = 2000;
+    };	
+	//Beer
+	class starch {
+        MaterialsReq[] = {{"maltedbarley",1}};
+        MaterialsGive[] = {{"starch",1}};
+        Text = "Milling Barley";
+        //ScrollText = "Milling Barley";
+        NoLicenseCost = 2000;
+    };
+	
+	class bitterwort {
+        MaterialsReq[] = {{"starch",2}};
+        MaterialsGive[] = {{"bitterwort",1}};
+        Text = "Mashing Starch";
+        //ScrollText = "Mashing Starch";
+        NoLicenseCost = 2000;
+    };	
+	
+	class beer {
+        MaterialsReq[] = {{"bitterwort",1}};
+        MaterialsGive[] = {{"beer",1}};
+        Text = "Fermenting & Bottling Beer";
+        //ScrollText = "Fermenting & Bottling Beer";
+        NoLicenseCost = 2000;
+    };	
+	//Moonshine
+	class mash {
+        MaterialsReq[] = {{"corn",3}};
+        MaterialsGive[] = {{"mash",1}};
+        Text = "Grinding Corn";
+        //ScrollText = "Grinding Corn";
+        NoLicenseCost = 2000;
+    };
+	
+	class fermentedmash {
+        MaterialsReq[] = {{"mash",1}};
+        MaterialsGive[] = {{"fermentedmash",1}};
+        Text = "Fermenting Mash";
+        //ScrollText = "Fermenting Mash";
+        NoLicenseCost = 2000;
+    };	
+	
+	class moonshine {
+        MaterialsReq[] = {{"fermentedmash",1}};
+        MaterialsGive[] = {{"moonshine",1}};
+        Text = "Bottling Moonshine";
+        //ScrollText = "Bottling Moonshine";
+        NoLicenseCost = 2000;
+    };	
+	//Orion's Spirits & Liquor Store
+
 };
