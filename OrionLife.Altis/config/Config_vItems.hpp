@@ -923,9 +923,9 @@ class VirtualItems {
 		icon = "images\icons\ico_beer.paa";
 	};
 
-    class bitterwort {
-		variable = "bitterwort";
-		displayName = "Bitter Wort";
+    class hops {
+		variable = "hops";
+		displayName = "Hops";
 		weight = 2;
 		buyPrice = -1;
 		sellPrice = -1;
