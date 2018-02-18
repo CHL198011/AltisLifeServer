@@ -120,7 +120,35 @@ class Licenses {
         illegal = false;
         side = "civ";
     };
+	
+	//Orion's Spirits & Liquor Store
+	class whiskey {
+        variable = "WhiskeyLicense";
+        displayName = "Whiskey License";
+        price = 20000;
+        illegal = true;
+        side = "civ";
+    };
+	
+		class beer {
+        variable = "BeerLicense";
+        displayName = "Beer License";
+        price = 20000;
+        illegal = true;
+        side = "civ";
+    };
+	
+		class moonshine {
+        variable = "MoonshineLicense";
+        displayName = "Moonshine License";
+        price = 20000;
+        illegal = true;
+        side = "civ";
+    };
+	
+	//Orion's Spirits & Liquor Store
 
+	
 	//Box's Addition
 	class TobaccoLeaf {
         variable = "TobaccoLeaf";
