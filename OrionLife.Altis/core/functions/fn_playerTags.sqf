@@ -42,6 +42,8 @@ private _index = -1;
         if (count _sPos > 1 && {_distance < 15}) then {
             //_name = format ["<t color='#e6e6e6'>%1</t><br>",name _x];
             _pid = format ["<t color='#e6e6e6'>%1</t>",getPlayerUID _x];
+            // Daryl - When a player gets restrained it puts a stop sign and big blue letters notifying others around them that the player is restrained.
+            if (_x getVariable  ["restrained",true]) then {_pid = "<t align='center'><t size='2' color='#0000ff'>Restrained</t><br/><img size='3' color='#ffffff' image='images\icons\ico_handcuffsign.paa'/></t><br/><t align='center' color='#e6e6e6' " + _pid;};
             if (_x getVariable ["speaking",false]) then {_pid = "<t color='#e6e6e6'>[Speaking] " + _pid;};
             _idc ctrlSetStructuredText parseText _pid;
             _idc ctrlSetPosition [_sPos select 0, _sPos select 1, 0.4, 0.65];
