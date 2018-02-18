@@ -109,6 +109,27 @@ class CfgGather {
             //skill2 = 1;
             zoneSize = 30;
         };
+		
+		class yeast {
+            amount = 1;
+            zones[] = { "yeast_1" };
+            //skill2 = 1;
+            zoneSize = 30;
+        };
+		
+        class maltedbarley {
+            amount = 1;
+            zones[] = { "maltedbarley_1" };
+            //skill2 = 1;
+            zoneSize = 30;
+        };
+		
+        class starch {
+            amount = 1;
+            zones[] = { "starch_1" };
+            //skill2 = 1;
+            zoneSize = 30;
+        };		
     };
 
 /*
