@@ -909,7 +909,7 @@ class VirtualItems {
 		sellPrice = -1;
 		illegal = false;
 		edible = -1;
-		icon = "images\icons\ico_beer.paa";
+		icon = "images\icons\OrionsSpirits\barley.paa";
 	};
 	
     class starch {
@@ -920,7 +920,7 @@ class VirtualItems {
 		sellPrice = -1;
 		illegal = false;
 		edible = 100;
-		icon = "images\icons\ico_beer.paa";
+		icon = "images\icons\OrionsSpirits\starch.paa";
 	};
 
     class hops {
@@ -931,7 +931,7 @@ class VirtualItems {
 		sellPrice = -1;
 		illegal = false;
 		edible = 100;
-		icon = "images\icons\ico_beer.paa";	
+		icon = "images\icons\OrionsSpirits\hops.paa";	
 //beer
 //Whiskey
 	class whiskey {
@@ -953,7 +953,7 @@ class VirtualItems {
 		sellPrice = -1;
 		illegal = true;
 		edible = -1;
-		icon = "images\icons\ico_whiskey.paa";
+		icon = "images\icons\OrionsSpirits\distilledwhiskey.paa";
 	};
 	
 	class mixedwhiskey {
@@ -964,7 +964,7 @@ class VirtualItems {
 		sellPrice = -1;
 		illegal = true;
 		edible = -1;
-		icon = "images\icons\ico_whiskey.paa";
+		icon = "images\icons\OrionsSpirits\mixedwhiskey.paa";
 	};	
 	
 	class yeast {
@@ -975,7 +975,7 @@ class VirtualItems {
 		sellPrice = -1;
 		illegal = false;
 		edible = -1;
-		icon = "images\icons\ico_whiskey.paa";
+		icon = "images\icons\OrionsSpirits\yeast.paa";
 	};	
 //Whiskey
 //moonshine
@@ -987,7 +987,7 @@ class VirtualItems {
 		sellPrice = -1;
 		illegal = false;
 		edible = 100;
-		icon = "images\icons\ico_moonshine.paa";
+		icon = "images\icons\OrionsSpirits\corn.paa";
 	};
 
 	class mash {
@@ -998,7 +998,7 @@ class VirtualItems {
 		sellPrice = -1;
 		illegal = false;
 		edible = 100;
-		icon = "images\icons\ico_moonshine.paa";
+		icon = "images\icons\OrionsSpirits\mash.paa";
 	};
 
 	class fermentedmash {
@@ -1009,7 +1009,7 @@ class VirtualItems {
 		sellPrice = -1;
 		illegal = false;
 		edible = 100;
-		icon = "images\icons\ico_moonshine.paa";
+		icon = "images\icons\OrionsSpirits\fermmash.paa";
 	};
 	
 	class moonshine {
