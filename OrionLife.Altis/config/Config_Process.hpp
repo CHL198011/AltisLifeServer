@@ -255,9 +255,9 @@ class ProcessAction {
         NoLicenseCost = 2000;
     };
 	
-	class bitterwort {
+	class hops {
         MaterialsReq[] = {{"starch",2}};
-        MaterialsGive[] = {{"bitterwort",1}};
+        MaterialsGive[] = {{"hops",1}};
         Text = "Mashing Starch";
         //ScrollText = "Mashing Starch";
         NoLicenseCost = 2000;
