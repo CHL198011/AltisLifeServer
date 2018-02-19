@@ -10,7 +10,7 @@ private ["_nearVehicles","_vehicle"];
 if !(isNull objectParent player) then {
     _vehicle = vehicle player;
 } else {
-    _nearVehicles = nearestObjects[getPos (_this select 0),["Car","Air","Ship"],30]; //Fetch vehicles within 30m.
+    _nearVehicles = nearestObjects[getPos (_this select 0),["Car","Air","Ship","Land_Pod_Heli_Transport_04_covered_F"],30]; //Fetch vehicles within 30m.
     if (count _nearVehicles > 0) then {
         {
             if (!isNil "_vehicle") exitWith {}; //Kill the loop.
