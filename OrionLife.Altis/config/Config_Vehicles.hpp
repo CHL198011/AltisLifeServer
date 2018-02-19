@@ -72,7 +72,7 @@ class CarShops {
         side = "civ";
         conditions = "mav_ttm_var_air == 1;";
         vehicles[] = {
-            { "C_Plane_Civil_01_F", ""  //Caesar BTT
+            { "C_Plane_Civil_01_F", "" }  //Caesar BTT
         };
     };
 
