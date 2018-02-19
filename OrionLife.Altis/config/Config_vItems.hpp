@@ -931,7 +931,8 @@ class VirtualItems {
 		sellPrice = -1;
 		illegal = false;
 		edible = 100;
-		icon = "images\icons\OrionsSpirits\hops.paa";	
+		icon = "images\icons\OrionsSpirits\hops.paa";
+    };
 //beer
 //Whiskey
 	class whiskey {
