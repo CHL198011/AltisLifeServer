@@ -170,7 +170,14 @@ class CarShops {
 			{ "O_Heli_Light_02_unarmed_F", "call life_coplevel >= 4" }, //PO-30 Orca Unarmed
             { "O_T_VTOL_02_infantry_grey_F", "call life_coplevel >= 9" }, //Y-32 Xi'an Infantry Transport
             { "B_Heli_Transport_03_unarmed_F", "call life_coplevel >= 5" }, //CH-67 Huron Unarmed
-			{ "I_Heli_light_03_unarmed_F", "call life_coplevel >= 6" }, //WY-55 Hellcat Unarmed
+			{ "I_Heli_light_03_unarmed_F", "call life_coplevel >= 6" } //WY-55 Hellcat Unarmed
+        };
+    };
+	
+	class cop_plane {
+        side = "cop";
+        conditions = "mav_ttm_var_air == 1;";
+        vehicles[] = {
             { "C_Plane_Civil_01_F", "call life_coplevel >= 3" } //Caesar BTT
         };
     };
