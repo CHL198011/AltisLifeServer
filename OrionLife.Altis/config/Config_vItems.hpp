@@ -304,7 +304,7 @@ class VirtualItems {
         variable = "speedbomb";
         displayName = "STR_Item_speedbomb";
         weight = 8;
-        buyPrice = 250000;
+        buyPrice = 550000;
         sellPrice = 25000;
         illegal = true;
         edible = -1;
