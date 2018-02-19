@@ -34,7 +34,7 @@ class Clothing {
 			{ "U_C_ConstructionCoverall_Vrana_F", "", 2500, "" },
 			{ "U_C_Mechanic_01_F", "", 2500, "" }, //LOW
             { "U_C_Poloshirt_stripped", "Poloshirt stripped", 125, "" },
-            { "U_C_Poloshirt_redwhite", "Poloshirt Red/White", 150, "" },
+            { "U_C_Poloshirt_redwhite", "Poloshirt Red/White", 150, "" },	
             { "U_C_Poloshirt_salmon", "Poloshirt Salmon", 175, "" },
             { "U_C_Poloshirt_blue", "Poloshirt Blue / Monster", 250, "" },
             { "U_C_Poor_2", "Rag tagged clothes", 250, "" },
@@ -949,6 +949,8 @@ class Clothing {
 			{ "H_HelmetSpecB_blk", "", 7500 "" },
 			{ "H_HelmetLeaderO_ghex_F", "", 50000, "" },
 			{ "H_HelmetSpecO_ghex_F", "", 75000, "" },
+			{ "H_HelmetSpecO_blk", "", 75000, "" },
+			{ "H_HelmetSpecO_ocamo", "", 75000, "" },
 			{ "H_PilotHelmetFighter_O", "", 100000, "" },
 			{ "H_PilotHelmetFighter_B", "", 100000, "" },
 			{ "H_PilotHelmetFighter_I", "", 100000, "" },
