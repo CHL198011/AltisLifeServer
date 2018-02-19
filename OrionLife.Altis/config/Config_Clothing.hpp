@@ -744,7 +744,11 @@ class Clothing {
 			{ "H_HelmetSpecB_blk", "", 7500 "" },
 			{ "H_HelmetLeaderO_ghex_F", "", 50000, "" },
 			{ "H_HelmetSpecO_ghex_F", "", 75000, "" },
+			{ "H_HelmetSpecO_blk", "", 75000, "" },
+			{ "H_HelmetSpecO_ocamo", "", 75000, "" },
 			{ "H_PilotHelmetFighter_O", "", 100000, "" },
+			{ "H_PilotHelmetFighter_B", "", 100000, "" },
+			{ "H_PilotHelmetFighter_I", "", 100000, "" },
 			{ "H_CrewHelmetHeli_B", "Gas Mask", 80000, "" }
         };
         goggles[] = {
@@ -946,6 +950,8 @@ class Clothing {
 			{ "H_HelmetLeaderO_ghex_F", "", 50000, "" },
 			{ "H_HelmetSpecO_ghex_F", "", 75000, "" },
 			{ "H_PilotHelmetFighter_O", "", 100000, "" },
+			{ "H_PilotHelmetFighter_B", "", 100000, "" },
+			{ "H_PilotHelmetFighter_I", "", 100000, "" },
 			{ "H_CrewHelmetHeli_B", "Gas Mask", 80000, "" }
         };
         goggles[] = {
@@ -1139,7 +1145,11 @@ class Clothing {
 			{ "H_HelmetSpecB_blk", "", 7500 "call life_donorlevel >= 1" },
 			{ "H_HelmetLeaderO_ghex_F", "", 50000, "call life_donorlevel >= 1" },
 			{ "H_HelmetSpecO_ghex_F", "", 75000, "call life_donorlevel >= 1" },
+			{ "H_HelmetSpecO_blk", "", 75000, "call life_donorlevel >= 1" },
+			{ "H_HelmetSpecO_ocamo", "", 75000, "call life_donorlevel >= 1" },
 			{ "H_PilotHelmetFighter_O", "", 20000, "call life_donorlevel >= 1" },
+			{ "H_PilotHelmetFighter_B", "", 20000, "call life_donorlevel >= 1" },
+			{ "H_PilotHelmetFighter_I", "", 20000, "call life_donorlevel >= 1" },
 			{ "H_CrewHelmetHeli_B", "Gas Mask", 40000, "call life_donorlevel >= 1" },
 			{ "H_PilotHelmetHeli_B", "Gas Mask", 10000, "call life_donorlevel >= 1" },
 			{ "H_PilotHelmetHeli_O", "Gas Mask", 10000, "call life_donorlevel >= 1" },
