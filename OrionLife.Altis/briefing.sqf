@@ -12,6 +12,7 @@ player createDiarySubject ["safezones","Safe Zones (No Killing)"];
 player createDiarySubject ["redzones","Red Zones (KOS)"];
 player createDiarySubject ["illegalitems","Illegal Activity"];
 //player createDiarySubject ["terrorrules","Terrorism Rules"];
+player createDiarySubject ["gatherprocess","Gathering & Processing"];
 player createDiarySubject ["controls","Controls"];
 
 /*  Example
@@ -810,7 +811,17 @@ The following items are illegal to posses:<br/><br/>
                 "
         ]
     ];
+//Gather & Process Section
 
+	player createDiaryRecord ["gatherprocess",
+		[
+			"Gathering & Processing",
+				"
+Oil: Oil Fields > Oil Processing > Oil Trader <br/>
+				"
+		]
+	];
+				
 // Controls Section
 
     player createDiaryRecord ["controls",
@@ -852,6 +863,10 @@ Left Ctrl + H: Revert holster action.<br/>
 Shift + Spacebar: Jump.<br/>
 Left Shift + O: (un)fade sound (ear plugs).<br/>
 Pullout Players: Automine with Tempest Device<br/>
+G: Warning Indicators.<br/>
+Q: Left Turn Signal (in Vehicle).<br/>
+E: Right Turn Signal (in Vehicle).<br/>
+Windows Key: Gather/Interact with Vehicle.<br/>
                 "
         ]
     ];
