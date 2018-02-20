@@ -120,9 +120,9 @@ switch(_craft) do
     case "attach":
     {
         _return = [
-				["muzzle_snds_acp",["barrel",2, "cloth",2]], // 9mm suppressor 
+				["muzzle_snds_L",["barrel",2, "cloth",2]], // 9mm suppressor 
 				["muzzle_snds_acp",["barrel",3, "cloth",2]], // .45 suppressor 
-				["muzzle_snds_H",["barrel",3, "cloth",4]], // 5.6 suppressor 
+				["muzzle_snds_M",["barrel",3, "cloth",4]], // 5.6 suppressor 
 				["muzzle_snds_H",["barrel",5, "cloth",5]], //37.5k - 6.5 suppressor 
 				["muzzle_snds_B",["barrel",7, "cloth",6]] //50k - 7.62 suppressor 
 			];
