@@ -112,7 +112,7 @@ class CarShops {
 
     class Gang_Vehicles {
         side = "civ";
-        conditions = '_b = (nearestObjects[getPosATL player,["Land_u_Barracks_V2_F","Land_i_Barracks_V2_F"],25]) select 0;  !isNil {_b getVariable "gangOwner"} && {(_b getVariable "gangOwner") == (group player)}';
+        conditions = "_b = (nearestObjects[getPosATL player,[\"Land_u_Barracks_V2_F\",\"Land_i_Barracks_V2_F\"],25]) select 0;  !isNil {_b getVariable \"gangOwner\"} && {(_b getVariable \"gangOwner\") == (group player)}";
         vehicles[] = {
             { "B_Quadbike_01_F", "" }, //Quad Bike
             { "B_G_Offroad_01_F", "" }, //Offroad
