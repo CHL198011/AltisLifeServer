@@ -110,6 +110,28 @@ class CarShops {
         };
     };
 
+    class Gang_Vehicles {
+        side = "civ";
+        conditions = '_b = (nearestObjects[getPosATL player,["Land_u_Barracks_V2_F","Land_i_Barracks_V2_F"],25]) select 0;  !isNil {_b getVariable "gangOwner"} && {(_b getVariable "gangOwner") == (group player)}';
+        vehicles[] = {
+            { "B_Quadbike_01_F", "" }, //Quad Bike
+            { "B_G_Offroad_01_F", "" }, //Offroad
+            { "O_MRAP_02_F", "mav_ttm_var_rebel >= 2" }, //Ifrit
+            { "O_G_Offroad_01_armed_F", "mav_ttm_var_rebel >= 3" }, //Offroad Armed
+            { "O_T_LSV_02_unarmed_F", "" }, //Qilin Unarmed
+            { "B_T_LSV_01_unarmed_F", "" }, //Prowler Unarmed
+            { "B_G_Van_02_vehicle_F", "" }, //Van Cargo
+            { "B_Heli_Light_01_stripped_F", "" }, //MH-9 Hummingbird Stripped
+            { "I_Heli_light_03_unarmed_F", "" }, //WY-55 Hellcat Unarmed
+            { "B_Heli_Transport_03_unarmed_F", "mav_ttm_var_rebel >= 2" }, //CH-67 Huron Unarmed
+			{ "Land_Pod_Heli_Transport_04_covered_F", "mav_ttm_var_rebel >= 5" }, //Mi-290 Taru Pod		
+			{ "O_Heli_Transport_04_F", "mav_ttm_var_rebel >= 2" }, //Mi-290 Taru SkyCrane
+            { "O_Heli_Transport_04_bench_F", "mav_ttm_var_rebel >= 2" }, //Mi-290 Taru Bench
+            { "O_Heli_Transport_04_box_F", "mav_ttm_var_rebel >= 2" },  //Mi-290 Taru Cargo
+            { "O_Heli_Light_02_unarmed_F", "" } //PO-30 Orca Unarmed
+        };
+    };
+
     class med_shop {
         side = "med";
         conditions = "";
