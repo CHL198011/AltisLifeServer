@@ -463,7 +463,7 @@ class Clothing {
         };
     };
 
-    class GangHideout {
+    class gang_clothing {
         title = "STR_Shops_C_Gang";
         conditions = "";
         side = "civ";

@@ -109,7 +109,7 @@ class WeaponShops {
         };
     };
 
-    class GangHideout {
+    class gang {
         name = "Hideout Armament";
         side = "civ";
         conditions = "";
