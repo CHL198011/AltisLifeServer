@@ -325,58 +325,58 @@ class LifeCfgVehicles {
         price = 150000;
         textures[] = {
             { "Racing (Tan Interior)", "civ", {
-                "A3\Air_F_Exp\Plane_Civil_01\Data\btt_ext_01_Racer_co.paa",
-                "A3\Air_F_Exp\Plane_Civil_01\Data\btt_ext_02_Racer_co.paa",
-                "A3\Air_F_Exp\Plane_Civil_01\Data\btt_int_01_tan_co.paa",
-                "A3\Air_F_Exp\Plane_Civil_01\Data\btt_int_02_tan_co.paa"
+                "\a3\Air_F_Exp\Plane_Civil_01\Data\btt_ext_01_Racer_co.paa",
+                "\a3\Air_F_Exp\Plane_Civil_01\Data\btt_ext_02_Racer_co.paa",
+                "\a3\Air_F_Exp\Plane_Civil_01\Data\btt_int_01_tan_co.paa",
+                "\a3\Air_F_Exp\Plane_Civil_01\Data\btt_int_02_tan_co.paa"
             }, "" },
             { "Racing", "civ", {
-                "A3\Air_F_Exp\Plane_Civil_01\Data\btt_ext_01_Racer_co.paa",
-                "A3\Air_F_Exp\Plane_Civil_01\Data\btt_ext_02_Racer_co.paa",
-                "A3\Air_F_Exp\Plane_Civil_01\Data\btt_int_01_co.paa",
-                "A3\Air_F_Exp\Plane_Civil_01\Data\btt_int_02_co.paa"
+                "\a3\Air_F_Exp\Plane_Civil_01\Data\btt_ext_01_Racer_co.paa",
+                "\a3\Air_F_Exp\Plane_Civil_01\Data\btt_ext_02_Racer_co.paa",
+                "\a3\Air_F_Exp\Plane_Civil_01\Data\btt_int_01_co.paa",
+                "\a3\Air_F_Exp\Plane_Civil_01\Data\btt_int_02_co.paa"
             }, "" },
             { "Red Line (Tan Interior)", "civ", {
-                "A3\Air_F_Exp\Plane_Civil_01\Data\btt_ext_01_RedLine_co.paa",
-                "A3\Air_F_Exp\Plane_Civil_01\Data\btt_ext_02_RedLine_co.paa",
-                "A3\Air_F_Exp\Plane_Civil_01\Data\btt_int_01_tan_co.paa",
-                "A3\Air_F_Exp\Plane_Civil_01\Data\btt_int_02_tan_co.paa"
+                "\a3\Air_F_Exp\Plane_Civil_01\Data\btt_ext_01_RedLine_co.paa",
+                "\a3\Air_F_Exp\Plane_Civil_01\Data\btt_ext_02_RedLine_co.paa",
+                "\a3\Air_F_Exp\Plane_Civil_01\Data\btt_int_01_tan_co.paa",
+                "\a3\Air_F_Exp\Plane_Civil_01\Data\btt_int_02_tan_co.paa"
             }, "" },
             { "Red Line", "civ", {
-                "A3\Air_F_Exp\Plane_Civil_01\Data\btt_ext_01_RedLine_co.paa",
-                "A3\Air_F_Exp\Plane_Civil_01\Data\btt_ext_02_RedLine_co.paa",
-                "A3\Air_F_Exp\Plane_Civil_01\Data\btt_int_01_co.paa",
-                "A3\Air_F_Exp\Plane_Civil_01\Data\btt_int_02_co.paa"
+                "\a3\Air_F_Exp\Plane_Civil_01\Data\btt_ext_01_RedLine_co.paa",
+                "\a3\Air_F_Exp\Plane_Civil_01\Data\btt_ext_02_RedLine_co.paa",
+                "\a3\Air_F_Exp\Plane_Civil_01\Data\btt_int_01_co.paa",
+                "\a3\Air_F_Exp\Plane_Civil_01\Data\btt_int_02_co.paa"
             }, "" },
             { "Tribal (Tan Interior)", "civ", {
-                "A3\Air_F_Exp\Plane_Civil_01\Data\btt_ext_01_Tribal_co.paa",
-                "A3\Air_F_Exp\Plane_Civil_01\Data\btt_ext_02_Tribal_co.paa",
-                "A3\Air_F_Exp\Plane_Civil_01\Data\btt_int_01_tan_co.paa",
-                "A3\Air_F_Exp\Plane_Civil_01\Data\btt_int_02_tan_co.paa"
+                "\a3\Air_F_Exp\Plane_Civil_01\Data\btt_ext_01_Tribal_co.paa",
+                "\a3\Air_F_Exp\Plane_Civil_01\Data\btt_ext_02_Tribal_co.paa",
+                "\a3\Air_F_Exp\Plane_Civil_01\Data\btt_int_01_tan_co.paa",
+                "\a3\Air_F_Exp\Plane_Civil_01\Data\btt_int_02_tan_co.paa"
             }, "" },
             { "Tribal", "civ", {
-                "A3\Air_F_Exp\Plane_Civil_01\Data\btt_ext_01_Tribal_co.paa",
-                "A3\Air_F_Exp\Plane_Civil_01\Data\btt_ext_02_Tribal_co.paa",
-                "A3\Air_F_Exp\Plane_Civil_01\Data\btt_int_01_co.paa",
-                "A3\Air_F_Exp\Plane_Civil_01\Data\btt_int_02_co.paa"
+                "\a3\Air_F_Exp\Plane_Civil_01\Data\btt_ext_01_Tribal_co.paa",
+                "\a3\Air_F_Exp\Plane_Civil_01\Data\btt_ext_02_Tribal_co.paa",
+                "\a3\Air_F_Exp\Plane_Civil_01\Data\btt_int_01_co.paa",
+                "\a3\Air_F_Exp\Plane_Civil_01\Data\btt_int_02_co.paa"
             }, "" },
             { "Blue Wave (Tan Interior)", "civ", {
-                "A3\Air_F_Exp\Plane_Civil_01\Data\btt_ext_01_Wave_co.paa",
-                "A3\Air_F_Exp\Plane_Civil_01\Data\btt_ext_02_Wave_co.paa",
-                "A3\Air_F_Exp\Plane_Civil_01\Data\btt_int_01_tan_co.paa",
-                "A3\Air_F_Exp\Plane_Civil_01\Data\btt_int_02_tan_co.paa"
+                "\a3\Air_F_Exp\Plane_Civil_01\Data\btt_ext_01_Wave_co.paa",
+                "\a3\Air_F_Exp\Plane_Civil_01\Data\btt_ext_02_Wave_co.paa",
+                "\a3\Air_F_Exp\Plane_Civil_01\Data\btt_int_01_tan_co.paa",
+                "\a3\Air_F_Exp\Plane_Civil_01\Data\btt_int_02_tan_co.paa"
             }, "" },
             { "Blue Wave", "civ", {
-                "A3\Air_F_Exp\Plane_Civil_01\Data\btt_ext_01_Wave_co.paa",
-                "A3\Air_F_Exp\Plane_Civil_01\Data\btt_ext_02_Wave_co.paa",
-                "A3\Air_F_Exp\Plane_Civil_01\Data\btt_int_01_co.paa",
-                "A3\Air_F_Exp\Plane_Civil_01\Data\btt_int_02_co.paa"
+                "\a3\Air_F_Exp\Plane_Civil_01\Data\btt_ext_01_Wave_co.paa",
+                "\a3\Air_F_Exp\Plane_Civil_01\Data\btt_ext_02_Wave_co.paa",
+                "\a3\Air_F_Exp\Plane_Civil_01\Data\btt_int_01_co.paa",
+                "\a3\Air_F_Exp\Plane_Civil_01\Data\btt_int_02_co.paa"
             }, "" },
             { "Spy Plane", "cop", {
                 "#(argb,8,8,3)color(0.05,0.05,0.05,1)",
                 "#(argb,8,8,3)color(0.05,0.05,0.05,1)",
-                "A3\Air_F_Exp\Plane_Civil_01\Data\btt_int_01_co.paa",
-                "A3\Air_F_Exp\Plane_Civil_01\Data\btt_int_02_co.paa"
+                "\a3\Air_F_Exp\Plane_Civil_01\Data\btt_int_01_co.paa",
+                "\a3\Air_F_Exp\Plane_Civil_01\Data\btt_int_02_co.paa"
             }, "" }
         };
     };
@@ -567,19 +567,19 @@ class LifeCfgVehicles {
         price = 1325000;
         textures[] = {
 			{ "Green", "civ", {
-                "a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_1_dahoman_co.paa",
-                "a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_2_dahoman_co.paa",
-				"a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_3_dahoman_co.paa"
+                "\a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_1_dahoman_co.paa",
+                "\a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_2_dahoman_co.paa",
+				"\a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_3_dahoman_co.paa"
             }, "" },
 			{ "Black", "civ", {
-                "a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_1_ion_co.paa",
-                "a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_2_ion_co.paa",
-				"a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_3_ion_co.paa"
+                "\a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_1_ion_co.paa",
+                "\a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_2_ion_co.paa",
+				"\a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_3_ion_co.paa"
             }, "" },
 			{ "Medic Mohawk", "med", {
-                "a3\air_f_beta\Heli_Transport_02\Data\Heli_Transport_02_1_INDP_CO.paa",
-                "a3\air_f_beta\Heli_Transport_02\Data\Heli_Transport_02_2_INDP_CO.paa",
-				"a3\air_f_beta\Heli_Transport_02\Data\Heli_Transport_02_3_INDP_CO.paa"
+                "\a3\air_f_beta\Heli_Transport_02\Data\Heli_Transport_02_1_INDP_CO.paa",
+                "\a3\air_f_beta\Heli_Transport_02\Data\Heli_Transport_02_2_INDP_CO.paa",
+				"\a3\air_f_beta\Heli_Transport_02\Data\Heli_Transport_02_3_INDP_CO.paa"
             }, "" },
 		};
     };
@@ -801,8 +801,8 @@ class LifeCfgVehicles {
         price = 750000;
         textures[] = {
 			{ "Arid", "civ", {
-                "a3\soft_f\MRAP_02\data\MRAP_02_ext_01_co.paa",
-				"a3\soft_f\MRAP_02\data\MRAP_02_ext_02_co.paa"
+                "\a3\soft_f\MRAP_02\data\MRAP_02_ext_01_co.paa",
+				"\a3\soft_f\MRAP_02\data\MRAP_02_ext_02_co.paa"
             }, "" },
 			{ "Urban", "civ", {
                 "images\Textures\Donator\IfritUrbanBody.paa",
