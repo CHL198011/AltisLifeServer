@@ -62,6 +62,7 @@ class CarShops {
             { "B_Heli_Light_01_F", "" }, //MH-9 Hummingbird
             { "O_Heli_Light_02_unarmed_F", "" }, //PO-30 Orca Unarmed
             { "B_Heli_Transport_03_unarmed_F", "" }, //CH-67 Huron Unarmed
+			{ "I_Heli_Transport_02_F", "" }, //CH-49 Mohawk
 			{ "O_Heli_Transport_04_F", "" }, //Mi-290 Taru SkyCrane
             { "O_Heli_Transport_04_bench_F", "" }, //Mi-290 Taru Bench
             { "O_Heli_Transport_04_box_F", "" } //Mi-290 Taru Cargo
@@ -560,6 +561,29 @@ class LifeCfgVehicles {
         textures[] = {};
     };
 
+	class I_Heli_Transport_02_F {
+        vItemSpace = 300;
+        conditions = "";
+        price = 1325000;
+        textures[] = {
+			{ "Green", "civ", {
+                "a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_1_dahoman_co.paa",
+                "a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_2_dahoman_co.paa",
+				"a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_3_dahoman_co.paa"
+            }, "" },
+			{ "Black", "civ", {
+                "a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_1_ion_co.paa",
+                "a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_2_ion_co.paa",
+				"a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_3_ion_co.paa"
+            }, "" },
+			{ "Medic Mohawk", "med", {
+                "a3\air_f_beta\Heli_Transport_02\Data\Heli_Transport_02_1_INDP_CO.paa",
+                "a3\air_f_beta\Heli_Transport_02\Data\Heli_Transport_02_2_INDP_CO.paa",
+				"a3\air_f_beta\Heli_Transport_02\Data\Heli_Transport_02_3_INDP_CO.paa"
+            }, "" },
+		};
+    };
+	
     class O_Heli_Transport_04_box_F {
         vItemSpace = 350;
         conditions = "";
