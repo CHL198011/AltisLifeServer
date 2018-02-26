@@ -114,22 +114,20 @@ class WeaponShops {
         side = "civ";
         conditions = "";
         items[] = {
-            { "NVGoggles_OPFOR", "", 5000, 75, ""}, //Black NightVision
             { "Binocular", "", 150, 75, "" },      //Binocular
             { "ItemGPS", "", 100, 50, "" },       //GPS
 			{ "hgun_Rook40_F", "", 5000, -1, "" }, //Rook
             { "hgun_Pistol_heavy_02_F", "", 7500, -1, "" }, //Zubr
             { "hgun_ACPC2_F", "", 15000, -1, "" }, //45 ACP
 			{ "hgun_PDW2000_F", "", 20000, -1, "" }, //PDW
-			{ "SMG_05_F", "", 25000, -1, "mav_ttm_var_rebel >= 1" }, //Protector
-            { "SMG_01_F", "", 30000, -1, "mav_ttm_var_rebel >= 1" }, //vermin
-			{ "arifle_MXC_F", "", 35000, -1, "mav_ttm_var_rebel >= 1" }, //mxc 5.56
-			{ "arifle_MX_F", "", 35000, -1, "mav_ttm_var_rebel >= 1" }, //mx 5.56
-			{ "arifle_MXM_F", "", 50000, -1, "mav_ttm_var_rebel >= 1" }, //mxm 5.56
-			{ "arifle_SDAR_F", "", 45000, -1, "mav_ttm_var_rebel >= 1" }, //sdar 5.56
-			{ "arifle_Mk20_plain_F", "", 50000, -1, "mav_ttm_var_rebel >= 1" }, //mk20 5.56
-            { "arifle_TRG21_F", "", 50000, -1, "mav_ttm_var_rebel >= 1" }, //TRG21 5.56
-            { "arifle_SPAR_01_khk_F", "", 65000, -1, "mav_ttm_var_rebel >= 1" } //spar16 5.56
+			{ "SMG_05_F", "", 25000, -1, "" }, //Protector
+            { "SMG_01_F", "", 30000, -1, "" }, //vermin
+			{ "arifle_MXC_F", "", 35000, -1, "" }, //mxc 5.56
+			{ "arifle_MX_F", "", 35000, -1, "" }, //mx 5.56
+			{ "arifle_SDAR_F", "", 45000, -1, "" }, //sdar 5.56
+			{ "arifle_Mk20_plain_F", "", 50000, -1, "" }, //mk20 5.56
+            { "arifle_TRG21_F", "", 50000, -1, "" }, //TRG21 5.56
+            { "arifle_SPAR_01_khk_F", "", 65000, -1, "" } //spar16 5.56
 			
         };
         mags[] = {
@@ -137,10 +135,10 @@ class WeaponShops {
 			{ "30Rnd_9x21_Mag_SMG_02", "", 100, 50, "" }, //9mm
             { "6Rnd_45ACP_Cylinder", "", 100, 50, "" }, //zubr
             { "9Rnd_45ACP_Mag", "", 100, 50, "" }, //acp
-			{ "20Rnd_556x45_UW_mag", "", 100, 50, "mav_ttm_var_rebel >= 1" }, //sdar
-            { "30Rnd_556x45_Stanag", "", 100, 50, "mav_ttm_var_rebel >= 1" }, //sdar,mk20,trg21,spar16
-			{ "30Rnd_45ACP_Mag_SMG_01", "", 100, 50, "mav_ttm_var_rebel >= 1" }, //vermin
-			{ "30Rnd_65x39_caseless_mag", "", 200, 100, "mav_ttm_var_rebel >= 1" } //mx mxc mxm
+			{ "20Rnd_556x45_UW_mag", "", 100, 50, "" }, //sdar
+            { "30Rnd_556x45_Stanag", "", 100, 50, "" }, //sdar,mk20,trg21,spar16
+			{ "30Rnd_45ACP_Mag_SMG_01", "", 100, 50, "" }, //vermin
+			{ "30Rnd_65x39_caseless_mag", "", 200, 100, "" } //mx mxc mxm
         };
         accs[] = {
             { "optic_ACO_grn_smg", "", 2500, 1250, "" }, //aco
@@ -153,9 +151,7 @@ class WeaponShops {
             { "optic_Hamr", "", 2500, -1, "" }, //rco
 			{ "optic_DMS", "", 10000, -1, "" }, //dms
 			{ "acc_flashlight", "", 750, 375, "" }, //flashlight
-			{ "acc_pointer_IR", "", 2500, 375, "" }, //laser
-			{ "acc_flashlight_pistol", "", 750, 375, "" }, //flashlight
-			{ "bipod_01_F_blk", "", 2500, -1, "" } //bipod
+			{ "acc_flashlight_pistol", "", 750, 375, "" } //pistol flashlight
         };
     };
 
