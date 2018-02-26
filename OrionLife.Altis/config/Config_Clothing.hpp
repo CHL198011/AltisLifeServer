@@ -552,7 +552,7 @@ class Clothing {
             { "V_TacVest_blk", "", 2150, "" },
             { "V_TacVest_camo", "", 2150, "" },
             { "V_TacVestCamo_khk", "", 2150, "" },
-            { "V_I_G_resistanceLeader_F", "", 2150, "" },
+            { "V_I_G_resistanceLeader_F", "", 2150, "" }
         };
         backpacks[] = {
             { "NONE", $STR_C_Remove_backpacks, 0, "" },
