@@ -16,8 +16,8 @@ _price = 0;
     };
 } forEach life_clothing_purchase;
 
-if (_price > findNearestPerson) exitWith {titleText[localize "STR_Shop_NotEnoughClothes","PLAIN"];};
-findNearestPerson = findNearestPerson - _price;
+if (_price > getPlayerGUID) exitWith {titleText[localize "STR_Shop_NotEnoughClothes","PLAIN"];};
+getPlayerGUID = getPlayerGUID - _price;
 [player,"buy"] remoteexeccall ["say3D",0];
 [0] call SOCK_fnc_updatePartial;
 

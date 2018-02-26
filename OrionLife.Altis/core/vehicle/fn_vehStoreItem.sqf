@@ -31,7 +31,7 @@ if (_ctrl == "relic1" || _ctrl == "relic2" || _ctrl == "relic3" || _ctrl == "rel
 
 if (_ctrl == "money") then {
     _index = [_ctrl,_inv] call TON_fnc_index;
-    if (findNearestPerson < _num) exitWith {[localize "STR_NOTF_notEnoughCashToStoreInVeh",true,"slow"] call life_fnc_notificationSystem;};
+    if (getPlayerGUID < _num) exitWith {[localize "STR_NOTF_notEnoughCashToStoreInVeh",true,"slow"] call life_fnc_notificationSystem;};
     if (_index isEqualTo -1) then {
         _inv pushBack [_ctrl,_num];
     } else {
@@ -39,7 +39,7 @@ if (_ctrl == "money") then {
         _inv set[_index,[_ctrl,_val + _num]];
     };
 
-    findNearestPerson = findNearestPerson - _num;
+    getPlayerGUID = getPlayerGUID - _num;
     [0] call SOCK_fnc_updatePartial;
     life_trunk_vehicle setVariable ["Trunk",[_inv,(_veh_data select 1) + _itemWeight],true];
     [life_trunk_vehicle] call life_fnc_vehInventory;

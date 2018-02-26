@@ -19,7 +19,7 @@ if (_amount > 100) exitWith {["You can't buy more than 100 items",true,"slow"] c
 if (_diff <= 0) exitWith {hint localize "STR_NOTF_NoSpace"};
 _amount = _diff;
 _hideout = (nearestObjects[getPosATL player,["Land_u_Barracks_V2_F","Land_i_Barracks_V2_F"],25]) select 0;
-if ((_price * _amount) > findNearestPerson && {!isNil "_hideout" && {!isNil {group player getVariable "gang_bank"}} && {(group player getVariable "gang_bank") <= _price * _amount}}) exitWith {hint localize "STR_NOTF_NotEnoughMoney"};
+if ((_price * _amount) > getPlayerGUID && {!isNil "_hideout" && {!isNil {group player getVariable "gang_bank"}} && {(group player getVariable "gang_bank") <= _price * _amount}}) exitWith {hint localize "STR_NOTF_NotEnoughMoney"};
 if ((time - life_action_delay) < 1.5) exitWith {[localize "STR_NOTF_ActionDelay",true,"slow"] call life_fnc_notificationSystem;};
 life_action_delay = time;
 
@@ -30,7 +30,7 @@ if ([true,_type,_amount] call life_fnc_handleInv) then {
         _action = [
             format[(localize "STR_Shop_Virt_Gang_FundsMSG")+ "<br/><br/>" +(localize "STR_Shop_Virt_Gang_Funds")+ " <t color='#8cff9b'>%1$</t><br/>" +(localize "STR_Shop_Virt_YourFunds")+ " <t color='#8cff9b'>%2$</t>",
                 [(group player getVariable "gang_bank")] call life_fnc_numberText,
-                [findNearestPerson] call life_fnc_numberText
+                [getPlayerGUID] call life_fnc_numberText
             ],
             localize "STR_Shop_Virt_YourorGang",
             localize "STR_Shop_Virt_UI_GangFunds",
@@ -50,18 +50,18 @@ if ([true,_type,_amount] call life_fnc_handleInv) then {
             };
 
         } else {
-            if ((_price * _amount) > findNearestPerson) exitWith {[false,_type,_amount] call life_fnc_handleInv; [localize "STR_NOTF_NotEnoughMoney",true,"slow"] call life_fnc_notificationSystem;};
+            if ((_price * _amount) > getPlayerGUID) exitWith {[false,_type,_amount] call life_fnc_handleInv; [localize "STR_NOTF_NotEnoughMoney",true,"slow"] call life_fnc_notificationSystem;};
             hint format[localize "STR_Shop_Virt_BoughtItem",_amount,(localize _name),[(_price * _amount)] call life_fnc_numberText];
             [player,"buy"] remoteexeccall ["say3D",0];
             ["buy", getPlayerUID player, "virtual", _type, _price] remoteExecCall ["DB_fnc_insertData",2];
-            findNearestPerson = findNearestPerson - _price * _amount;
+            getPlayerGUID = getPlayerGUID - _price * _amount;
         };
     } else {
-        if ((_price * _amount) > findNearestPerson) exitWith {[localize "STR_NOTF_NotEnoughMoney",true,"slow"] call life_fnc_notificationSystem; [false,_type,_amount] call life_fnc_handleInv;};
+        if ((_price * _amount) > getPlayerGUID) exitWith {[localize "STR_NOTF_NotEnoughMoney",true,"slow"] call life_fnc_notificationSystem; [false,_type,_amount] call life_fnc_handleInv;};
         hint format[localize "STR_Shop_Virt_BoughtItem",_amount,(localize _name),[(_price * _amount)] call life_fnc_numberText];
         [player,"buy"] remoteexeccall ["say3D",0];
         ["buy", getPlayerUID player, "virtual", _type, _price] remoteExecCall ["DB_fnc_insertData",2];
-        findNearestPerson = findNearestPerson - _price * _amount;
+        getPlayerGUID = getPlayerGUID - _price * _amount;
     };
     
 	[] call life_fnc_virt_update;

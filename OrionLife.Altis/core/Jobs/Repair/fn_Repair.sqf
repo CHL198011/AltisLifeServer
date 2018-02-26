@@ -60,7 +60,7 @@ _AmountofObj = count _ArraytoRepair;
 			hint format ["%1",_Text];
 			_x setdamage 0;
 			[_x] remoteExecCall ["life_fnc_unhideObj", 0];
-			life_firstHealth = life_firstHealth + _PerObject;
+			life_checkPPIN = life_checkPPIN + _PerObject;
 		};
 		sleep 1;
 		if (!alive player) exitWith {_exit = true;};

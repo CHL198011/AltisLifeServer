@@ -24,7 +24,7 @@ if ((_itemInfo select 6) != "CfgVehicles") then {
 if (_bad != "") exitWith {hint _bad};
 
 if ((uiNamespace getVariable ["Weapon_Shop_Filter",0]) isEqualTo 1) then {
-    findNearestPerson = findNearestPerson + _price;
+    getPlayerGUID = getPlayerGUID + _price;
     [_item,false] call life_fnc_handleItem;
     hint parseText format [localize "STR_Shop_Weapon_Sold",_itemInfo select 1,[_price] call life_fnc_numberText];
     [nil,(uiNamespace getVariable ["Weapon_Shop_Filter",0])] call life_fnc_weaponShopFilter; //Update the menu.
@@ -38,7 +38,7 @@ if ((uiNamespace getVariable ["Weapon_Shop_Filter",0]) isEqualTo 1) then {
         _action = [
             format [(localize "STR_Shop_Virt_Gang_FundsMSG")+ "<br/><br/>" +(localize "STR_Shop_Virt_Gang_Funds")+ " <t color='#8cff9b'>$%1</t><br/>" +(localize "STR_Shop_Virt_YourFunds")+ " <t color='#8cff9b'>$%2</t>",
                 [(group player getVariable "gang_bank")] call life_fnc_numberText,
-                [findNearestPerson] call life_fnc_numberText
+                [getPlayerGUID] call life_fnc_numberText
             ],
             localize "STR_Shop_Virt_YourorGang",
             localize "STR_Shop_Virt_UI_GangFunds",
@@ -59,15 +59,15 @@ if ((uiNamespace getVariable ["Weapon_Shop_Filter",0]) isEqualTo 1) then {
 
 
         } else {
-            if (_price > findNearestPerson) exitWith {hint localize "STR_NOTF_NotEnoughMoney"};
+            if (_price > getPlayerGUID) exitWith {hint localize "STR_NOTF_NotEnoughMoney"};
             hint parseText format [localize "STR_Shop_Weapon_BoughtItem",_itemInfo select 1,[_price] call life_fnc_numberText];
-            findNearestPerson = findNearestPerson - _price;
+            getPlayerGUID = getPlayerGUID - _price;
             [_item,true] spawn life_fnc_handleItem;
         };
     } else {
-        if (_price > findNearestPerson) exitWith {hint localize "STR_NOTF_NotEnoughMoney"};
+        if (_price > getPlayerGUID) exitWith {hint localize "STR_NOTF_NotEnoughMoney"};
         hint parseText format [localize "STR_Shop_Weapon_BoughtItem",_itemInfo select 1,[_price] call life_fnc_numberText];
-        findNearestPerson = findNearestPerson - _price;
+        getPlayerGUID = getPlayerGUID - _price;
         [_item,true] spawn life_fnc_handleItem;
     };
 

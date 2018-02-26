@@ -32,8 +32,8 @@ if (!isServer && (!isNil "life_adminlevel" || !isNil "life_coplevel" || !isNil "
 };
 
 //Parse basic player information.
-findNearestPerson = parseNumber (_this select 2);
-goToShopView = parseNumber (_this select 3);
+getPlayerGUID = parseNumber (_this select 2);
+findLocalVehicle = parseNumber (_this select 3);
 CONST(life_adminlevel,(_this select 4));
 if (LIFE_SETTINGS(getNumber,"donor_level") isEqualTo 1) then {
     CONST(life_donorlevel,(_this select 5));

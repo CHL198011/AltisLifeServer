@@ -31,7 +31,7 @@ if(!isNil {_val}) then
 
 	player playMove "AinvPknlMstpSlayWrflDnon";
     titleText[format [localize "STR_NOTF_PickedMoney",[_val] call life_fnc_numberText],"PLAIN"];
-    findNearestPerson = findNearestPerson + _val;
+    getPlayerGUID = getPlayerGUID + _val;
     [0] call SOCK_fnc_updatePartial;
 	life_action_delay = time;
 };

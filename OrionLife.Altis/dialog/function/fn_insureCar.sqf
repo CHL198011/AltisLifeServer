@@ -41,13 +41,13 @@ switch (playerSide) do {
 }; 
 _insurancePrice = _purchasePrice * _multiplier; 
 if(!(_insurancePrice isEqualType 0) || _insurancePrice < 1) then {_insurancePrice = 500}; 
-if(goToShopView < _insurancePrice) exitWith {hint format[(localize "STR_GNOTF_NotEnoughMoney"),[_insurancePrice] call life_fnc_numberText];}; 
+if(findLocalVehicle < _insurancePrice) exitWith {hint format[(localize "STR_GNOTF_NotEnoughMoney"),[_insurancePrice] call life_fnc_numberText];}; 
 if (life_HC_isActive) then { 
  [_vid,_pid,_insurancePrice,player,life_garage_type] remoteExecCall ["HC_fnc_insureCar",HC_Life]; 
 } else { 
  [_vid,_pid,_insurancePrice,player,life_garage_type] remoteExecCall ["TON_fnc_insureCar",RSERV]; 
 }; 
 [localize "STR_InsuranceApply",true,"slow"] call life_fnc_notificationSystem; 
-goToShopView = goToShopView - _insurancePrice; 
+findLocalVehicle = findLocalVehicle - _insurancePrice; 
 life_action_delay = time; 
 closeDialog 0;

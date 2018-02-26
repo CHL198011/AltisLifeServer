@@ -60,7 +60,7 @@ while{true} do
 
 5 cutText ["","PLAIN"];
 titleText[format["You have just robbed the bank for $%1 !",[_kassa] call life_fnc_numberText],"PLAIN"];
-findNearestPerson = findNearestPerson + _kassa;
+getPlayerGUID = getPlayerGUID + _kassa;
 ["robbank"] spawn mav_ttm_fnc_addExp;
 [] call life_fnc_hudSetup;
 [0] call SOCK_fnc_updatePartial;

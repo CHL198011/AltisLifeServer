@@ -18,7 +18,7 @@ if (_val < 100 && _gFund > 20000000) exitWith {hint localize "STR_ATM_WithdrawMi
 if ((time - life_gang_bank_time) < (6 + (round random 5))) exitWith {hint localize "STR_ATM_WithdrawInUseG"};
 
 _gFund = _gFund - _value;
-findNearestPerson = findNearestPerson + _value;
+getPlayerGUID = getPlayerGUID + _value;
 group player setVariable ["gang_bank",_gFund,true];
 
 if (life_HC_isActive) then {
@@ -35,9 +35,9 @@ life_gang_bank_time = time;
 
 if (LIFE_SETTINGS(getNumber,"player_moneyLog") isEqualTo 1) then {
     if (LIFE_SETTINGS(getNumber,"battlEye_friendlyLogging") isEqualTo 1) then {
-        money_log = format [localize "STR_DL_ML_withdrewGang_BEF",_value,[_gFund] call life_fnc_numberText,[goToShopView] call life_fnc_numberText,[findNearestPerson] call life_fnc_numberText];
+        money_log = format [localize "STR_DL_ML_withdrewGang_BEF",_value,[_gFund] call life_fnc_numberText,[findLocalVehicle] call life_fnc_numberText,[getPlayerGUID] call life_fnc_numberText];
     } else {
-        money_log = format [localize "STR_DL_ML_withdrewGang",profileName,(getPlayerUID player),_value,[_gFund] call life_fnc_numberText,[goToShopView] call life_fnc_numberText,[findNearestPerson] call life_fnc_numberText];
+        money_log = format [localize "STR_DL_ML_withdrewGang",profileName,(getPlayerUID player),_value,[_gFund] call life_fnc_numberText,[findLocalVehicle] call life_fnc_numberText,[getPlayerGUID] call life_fnc_numberText];
     };
     publicVariableServer "money_log";
 };

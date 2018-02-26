@@ -69,14 +69,14 @@ if (count crew _vehicle isEqualTo 0) then {
             [0,"STR_NOTF_HasImpounded",true,[profileName,((_vehicleData select 0) select 1),_vehicleName]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
             if (_vehicle in life_vehicles) then {
                 hint format [localize "STR_NOTF_OwnImpounded",[_value] call life_fnc_numberText,_type];
-                goToShopView = goToShopView - _value;
+                findLocalVehicle = findLocalVehicle - _value;
             } else {
                 hint format [localize "STR_NOTF_Impounded",_type,[_value] call life_fnc_numberText];
                 ["VehicleImpounded"] spawn mav_ttm_fnc_addExp;
                 //[format["%1 Has impounded %2 %3",profileName,((_vehicleData select 0) select 1),_vehicleName], "VehicleLogs"] remoteExecCall ["A3Log", 2];
-                goToShopView = goToShopView + _value;
+                findLocalVehicle = findLocalVehicle + _value;
             };
-            if (goToShopView < 0) then {goToShopView = 0;};
+            if (findLocalVehicle < 0) then {findLocalVehicle = 0;};
             [1] call SOCK_fnc_updatePartial;
     };
 } else {

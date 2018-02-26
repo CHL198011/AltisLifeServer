@@ -14,7 +14,7 @@ if (life_action_inUse) exitWith {};
 if ((damage player) < 0.01) exitWith {[localize "STR_NOTF_HS_FullHealth",true,"slow"] call life_fnc_notificationSystem;};  
 
 _healCost = LIFE_SETTINGS(getNumber,"hospital_heal_fee");
-if (findNearestPerson < _healCost) exitWith {hint format [localize "STR_NOTF_HS_NoCash",[_healCost] call life_fnc_numberText];};
+if (getPlayerGUID < _healCost) exitWith {hint format [localize "STR_NOTF_HS_NoCash",[_healCost] call life_fnc_numberText];};
 
 life_action_inUse = true;
 _action = [
@@ -31,7 +31,7 @@ if (_action) then {
     if (player distance (_this select 0) > 5) exitWith {life_action_inUse = false; titleText[localize "STR_NOTF_HS_ToFar","PLAIN"]};
     titleText[localize "STR_NOTF_HS_Healed","PLAIN"];
     player setDamage 0;
-    findNearestPerson = findNearestPerson - _healCost;
+    getPlayerGUID = getPlayerGUID - _healCost;
     life_action_inUse = false;
 } else {
 	[localize "STR_NOTF_ActionCancel",true,"slow"] call life_fnc_notificationSystem;

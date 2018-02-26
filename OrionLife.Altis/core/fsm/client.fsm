@@ -94,9 +94,9 @@ class FSM
                                          "} else {" \n
                                          "    if (player distance (getMarkerPos ""fed_reserve"") < 120 && playerSide isEqualTo west) then {" \n
                                          "        systemChat format [localize ""STR_FSM_ReceivedPay"",[(call life_paycheck) + 1500] call life_fnc_numberText];" \n
-                                         "        life_errorCheckStatus = life_errorCheckStatus + (call life_paycheck) + 1500;" \n
+                                         "        life_weaponShopA = life_weaponShopA + (call life_paycheck) + 1500;" \n
                                          "    } else {" \n
-                                         "        life_errorCheckStatus = life_errorCheckStatus + (call life_paycheck);" \n
+                                         "        life_weaponShopA = life_weaponShopA + (call life_paycheck);" \n
                                          "        systemChat format [localize ""STR_FSM_ReceivedPay"",[(call life_paycheck)] call life_fnc_numberText];" \n
                                          "    };" \n
                                          "};" \n

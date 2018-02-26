@@ -51,12 +51,12 @@ if(!(count crew _ImpoundObject > 0))then{
         [0,"STR_NOTF_HasImpounded",true,[profileName,((_ImpoundObjectData select 0) select 1),_ImpoundObjectName]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
         if (_ImpoundObject in life_vehicles) then {
            hint format [localize "STR_NOTF_OwnImpounded",[_price] call life_fnc_numberText,_displayName];
-            goToShopView = goToShopView - _price;
+            findLocalVehicle = findLocalVehicle - _price;
         } else {
             hint format [localize "STR_NOTF_Impounded",_displayName,[_price] call life_fnc_numberText];
-            goToShopView = goToShopView + _price;
+            findLocalVehicle = findLocalVehicle + _price;
         };
-        if (goToShopView < 0) then {goToShopView = 0;};
+        if (findLocalVehicle < 0) then {findLocalVehicle = 0;};
         [1] call SOCK_fnc_updatePartial;
 
 } else {
@@ -81,12 +81,12 @@ if (count crew _ImpoundObject isEqualTo 0) then {
         [0,"STR_NOTF_HasImpounded",true,[profileName,((_ImpoundObjectData select 0) select 1),_ImpoundObjectName]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
         if (_ImpoundObject in life_ImpoundObjects) then {
            hint format [localize "STR_NOTF_OwnImpounded",[_value] call life_fnc_numberText,_type];
-            goToShopView = goToShopView - _value;
+            findLocalVehicle = findLocalVehicle - _value;
         } else {
            	hint format [localize "STR_NOTF_Impounded",_type,[_value] call life_fnc_numberText];
-            goToShopView = goToShopView + _value;
+            findLocalVehicle = findLocalVehicle + _value;
         };
-        if (goToShopView < 0) then {goToShopView = 0;};
+        if (findLocalVehicle < 0) then {findLocalVehicle = 0;};
         [1] call SOCK_fnc_updatePartial;
 
 } else {

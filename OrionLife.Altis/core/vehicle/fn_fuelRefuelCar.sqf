@@ -35,7 +35,7 @@ if (_car distance player > 10 && !(isNull objectParent player)) exitWith {
     closeDialog 0;
 };
 
-if ((goToShopView - (_fueltoput * life_fuelPrices))> 0)then {
+if ((findLocalVehicle - (_fueltoput * life_fuelPrices))> 0)then {
     life_is_processing = true;
     //Setup our progress bar.
     disableSerialization;
@@ -56,8 +56,8 @@ if ((goToShopView - (_fueltoput * life_fuelPrices))> 0)then {
         if (_cP >= 1) exitWith {};
         if (player distance _car > 10) exitWith {};
         if !(isNull objectParent player) exitWith {};
-        if !((goToShopView - round(0.01 * _totalcost))> 0) exitWith {};
-        goToShopView = goToShopView - round((0.01 * _totalcost));
+        if !((findLocalVehicle - round(0.01 * _totalcost))> 0) exitWith {};
+        findLocalVehicle = findLocalVehicle - round((0.01 * _totalcost));
         _tp = _tp +1;
         if (_tp == 9) then {
             _tp = 0;

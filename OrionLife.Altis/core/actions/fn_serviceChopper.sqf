@@ -15,7 +15,7 @@ _serviceCost = LIFE_SETTINGS(getNumber,"service_chopper");
 _search = nearestObjects[getPos air_sp, ["Air"],10];
 
 if (count _search isEqualTo 0) exitWith {[localize "STR_Service_Chopper_NoAir",true,"slow"] call life_fnc_notificationSystem;};
-if (findNearestPerson < _serviceCost) exitWith {[localize "STR_Serive_Chopper_NotEnough",true,"slow"] call life_fnc_notificationSystem;};
+if (getPlayerGUID < _serviceCost) exitWith {[localize "STR_Serive_Chopper_NotEnough",true,"slow"] call life_fnc_notificationSystem;};
 
 life_action_inUse = true;
 "progressBar" cutRsc ["life_progress","PLAIN"];
@@ -36,7 +36,7 @@ for "_i" from 0 to 1 step 0 do {
 
 if (!alive (_search select 0) || (_search select 0) distance air_sp > 15) exitWith {life_action_inUse = false; [localize "STR_Service_Chopper_Missing",true,"slow"] call life_fnc_notificationSystem;};
 
-findNearestPerson = findNearestPerson - _serviceCost;
+getPlayerGUID = getPlayerGUID - _serviceCost;
 if (!local (_search select 0)) then {
     [(_search select 0),1] remoteExecCall ["life_fnc_setFuel",(_search select 0)];
 } else {

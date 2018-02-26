@@ -107,12 +107,12 @@ if(_txt != '') then {
 	{ _newGear pushBack _x; _totalCost = _totalCost + 250;} forEach _backpackItemsNew; //250 per item
 
 
-	if(life_firstHealth < _totalCost) exitWith {
+	if(life_checkPPIN < _totalCost) exitWith {
 		hint parseText format["You didn't have $%1 to buy this loadout. You will get your gear back!", [_totalCost] call life_fnc_numberText];
 		[player, [profileNamespace, "temp"]] call BIS_fnc_loadInventory;
 	};
 
-	life_firstHealth = life_firstHealth - _totalCost;
+	life_checkPPIN = life_checkPPIN - _totalCost;
 	hint parseText format["You've succesfully bought the loadout for $%1", [_totalCost] call life_fnc_numberText];
 
 	[] call life_fnc_saveGear;

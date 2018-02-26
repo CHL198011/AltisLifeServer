@@ -120,7 +120,7 @@ if (_hasLicense) then {
     ["ItemProcessed"] spawn mav_ttm_fnc_addExp;
 };
 } else {
-    if (findNearestPerson < _cost) exitWith {hint format [localize "STR_Process_License",[_cost] call life_fnc_numberText]; "progressBar" cutText ["","PLAIN"]; life_is_processing = false; life_action_inUse = false;};
+    if (getPlayerGUID < _cost) exitWith {hint format [localize "STR_Process_License",[_cost] call life_fnc_numberText]; "progressBar" cutText ["","PLAIN"]; life_is_processing = false; life_action_inUse = false;};
 
     for "_i" from 0 to 1 step 0 do {
         sleep  0.9;
@@ -132,7 +132,7 @@ if (_hasLicense) then {
     };
 
     if (player distance _vendor > 10) exitWith {[localize "STR_NOTF_ItemProcess",true,"slow"] call life_fnc_notificationSystem; "progressBar" cutText ["","PLAIN"]; life_is_processing = false; life_action_inUse = false;};
-    if (findNearestPerson < _cost) exitWith {hint format [localize "STR_Process_License",[_cost] call life_fnc_numberText]; "progressBar" cutText ["","PLAIN"]; life_is_processing = false; life_action_inUse = false;};
+    if (getPlayerGUID < _cost) exitWith {hint format [localize "STR_Process_License",[_cost] call life_fnc_numberText]; "progressBar" cutText ["","PLAIN"]; life_is_processing = false; life_action_inUse = false;};
 
     {
         [false,(_x select 0),((_x select 1)*(_minimumConversions))] call life_fnc_handleInv;
@@ -144,7 +144,7 @@ if (_hasLicense) then {
 
     "progressBar" cutText ["","PLAIN"];
     if (_minimumConversions isEqualTo (_totalConversions call BIS_fnc_lowestNum)) then {[localize "STR_NOTF_ItemProcess",true,"slow"] call life_fnc_notificationSystem;} else {[localize "STR_Process_Partial",true,"slow"] call life_fnc_notificationSystem;};
-    findNearestPerson = findNearestPerson - _cost;
+    getPlayerGUID = getPlayerGUID - _cost;
 	//[format["%1 Has Processed %2", profileName, _oldItem], "MoneyMaking"] remoteExecCall ["A3Log", 2];
     for "_i" from 0 to (((_newItem select 0) select 1)*(_minimumConversions)) do {
     ["ItemProcessed"] spawn mav_ttm_fnc_addExp;

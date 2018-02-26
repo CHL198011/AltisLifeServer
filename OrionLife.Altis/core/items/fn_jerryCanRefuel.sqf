@@ -26,7 +26,7 @@ _action = [
 ] call BIS_fnc_guiMessage;
 
 if (_action) then {
-    if (findNearestPerson < _fuelCost) exitWith {[localize "STR_NOTF_NotEnoughMoney",true,"slow"] call life_fnc_notificationSystem; life_action_inUse = false;};
+    if (getPlayerGUID < _fuelCost) exitWith {[localize "STR_NOTF_NotEnoughMoney",true,"slow"] call life_fnc_notificationSystem; life_action_inUse = false;};
     _startPos = getPos player;
     //Setup our progress bar.
     disableSerialization;
@@ -70,7 +70,7 @@ if (_action) then {
     if (life_interrupted) exitWith {life_interrupted = false; titleText[localize "STR_NOTF_ActionCancel","PLAIN"]; life_action_inUse = false;};
     if (!([false,"fuelEmpty",1] call life_fnc_handleInv)) exitWith {life_action_inUse = false;};
     life_action_inUse = false;
-    findNearestPerson = findNearestPerson - _fuelCost;
+    getPlayerGUID = getPlayerGUID - _fuelCost;
     [true,"fuelFull",1] call life_fnc_handleInv;
     [localize "STR_ISTR_Jerry_Refueled",true,"slow"] call life_fnc_notificationSystem;
 } else {

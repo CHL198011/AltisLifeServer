@@ -30,7 +30,7 @@ _illegal = [_itemInfo select 0,life_illegal_items] call life_fnc_index;
 
 if (playerSide isEqualTo west && _illegal isEqualTo 1) exitWith {
     titleText[format [localize "STR_NOTF_PickedEvidence",_itemName,[round(ITEM_SELLPRICE(_itemInfo select 0) / 2)] call life_fnc_numberText],"PLAIN"];
-    goToShopView = goToShopView + round(ITEM_SELLPRICE(_itemInfo select 0) / 2);
+    findLocalVehicle = findLocalVehicle + round(ITEM_SELLPRICE(_itemInfo select 0) / 2);
     deleteVehicle _this;
     [1] call SOCK_fnc_updatePartial;
     life_action_delay = time;

@@ -40,7 +40,7 @@ if (_action) then {
     deleteMarkerLocal format ["house_%1",_house getVariable "uid"];
     _house setVariable ["uid",nil,true];
 
-    goToShopView = goToShopView + (round((_houseCfg select 0)/2));
+    findLocalVehicle = findLocalVehicle + (round((_houseCfg select 0)/2));
     _houseName = FETCH_CONFIG2(getText,"CfgVehicles",(typeOf _house), "displayName");
     ["sell", getPlayerUID player, "house", _houseName, (round((_houseCfg select 0)/2))] remoteExecCall ["DB_fnc_insertData",2];
 
@@ -49,9 +49,9 @@ if (_action) then {
 
     if (LIFE_SETTINGS(getNumber,"player_advancedLog") isEqualTo 1) then {
         if (LIFE_SETTINGS(getNumber,"battlEye_friendlyLogging") isEqualTo 1) then {
-            advanced_log = format [localize "STR_DL_AL_soldHouse_BEF",(round((_houseCfg select 0)/2)),[goToShopView] call life_fnc_numberText];
+            advanced_log = format [localize "STR_DL_AL_soldHouse_BEF",(round((_houseCfg select 0)/2)),[findLocalVehicle] call life_fnc_numberText];
         } else {
-            advanced_log = format [localize "STR_DL_AL_soldHouse",profileName,(getPlayerUID player),(round((_houseCfg select 0)/2)),[goToShopView] call life_fnc_numberText];
+            advanced_log = format [localize "STR_DL_AL_soldHouse",profileName,(getPlayerUID player),(round((_houseCfg select 0)/2)),[findLocalVehicle] call life_fnc_numberText];
             };
         publicVariableServer "advanced_log";
     };

@@ -49,7 +49,7 @@ if(_vehicle getVariable "purpose" == "truck_mission") then
 			hint format["You have searched an illegal vehicle and discovered %1 %2! You and all oficers within 1km have been rewarded a finders fee of %3! Good work officer!",_cargoAmount, _cargo select 0, _payout];
 	    [0,"STR_NOTF_VehContraband",[_cargoAmount, _cargo select 0, [_cargoValue] call BIS_fnc_numberText]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
 
-			goToShopView = goToShopView + _payout;
+			findLocalVehicle = findLocalVehicle + _payout;
 			_xp = ceil(_payout * 0.0025);
 			[_xp] spawn life_fnc_awardExperience;
 			{
@@ -80,7 +80,7 @@ if(isNil{_vehicle getVariable "purpose"}) then {
 	_value = _illegalValue;
 	if (_value > 0) then {
 	    [0,"STR_NOTF_VehContraband",true,[[_value] call life_fnc_numberText]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
-	    goToShopView = goToShopView + _value;
+	    findLocalVehicle = findLocalVehicle + _value;
 	    [1] call SOCK_fnc_updatePartial;
 	    _vehicle setVariable ["Trunk",[[],0],true];
 	} else {

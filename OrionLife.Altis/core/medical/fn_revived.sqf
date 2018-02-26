@@ -22,10 +22,10 @@ life_deathCamera cameraEffect ["TERMINATE","BACK"];
 camDestroy life_deathCamera;
 
 //Take fee for services.
-if (goToShopView > _reviveCost) then {
-    goToShopView = goToShopView - _reviveCost;
+if (findLocalVehicle > _reviveCost) then {
+    findLocalVehicle = findLocalVehicle - _reviveCost;
 } else {
-    goToShopView = 0;
+    findLocalVehicle = 0;
 };
 
 //Bring me back to life.

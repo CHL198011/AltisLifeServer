@@ -16,11 +16,11 @@ _flag = switch (playerSide) do {case west: {"cop"}; case civilian: {"civ"}; case
 
 switch (_mode) do {
     case 0: {
-        _packet set[2,findNearestPerson];
+        _packet set[2,getPlayerGUID];
     };
 
     case 1: {
-        _packet set[2,goToShopView];
+        _packet set[2,findLocalVehicle];
     };
 
     case 2: {
@@ -47,8 +47,8 @@ switch (_mode) do {
     };
 
     case 6: {
-        _packet set[2,findNearestPerson];
-        _packet set[4,goToShopView];
+        _packet set[2,getPlayerGUID];
+        _packet set[4,findLocalVehicle];
     };
 
     case 7: {

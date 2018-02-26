@@ -43,7 +43,7 @@ if ([_hideout getVariable "gangOwner"] isEqualTo "") exitWith {hint "You must ca
 if ((_hideout getVariable "gangOwner") != (group player)) exitWith {hint "You must capture the hideout before starting a convoy!"};
 if (isNil {group player getVariable "gang_name"}) exitWith {"You must be in a gang to start the convoy and/or own the hideout!"};
 if (_inProgress) exitWith {hint format ["Sorry, another gang is already doing gang hideout %1's convoy. Try again later!", _type]};
-if (findNearestPerson <= 14999) exitWith {hint "Sorry, you need to invest $15,000 before you can start the convoy!"};
+if (getPlayerGUID <= 14999) exitWith {hint "Sorry, you need to invest $15,000 before you can start the convoy!"};
 
 switch (_type) do {
 	case 1 : {missionNamespace setVariable ["inProgressGang1", true, true]};
@@ -52,7 +52,7 @@ switch (_type) do {
 	case 4 : {missionNamespace setVariable ["inProgressGang4", true, true]};
 };
 
-findNearestPerson = findNearestPerson - 15000;
+getPlayerGUID = getPlayerGUID - 15000;
 _vehicle = "C_Truck_02_covered_F" createVehicle _sp;
 _vehicle setVariable ["notFilled", true, false];
 _vehicle setVariable ["convoyFilled", false, true];

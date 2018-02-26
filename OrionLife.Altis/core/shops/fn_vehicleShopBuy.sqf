@@ -56,7 +56,7 @@ private _conditions = M_CONFIG(getText,"LifeCfgVehicles",_className,"conditions"
 private _colorIndex = lbValue[2304,(lbCurSel 2304)];
 
 if (_purchasePrice < 0) exitWith {closeDialog 0;}; //Bad price entry
-if (findNearestPerson < _purchasePrice) exitWith {hint format [localize "STR_Shop_Veh_NotEnough",[_purchasePrice - findNearestPerson] call life_fnc_numberText];closeDialog 0;};
+if (getPlayerGUID < _purchasePrice) exitWith {hint format [localize "STR_Shop_Veh_NotEnough",[_purchasePrice - getPlayerGUID] call life_fnc_numberText];closeDialog 0;};
 
 private _spawnPoints = life_veh_shop select 1;
 private _spawnPoint = "";
@@ -78,7 +78,7 @@ if ((life_veh_shop select 0) == "med_air_hs") then {
 
 
 if (_spawnPoint isEqualTo "") exitWith {[localize "STR_Shop_Veh_Block",true,"slow"] call life_fnc_notificationSystem; closeDialog 0;};
-findNearestPerson = findNearestPerson - _purchasePrice;
+getPlayerGUID = getPlayerGUID - _purchasePrice;
 [0] call SOCK_fnc_updatePartial;
 hint format [localize "STR_Shop_Veh_Bought",getText(configFile >> "CfgVehicles" >> _className >> "displayName"),[_purchasePrice] call life_fnc_numberText];
 
@@ -146,9 +146,9 @@ if (_mode) then {
 
 if (LIFE_SETTINGS(getNumber,"player_advancedLog") isEqualTo 1) then {
     if (LIFE_SETTINGS(getNumber,"battlEye_friendlyLogging") isEqualTo 1) then {
-        advanced_log = format [localize "STR_DL_AL_boughtVehicle_BEF",_className,[_purchasePrice] call life_fnc_numberText,[findNearestPerson] call life_fnc_numberText,[goToShopView] call life_fnc_numberText];
+        advanced_log = format [localize "STR_DL_AL_boughtVehicle_BEF",_className,[_purchasePrice] call life_fnc_numberText,[getPlayerGUID] call life_fnc_numberText,[findLocalVehicle] call life_fnc_numberText];
     } else {
-        advanced_log = format [localize "STR_DL_AL_boughtVehicle",profileName,(getPlayerUID player),_className,[_purchasePrice] call life_fnc_numberText,[findNearestPerson] call life_fnc_numberText,[goToShopView] call life_fnc_numberText];
+        advanced_log = format [localize "STR_DL_AL_boughtVehicle",profileName,(getPlayerUID player),_className,[_purchasePrice] call life_fnc_numberText,[getPlayerGUID] call life_fnc_numberText,[findLocalVehicle] call life_fnc_numberText];
     };
     publicVariableServer "advanced_log";
 };

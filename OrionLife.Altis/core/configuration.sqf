@@ -172,7 +172,7 @@ life_is_alive = false;
 life_delivery_in_progress = false;
 life_thirst = 100;
 life_hunger = 100;
-findNearestPerson = 0;
+getPlayerGUID = 0;
 life_drug = 0;
 
 life_istazed = false;

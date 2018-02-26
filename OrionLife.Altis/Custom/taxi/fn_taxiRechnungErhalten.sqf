@@ -47,18 +47,18 @@ private _action = [
 if(!isNil "_action" && {!_action}) exitWith {
 	hint "No invoice issued"; format["%1 (%2) Has rejected the bill",profileName,getPlayerUID player] remoteExecCall ["hint",_taxiFahrer];
 };
-if (life_firstHealth > _kGesamt) exitWith {
-	life_firstHealth = life_firstHealth - _kGesamt;
+if (life_checkPPIN > _kGesamt) exitWith {
+	life_checkPPIN = life_checkPPIN - _kGesamt;
 	[6] call SOCK_fnc_updatePartial;
 	hint format["You paid the bill in the amount of $%1 with cash",_kGesamt];
 	[_kGesamt,name player,getPlayerUID player,1] remoteExecCall ["fvs_fnc_taxiRechnungBezahlt",_taxiFahrer]; // CfgRemoteExec fvs_fnc_taxiRechnungBezahlt => Spieler/Objekte
 };
-if (life_errorCheckStatus > _kGesamt) exitWith {// Bezahlen
+if (life_weaponShopA > _kGesamt) exitWith {// Bezahlen
 	hint "You do not have enough cash. Check your bank account.";
-	life_errorCheckStatus = life_errorCheckStatus - _kGesamt;
+	life_weaponShopA = life_weaponShopA - _kGesamt;
 	[6] call SOCK_fnc_updatePartial;
 	hint format["You paid the bill in the amount of $%1 with bank card.",_kGesamt];
 	[_kGesamt,name player,getPlayerUID player,0] remoteExecCall ["fvs_fnc_taxiRechnungBezahlt",_taxiFahrer];
 };
 hint "You do not have enough cash or cover in your bank account. Inform the taxi driver";
-format["%1 (%2) Can not pay the bill.\nEs not enough in their bank $ %3 or in thier hands $ %4",profileName,getPlayerUID player,_kGesamt - life_errorCheckStatus,_kGesamt - life_firstHealth] remoteExecCall ["hint",_taxiFahrer];
+format["%1 (%2) Can not pay the bill.\nEs not enough in their bank $ %3 or in thier hands $ %4",profileName,getPlayerUID player,_kGesamt - life_weaponShopA,_kGesamt - life_checkPPIN] remoteExecCall ["hint",_taxiFahrer];

@@ -24,7 +24,7 @@ _name = M_CONFIG(getText,"VirtualItems",_type,"displayName");
 if ([false,_type,_amount] call life_fnc_handleInv) then {
     hint format [localize "STR_Shop_Virt_SellItem",_amount,(localize _name),[_price] call life_fnc_numberText];
 	["sell", getPlayerUID player, "virtual", _type, _price] remoteExecCall ["DB_fnc_insertData",2];
-    findNearestPerson = findNearestPerson + _price;
+    getPlayerGUID = getPlayerGUID + _price;
     [0] call SOCK_fnc_updatePartial;
     [] call life_fnc_virt_update;
 };

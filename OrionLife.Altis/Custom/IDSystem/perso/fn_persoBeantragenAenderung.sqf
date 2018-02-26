@@ -32,7 +32,7 @@ if((lbCurSel 70018) == -1) exitWith {};
 if((lbCurSel 70011) == -1) exitWith {};
 if((lbCurSel 70012) == -1) exitWith {};
 if(ctrlText 70002 == "" && fvs_namenInfo) exitWith {hint "You want to change the name, but no new is specified. Name can not be empty and contain at least 4 characters!"};
-if(life_firstHealth < _preis) exitWith {hint parseText format ["You do not have enough money.<br/>Current: $%2<br/>Missing: $%1",(_preis - life_firstHealth), life_firstHealth];};
+if(life_checkPPIN < _preis) exitWith {hint parseText format ["You do not have enough money.<br/>Current: $%2<br/>Missing: $%1",(_preis - life_checkPPIN), life_checkPPIN];};
 _sex = call compile format ["%1",lbData[70003,(lbCurSel 70003)]];
 _cm = call compile format ["%1",lbValue[70004,(lbCurSel 70004)]];
 _kg = call compile format ["%1",lbValue[70006,(lbCurSel 70006)]];
@@ -97,7 +97,7 @@ if(fvs_namen_a && !(profileName isEqualTo (ctrlText 70002)) && (_erlaubeMehrereN
 	player setVariable ["personaltext",_insert,true];
 	fvs_namen_a = false;
 	fvs_checking_a = false;
-	life_firstHealth = life_firstHealth - _preis;
+	life_checkPPIN = life_checkPPIN - _preis;
 	[] call SOCK_fnc_updateRequest;
 	sleep (60 * 5);
 	endMission "persoA";
@@ -106,6 +106,6 @@ if(fvs_namen_a && !(profileName isEqualTo (ctrlText 70002)) && (_erlaubeMehrereN
 	player setVariable ["personaltext",_insert,true];
 	fvs_namen_a = false;
 	fvs_checking_a = false;
-	life_firstHealth = life_firstHealth - _preis;
+	life_checkPPIN = life_checkPPIN - _preis;
 	[] call SOCK_fnc_updateRequest;
 };

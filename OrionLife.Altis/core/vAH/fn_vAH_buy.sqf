@@ -43,7 +43,7 @@ if (_seller isEqualTo _uid) exitWith {[localize "STR_AH_Idiot",true,"slow"] call
 
 {_checkid = _x select 0; if (_checkid isEqualTo _id) then {_status = _x select 7};} forEach all_ah_items;
 if !(_status isEqualTo 0) exitWith {[localize "STR_AH_Sold",true,"slow"] call life_fnc_notificationSystem;}; //NOT FOR SALE ANYMORE
-if (goToShopView < _value) exitWith {[localize "STR_NOTF_NotEnoughFunds",true,"slow"] call life_fnc_notificationSystem;};
+if (findLocalVehicle < _value) exitWith {[localize "STR_NOTF_NotEnoughFunds",true,"slow"] call life_fnc_notificationSystem;};
 
 if (_type isEqualTo 0) then 
 	{
@@ -60,7 +60,7 @@ if (_type isEqualTo 0) then
 		};
 
 if (!_iCheck) exitWith {[localize "STR_NOTF_InvFull",true,"slow"] call life_fnc_notificationSystem;};
-goToShopView = goToShopView - _value;
+findLocalVehicle = findLocalVehicle - _value;
 
 switch (_type) do {
 	case 0: {[true,_item,_diff] call life_fnc_handleInv;};

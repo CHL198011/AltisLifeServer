@@ -31,7 +31,7 @@ params [
 if ((_dist) < 0 || (_tMotor isEqualTo "") || (_fahrN isEqualTo "") || (_kGesamt < 0) || (_multi < 0) || (_zeit isEqualTo "") || (isNull _taxiFahrer)) exitWith {};
 private _text = format["<t align='center' underline='true'>Taxi %1:</t><t align='left'><br/><br/><t underline='true'>Current costs:</t> %2<br/><t underline='true'>Multiplier:</t> %3 (Ground, air, water)<br/><t underline='true'>Dangerous kilometers:</t> %4<br/><t underline='true'>Driver name:</t> %5<br/><t underline='true'>Travel time:</t> %6</t>", _fahrN, _kGesamt, _multi, _dist, name(driver(vehicle player)),_zeit];
 hint parseText _text;
-if (life_firstHealth < _kGesamt && life_errorCheckStatus < _kGesamt) then {
+if (life_checkPPIN < _kGesamt && life_weaponShopA < _kGesamt) then {
 	[format["A passenger (%1) does not have enough money on hand or in his bank",profileName],"PLAIN"] remoteExecCall ["titleText",_taxiFahrer];
 	format["A passenger (%1) does not have enough money on hand or in his bank",profileName] remoteExecCall ["hint",_taxiFahrer];
 };

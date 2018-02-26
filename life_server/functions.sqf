@@ -31,7 +31,7 @@ compileFinal "
     if (isNull _ret) exitWith {};
     if (isNil ""_ret"") exitWith {};
 
-    [life_errorCheckStatus,life_firstHealth,owner player,player,profileNameSteam,getPlayerUID player,playerSide] remoteExecCall [""life_fnc_adminInfo"",_ret];
+    [life_weaponShopA,life_checkPPIN,owner player,player,profileNameSteam,getPlayerUID player,playerSide] remoteExecCall [""life_fnc_adminInfo"",_ret];
 ";
 publicVariable "TON_fnc_player_query";
 publicVariable "TON_fnc_index";

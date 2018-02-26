@@ -55,15 +55,15 @@ if (life_HC_isActive) then {
 
 //[format["%1 Has sold their %2 for %3", profileName, _vehicle, _sellPrice], "MoneyLogs"] remoteExecCall ["A3Log", 2];
 hint format [localize "STR_Garage_SoldCar",[_sellPrice] call life_fnc_numberText];
-goToShopView = goToShopView + _sellPrice;
+findLocalVehicle = findLocalVehicle + _sellPrice;
 ["sell", getPlayerUID player, "vehicle", _vehicle, _sellPrice] remoteExecCall ["DB_fnc_insertData",2];
 [1] call SOCK_fnc_updatePartial;
 
 if (LIFE_SETTINGS(getNumber,"player_advancedLog") isEqualTo 1) then {
     if (LIFE_SETTINGS(getNumber,"battlEye_friendlyLogging") isEqualTo 1) then {
-        advanced_log = format [localize "STR_DL_AL_soldVehicle_BEF",_vehicleLife,[_sellPrice] call life_fnc_numberText,[goToShopView] call life_fnc_numberText,[findNearestPerson] call life_fnc_numberText];
+        advanced_log = format [localize "STR_DL_AL_soldVehicle_BEF",_vehicleLife,[_sellPrice] call life_fnc_numberText,[findLocalVehicle] call life_fnc_numberText,[getPlayerGUID] call life_fnc_numberText];
     } else {
-        advanced_log = format [localize "STR_DL_AL_soldVehicle",profileName,(getPlayerUID player),_vehicleLife,[_sellPrice] call life_fnc_numberText,[goToShopView] call life_fnc_numberText,[findNearestPerson] call life_fnc_numberText];
+        advanced_log = format [localize "STR_DL_AL_soldVehicle",profileName,(getPlayerUID player),_vehicleLife,[_sellPrice] call life_fnc_numberText,[findLocalVehicle] call life_fnc_numberText,[getPlayerGUID] call life_fnc_numberText];
     };
     publicVariableServer "advanced_log";
 };

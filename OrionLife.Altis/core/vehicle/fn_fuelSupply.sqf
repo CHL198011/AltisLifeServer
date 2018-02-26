@@ -116,7 +116,7 @@ if (_fuelFeedState <= 0) then {titleText [localize "STR_FuelTank_FeedFull","PLAI
 if (_fuelState <= 0) then {titleText [localize "STR_FuelTank_Empty","PLAIN"]};
 sleep 2;
 
-findNearestPerson = findNearestPerson + _win;
+getPlayerGUID = getPlayerGUID + _win;
 [0] call SOCK_fnc_updatePartial;
 
 titleText [format [localize "STR_FuelTank_Money", _win], "PLAIN"];

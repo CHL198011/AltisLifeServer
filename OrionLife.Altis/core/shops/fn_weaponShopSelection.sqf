@@ -25,8 +25,8 @@ if ((uiNamespace getVariable ["Weapon_Shop_Filter",0]) isEqualTo 1) then {
 } else {
     _price = _control lbValue _index;
     _item = CONTROL_DATAI(_control,_index);
-    if (_price > findNearestPerson) then {
-        _priceTag ctrlSetStructuredText parseText format ["<t size='0.8'>Price: <t color='#ff0000'>$%1</t><br/>You lack: <t color='#8cff9b'>$%2</t></t>",[(_price)] call life_fnc_numberText,[(_price - findNearestPerson)] call life_fnc_numberText];
+    if (_price > getPlayerGUID) then {
+        _priceTag ctrlSetStructuredText parseText format ["<t size='0.8'>Price: <t color='#ff0000'>$%1</t><br/>You lack: <t color='#8cff9b'>$%2</t></t>",[(_price)] call life_fnc_numberText,[(_price - getPlayerGUID)] call life_fnc_numberText];
     } else {
         _priceTag ctrlSetStructuredText parseText format ["<t size='0.8'>Price: <t color='#8cff9b'>$%1</t></t>",[(_price)] call life_fnc_numberText];
     };

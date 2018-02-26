@@ -81,36 +81,36 @@ if (_spawnPoint isEqualTo "") exitWith {[localize "STR_Shop_Veh_Block",true,"slo
 
 private _notEnoughMoney = false;
 try {
-	if (findNearestPerson < _purchasePrice) then {
-		if (goToShopView < _purchasePrice) then {
-			hint parseText format [localize "STR_Shop_Veh_NotEnough",[_purchasePrice - goToShopView] call life_fnc_numberText];
+	if (getPlayerGUID < _purchasePrice) then {
+		if (findLocalVehicle < _purchasePrice) then {
+			hint parseText format [localize "STR_Shop_Veh_NotEnough",[_purchasePrice - findLocalVehicle] call life_fnc_numberText];
 			throw "No money";
 		};
 	};
 			
-	if ((goToShopView > _purchasePrice) && (findNearestPerson < _purchasePrice)) then {
+	if ((findLocalVehicle > _purchasePrice) && (getPlayerGUID < _purchasePrice)) then {
 		if (LIFE_SETTINGS(getNumber,"debit_tax") isEqualTo 1) then {
 			_debitTax = LIFE_SETTINGS(getNumber,"debit_taxAmount");
 			_realTaxAmount = _debitTax * _purchasePrice;
 			_priceAfterTax = _purchasePrice + _realTaxAmount;
-			goToShopView = goToShopView - _priceAfterTax;
+			findLocalVehicle = findLocalVehicle - _priceAfterTax;
 			[1] call SOCK_fnc_updatePartial;
 			hint parseText format [localize "STR_Debit_BoughtItemTax",getText(configFile >> "CfgVehicles" >> _className >> "displayName"),[_purchasePrice] call life_fnc_numberText,[_realTaxAmount] call life_fnc_numberText];
 			_notEnoughMoney = true;
 		} else {
-			goToShopView = goToShopView - _purchasePrice;
+			findLocalVehicle = findLocalVehicle - _purchasePrice;
 			[1] call SOCK_fnc_updatePartial;
 			hint parseText format [localize "STR_Debit_BoughtItem",getText(configFile >> "CfgVehicles" >> _className >> "displayName"),[_purchasePrice] call life_fnc_numberText];
 			_notEnoughMoney = true;
 		};
 	} else {
 		if (life_has_debit isEqualTo true) then {
-			findNearestPerson = findNearestPerson - _purchasePrice;
+			getPlayerGUID = getPlayerGUID - _purchasePrice;
 			[0] call SOCK_fnc_updatePartial;
 			hint parseText format [localize "STR_Debit_UsedOnHandCash",getText(configFile >> "CfgVehicles" >> _className >> "displayName"),[_purchasePrice] call life_fnc_numberText];
 			_notEnoughMoney = true;
 		} else {
-			findNearestPerson = findNearestPerson - _purchasePrice;
+			getPlayerGUID = getPlayerGUID - _purchasePrice;
 			[0] call SOCK_fnc_updatePartial;
 			hint parseText format [localize "STR_Shop_Veh_Bought",getText(configFile >> "CfgVehicles" >> _className >> "displayName"),[_purchasePrice] call life_fnc_numberText];
 			_notEnoughMoney = true;
@@ -183,9 +183,9 @@ if (_mode) then {
 
 if (LIFE_SETTINGS(getNumber,"player_advancedLog") isEqualTo 1) then {
     if (LIFE_SETTINGS(getNumber,"battlEye_friendlyLogging") isEqualTo 1) then {
-        advanced_log = format [localize "STR_DL_AL_boughtVehicle_BEF",_className,[_purchasePrice] call life_fnc_numberText,[findNearestPerson] call life_fnc_numberText,[goToShopView] call life_fnc_numberText];
+        advanced_log = format [localize "STR_DL_AL_boughtVehicle_BEF",_className,[_purchasePrice] call life_fnc_numberText,[getPlayerGUID] call life_fnc_numberText,[findLocalVehicle] call life_fnc_numberText];
     } else {
-        advanced_log = format [localize "STR_DL_AL_boughtVehicle",profileName,(getPlayerUID player),_className,[_purchasePrice] call life_fnc_numberText,[findNearestPerson] call life_fnc_numberText,[goToShopView] call life_fnc_numberText];
+        advanced_log = format [localize "STR_DL_AL_boughtVehicle",profileName,(getPlayerUID player),_className,[_purchasePrice] call life_fnc_numberText,[getPlayerGUID] call life_fnc_numberText,[findLocalVehicle] call life_fnc_numberText];
     };
     publicVariableServer "advanced_log";
 };

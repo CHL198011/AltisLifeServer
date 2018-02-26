@@ -12,9 +12,9 @@ _unit = param [1,objNull,[objNull]];
 if (life_bail_paid) exitWith {};
 if (isNil "life_bail_amount") then {life_bail_amount = 3500;};
 if (!life_canpay_bail) exitWith {[localize "STR_NOTF_Bail_Post",true,"slow"] call life_fnc_notificationSystem;};
-if (goToShopView < life_bail_amount) exitWith {hint format [localize "STR_NOTF_Bail_NotEnough",life_bail_amount];};
+if (findLocalVehicle < life_bail_amount) exitWith {hint format [localize "STR_NOTF_Bail_NotEnough",life_bail_amount];};
 
-goToShopView = goToShopView - life_bail_amount;
+findLocalVehicle = findLocalVehicle - life_bail_amount;
 life_bail_paid = true;
 [1] call SOCK_fnc_updatePartial;
 [0,"STR_NOTF_Bail_Bailed",true,[profileName]] remoteExecCall ["life_fnc_broadcast",RCLIENT];

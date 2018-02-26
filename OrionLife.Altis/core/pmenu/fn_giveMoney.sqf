@@ -20,12 +20,12 @@ if (isNull _unit) exitWith {ctrlShow[2001,true];};
 if (!life_use_atm) exitWith {[localize "STR_NOTF_recentlyRobbedBank",true,"slow"] call life_fnc_notificationSystem;ctrlShow[2001,true];};
 if (!([_amount] call TON_fnc_isnumber)) exitWith {[localize "STR_NOTF_notNumberFormat",true,"slow"] call life_fnc_notificationSystem;ctrlShow[2001,true];};
 if (parseNumber(_amount) <= 0) exitWith {[localize "STR_NOTF_enterAmount",true,"slow"] call life_fnc_notificationSystem;ctrlShow[2001,true];};
-if (parseNumber(_amount) > findNearestPerson) exitWith {[localize "STR_NOTF_notEnoughtToGive",true,"slow"] call life_fnc_notificationSystem;ctrlShow[2001,true];};
+if (parseNumber(_amount) > getPlayerGUID) exitWith {[localize "STR_NOTF_notEnoughtToGive",true,"slow"] call life_fnc_notificationSystem;ctrlShow[2001,true];};
 if (isNull _unit) exitWith {ctrlShow[2001,true];};
 if (isNil "_unit") exitWith {ctrlShow[2001,true]; [localize "STR_NOTF_notWithinRange",true,"slow"] call life_fnc_notificationSystem;};
 
 hint format [localize "STR_NOTF_youGaveMoney",[(parseNumber(_amount))] call life_fnc_numberText,_unit getVariable ["realname",name _unit]];
-findNearestPerson = findNearestPerson - (parseNumber(_amount));
+getPlayerGUID = getPlayerGUID - (parseNumber(_amount));
 [0] call SOCK_fnc_updatePartial;
 
 [_unit,_amount,player] remoteExecCall ["life_fnc_receiveMoney",_unit];

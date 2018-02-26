@@ -61,7 +61,7 @@ while{true} do
    5 cutText ["","PLAIN"];
    titleText[format["You have recieved $%1 from the robbery, Run!!",[_kassa] call life_fnc_numberText],"PLAIN"];
    deleteMarker _marker;
-   findNearestPerson = findNearestPerson + _kassa;
+   getPlayerGUID = getPlayerGUID + _kassa;
    ["robshop"] spawn mav_ttm_fnc_addExp;
    [] call life_fnc_hudSetup;
    [0] call SOCK_fnc_updatePartial;

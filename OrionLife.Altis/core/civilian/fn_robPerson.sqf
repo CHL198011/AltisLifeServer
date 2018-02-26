@@ -11,8 +11,8 @@ params [
 ];
 if (isNull _robber) exitWith {}; //No one to return it to?
 
-if (findNearestPerson > 0) then {
-    [findNearestPerson,player,_robber] remoteExecCall ["life_fnc_robReceive",_robber];
+if (getPlayerGUID > 0) then {
+    [getPlayerGUID,player,_robber] remoteExecCall ["life_fnc_robReceive",_robber];
 
     if (life_HC_isActive) then {
         [getPlayerUID _robber,_robber getVariable ["realname",name _robber],"222"] remoteExecCall ["HC_fnc_wantedAdd",HC_Life];
@@ -20,8 +20,8 @@ if (findNearestPerson > 0) then {
         [getPlayerUID _robber,_robber getVariable ["realname",name _robber],"222"] remoteExecCall ["life_fnc_wantedAdd",RSERV];
     };
 
-    [1,"STR_NOTF_Robbed",true,[_robber getVariable ["realname",name _robber],profileName,[findNearestPerson] call life_fnc_numberText]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
-    findNearestPerson = 0;
+    [1,"STR_NOTF_Robbed",true,[_robber getVariable ["realname",name _robber],profileName,[getPlayerGUID] call life_fnc_numberText]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
+    getPlayerGUID = 0;
     [0] call SOCK_fnc_updatePartial;
 } else {
     [2,"STR_NOTF_RobFail",true,[profileName]] remoteExecCall ["life_fnc_broadcast",_robber];

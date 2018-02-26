@@ -34,7 +34,7 @@ if ([true,_type,_amount] call life_fnc_handleInv) then {
 		_action = [
 			format [(localize "STR_Shop_Virt_Gang_FundsMSG")+ "<br/><br/>" +(localize "STR_Shop_Virt_Gang_Funds")+ " <t color='#8cff9b'>$%1</t><br/>" +(localize "STR_Shop_Virt_YourFunds")+ " <t color='#8cff9b'>$%2</t>",
 				[(group player getVariable "gang_bank")] call life_fnc_numberText,
-				[findNearestPerson] call life_fnc_numberText
+				[getPlayerGUID] call life_fnc_numberText
 			],
 			localize "STR_Shop_Virt_YourorGang",
 			localize "STR_Shop_Virt_UI_GangFunds",
@@ -55,33 +55,33 @@ if ([true,_type,_amount] call life_fnc_handleInv) then {
 
 		} else {
 			try {
-				if (findNearestPerson < _realPrice) then {
-					if (goToShopView < _realPrice) then {
+				if (getPlayerGUID < _realPrice) then {
+					if (findLocalVehicle < _realPrice) then {
 						[localize "STR_NOTF_NotEnoughMoney",true,"slow"] call life_fnc_notificationSystem; [false,_type,_amount] call life_fnc_handleInv;
 						throw "No money";
 					};
 				};
 				
-				if ((goToShopView > _realPrice) && (findNearestPerson < _realPrice)) then {
+				if ((findLocalVehicle > _realPrice) && (getPlayerGUID < _realPrice)) then {
 					if (LIFE_SETTINGS(getNumber,"debit_tax") isEqualTo 1) then {
 						_debitTax = LIFE_SETTINGS(getNumber,"debit_taxAmount");
 						_realTaxAmount = _debitTax * _realPrice;
 						_priceAfterTax = _realPrice + _realTaxAmount;
-						goToShopView = goToShopView - _priceAfterTax;
+						findLocalVehicle = findLocalVehicle - _priceAfterTax;
 						[1] call SOCK_fnc_updatePartial;
 						hint parseText format [localize "STR_Debit_Virt_BoughtItemTax",_amount,(localize _name),[_realPrice] call life_fnc_numberText,[_realTaxAmount] call life_fnc_numberText];
 					} else {
-						goToShopView = goToShopView - _realPrice;
+						findLocalVehicle = findLocalVehicle - _realPrice;
 						hint parseText format [localize "STR_Debit_Virt_BoughtItem",_amount,(localize _name),[_realPrice] call life_fnc_numberText];
 						[1] call SOCK_fnc_updatePartial;
 					};
 					} else {
 						if (life_has_debit isEqualTo true) then {
 							hint parseText format [localize "STR_Debit_Virt_UsedOnHandCash",_amount,(localize _name),[_realPrice] call life_fnc_numberText];
-							findNearestPerson = findNearestPerson - _realPrice;
+							getPlayerGUID = getPlayerGUID - _realPrice;
 							[0] call SOCK_fnc_updatePartial;
 						} else {
-							findNearestPerson = findNearestPerson - _realPrice;
+							getPlayerGUID = getPlayerGUID - _realPrice;
 							[0] call SOCK_fnc_updatePartial;
 						};
 					};
@@ -90,24 +90,24 @@ if ([true,_type,_amount] call life_fnc_handleInv) then {
 		};
 	} else {
 		try {
-			if (findNearestPerson < _realPrice) then {
-				if (goToShopView < _realPrice) then {
+			if (getPlayerGUID < _realPrice) then {
+				if (findLocalVehicle < _realPrice) then {
 					[localize "STR_NOTF_NotEnoughMoney",true,"slow"] call life_fnc_notificationSystem; [false,_type,_amount] call life_fnc_handleInv;
 					throw "No money";
 				};
 			};
 			
-				if ((goToShopView > _realPrice) && (findNearestPerson < _realPrice)) then {
+				if ((findLocalVehicle > _realPrice) && (getPlayerGUID < _realPrice)) then {
 					if (LIFE_SETTINGS(getNumber,"debit_tax") isEqualTo 1) then {
 						_debitTax = LIFE_SETTINGS(getNumber,"debit_taxAmount");
 						_realTaxAmount = _debitTax * _realPrice;
 						_priceAfterTax = _realPrice + _realTaxAmount;
-						goToShopView = goToShopView - _priceAfterTax;
+						findLocalVehicle = findLocalVehicle - _priceAfterTax;
 						[1] call SOCK_fnc_updatePartial;
 						hint parseText format [localize "STR_Debit_Virt_BoughtItemTax",_amount,(localize _name),[_realPrice] call life_fnc_numberText,[_realTaxAmount] call life_fnc_numberText];
 						[player,"buy"] remoteexeccall ["say3D",0];
 					} else {
-						goToShopView = goToShopView - _realPrice;
+						findLocalVehicle = findLocalVehicle - _realPrice;
 						hint parseText format [localize "STR_Debit_Virt_BoughtItem",_amount,(localize _name),[_realPrice] call life_fnc_numberText];
 						[player,"buy"] remoteexeccall ["say3D",0];
 						[1] call SOCK_fnc_updatePartial;
@@ -115,11 +115,11 @@ if ([true,_type,_amount] call life_fnc_handleInv) then {
 					} else {
 						if (life_has_debit isEqualTo true) then {
 							hint parseText format [localize "STR_Debit_Virt_UsedOnHandCash",_amount,(localize _name),[_realPrice] call life_fnc_numberText];
-							findNearestPerson = findNearestPerson - _realPrice;
+							getPlayerGUID = getPlayerGUID - _realPrice;
 							[player,"buy"] remoteexeccall ["say3D",0];
 							[0] call SOCK_fnc_updatePartial;
 						} else {
-							findNearestPerson = findNearestPerson - _realPrice;
+							getPlayerGUID = getPlayerGUID - _realPrice;
 							[player,"buy"] remoteexeccall ["say3D",0];
 							[0] call SOCK_fnc_updatePartial;
 						};

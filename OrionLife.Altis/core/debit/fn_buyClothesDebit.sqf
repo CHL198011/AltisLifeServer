@@ -19,26 +19,26 @@ _price = 0;
 } forEach life_clothing_purchase;
 
 try {
-	if (findNearestPerson < _price) then {
-		if (goToShopView < _price) then {
+	if (getPlayerGUID < _price) then {
+		if (findLocalVehicle < _price) then {
 			[localize "STR_Shop_NotEnoughClothes",true,"slow"] call life_fnc_notificationSystem;
 			throw "No money";
 		};
 	};
 			
-	if ((goToShopView > _price) && (findNearestPerson < _price)) then {
+	if ((findLocalVehicle > _price) && (getPlayerGUID < _price)) then {
 		if (LIFE_SETTINGS(getNumber,"debit_tax") isEqualTo 1) then {
 			_debitTax = LIFE_SETTINGS(getNumber,"debit_taxAmount");
 			_realTaxAmount = _debitTax * _price;
 			_priceAfterTax = _price + _realTaxAmount;
-			goToShopView = goToShopView - _priceAfterTax;
+			findLocalVehicle = findLocalVehicle - _priceAfterTax;
 			[1] call SOCK_fnc_updatePartial;
 			life_clothesPurchased = true;
 			[] call life_fnc_playerSkins;
 			closeDialog 0;
 			hint parseText format [localize "STR_Debit_Clothing_BoughtItemTax",[_price] call life_fnc_numberText,[_realTaxAmount] call life_fnc_numberText];
 		} else {
-			goToShopView = goToShopView - _price;
+			findLocalVehicle = findLocalVehicle - _price;
 			[1] call SOCK_fnc_updatePartial;
 			life_clothesPurchased = true;
 			[] call life_fnc_playerSkins;
@@ -47,14 +47,14 @@ try {
 		};
 	} else {
 		if (life_has_debit isEqualTo true) then {
-			findNearestPerson = findNearestPerson - _price;
+			getPlayerGUID = getPlayerGUID - _price;
 			[0] call SOCK_fnc_updatePartial;
 			life_clothesPurchased = true;
 			[] call life_fnc_playerSkins;
 			closeDialog 0;
 			hint parseText format [localize "STR_Debit_Clothing_UsedOnHandCash",[_price] call life_fnc_numberText];
 		} else {
-			findNearestPerson = findNearestPerson - _price;
+			getPlayerGUID = getPlayerGUID - _price;
 			[0] call SOCK_fnc_updatePartial;
 			life_clothesPurchased = true;
 			[] call life_fnc_playerSkins;

@@ -72,7 +72,7 @@ if (_bad) exitWith {closeDialog 0;};
 if (_classname == "relic1" || _classname == "relic2" || _classname == "relic3" || _classname == "relic4" || _classname == "relicTransport" || _classname == "relicFed" || _classname == "excavator" || _classname == "planeTreasure") exitWith {["You cannot sell relics",true,"slow"] call life_fnc_notificationSystem;};
 _action = [format["You will be taxed $%1 . Continue?",_tax],"Auction Confirmation","CONTINUE","CANCEL"] call BIS_fnc_guiMessage;
 if(_action) then {
-		if(goToShopView < _tax) exitWith {["You don't have enough money in the bank to pay the tax",false,"slow"] call life_fnc_notificationSystem;_bad = true;};
+		if(findLocalVehicle < _tax) exitWith {["You don't have enough money in the bank to pay the tax",false,"slow"] call life_fnc_notificationSystem;_bad = true;};
 	
 	switch (_type) do 
 		{
@@ -88,7 +88,7 @@ if(_action) then {
 		if (_bad) exitWith {closeDialog 0;};
 		[4,_type,_quantity,_price,_uid,_classname,_realName,name player] remoteExec ["TON_fnc_vAH_update",RSERV];
 		["Auction Successfully Added",false,"slow"] call life_fnc_notificationSystem;
-		goToShopView = goToShopView - _tax;
+		findLocalVehicle = findLocalVehicle - _tax;
 		closeDialog 0;
 		[0] call SOCK_fnc_updatePartial;
 		[3] call SOCK_fnc_updatePartial;

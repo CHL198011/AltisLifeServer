@@ -310,7 +310,7 @@ if (_total > 0) then
         [1,_x] remoteExec ["TON_fnc_vAH_update",RSERV];
     } forEach _toDel;
     [0,format[localize "STR_AH_LogInRec",[_total]call life_fnc_numberText]] remoteExecCall ["life_fnc_broadcast",player];
-    goToShopView = goToShopView + _total;
+    findLocalVehicle = findLocalVehicle + _total;
 };
 
 diag_log "----------------------------------------------------------------------------------------------------";

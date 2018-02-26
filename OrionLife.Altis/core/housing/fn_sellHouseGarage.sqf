@@ -34,7 +34,7 @@ if (_action) then {
         [_uid,_house,1] remoteExec ["TON_fnc_houseGarage",RSERV];
     };
 
-    goToShopView = goToShopView + _sellPrice;
+    findLocalVehicle = findLocalVehicle + _sellPrice;
     _houseName = FETCH_CONFIG2(getText,"CfgHousing",(typeOf _house), "displayName");
     ["sell", getPlayerUID player, "garage", _houseName, _sellPrice] remoteExecCall ["DB_fnc_insertData",2];
     [1] call SOCK_fnc_updatePartial;

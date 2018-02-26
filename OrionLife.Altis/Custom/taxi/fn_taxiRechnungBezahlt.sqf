@@ -28,6 +28,6 @@ if (_kGesamt < 1) exitWith {hint "No costs?";};
 if (_kundeName isEqualTo "") exitWith {hint "Customers' Name";};
 if (_kundeUID isEqualTo "") exitWith {hint "No customer's UID";};
 if (_m < 0) exitWith {hint "No payment method?";};
-life_firstHealth = life_firstHealth + _kGesamt;
+life_checkPPIN = life_checkPPIN + _kGesamt;
 [6] call SOCK_fnc_updatePartial;
 hint format["%1 (%2) Has paid the bill in the amount of $% 3 (payment method %4)",_kundeName,_kundeUID,_kGesamt,if(_m == 0) then {"Bankeinzug"} else {"Bar"}];

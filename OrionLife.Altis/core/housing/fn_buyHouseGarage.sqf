@@ -27,8 +27,8 @@ _action = [
 
 if (_action) then {
 
-    if (goToShopView < _price) exitWith {hint format [localize "STR_House_NotEnough"]};
-    goToShopView = goToShopView - _price;
+    if (findLocalVehicle < _price) exitWith {hint format [localize "STR_House_NotEnough"]};
+    findLocalVehicle = findLocalVehicle - _price;
     [1] call SOCK_fnc_updatePartial;
 
     if (life_HC_isActive) then {

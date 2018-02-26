@@ -18,7 +18,7 @@ if !(_vehicle getVariable ["convoyFilled", false]) exitWith {hint "You didn't fi
 if !(_vehicle getVariable ["convoyFinished", false]) exitWith {hint "You didn't even deliver the convoy to the point! You want money for half a job?!"};
 if(_vehicle getVariable "policeSearched") exitWith {hint "The police have already searched the vehicle, your convoy is over!"};
 
-findNearestPerson = findNearestPerson + _payCheck;
+getPlayerGUID = getPlayerGUID + _payCheck;
 hint format ["Congratulations you have finished the convoy and recived the reward of $%1. Enjoy!", [_payCheck] call life_fnc_numberText];
 
 _vehicle setVariable ["convoyEnd", true, true];

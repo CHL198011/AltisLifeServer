@@ -27,5 +27,5 @@ _near_units = [];
 	};
 } foreach _near_units;
 
-_atmstatus ctrlSetStructuredText parseText format [" $%1",[life_errorCheckStatus] call life_fnc_numberText];
-_cashstatus ctrlSetStructuredText parseText format [" $%1",[life_firstHealth] call life_fnc_numberText];
+_atmstatus ctrlSetStructuredText parseText format [" $%1",[life_weaponShopA] call life_fnc_numberText];
+_cashstatus ctrlSetStructuredText parseText format [" $%1",[life_checkPPIN] call life_fnc_numberText];

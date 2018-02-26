@@ -131,8 +131,8 @@ _unit = _this select 0;
             };
         };
 
-        case "life_firstHealth": {
-            if (findNearestPerson > 0) then {
+        case "life_checkPPIN": {
+            if (getPlayerGUID > 0) then {
                 _pos = _unit modelToWorld[0,3,0];
                 _pos = [(_pos select 0),(_pos select 1),0];
                 _obj = "Land_Money_F" createVehicle _pos;
@@ -140,7 +140,7 @@ _unit = _this select 0;
                 _obj setPos _pos;
                 [_obj] remoteExecCall ["life_fnc_simDisable",RANY];
 				_obj setVariable["CurrentTime",serverTime];
-                missionNamespace setVariable ["findNearestPerson",0];
+                missionNamespace setVariable ["getPlayerGUID",0];
             };
         };
 
@@ -170,4 +170,4 @@ _unit = _this select 0;
             };
         };
     };
-} forEach (("true" configClasses (missionConfigFile >> "VirtualItems")) + ["life_firstHealth"]);
+} forEach (("true" configClasses (missionConfigFile >> "VirtualItems")) + ["life_checkPPIN"]);

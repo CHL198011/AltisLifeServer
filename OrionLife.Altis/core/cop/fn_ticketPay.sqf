@@ -7,15 +7,15 @@
     Pays the ticket.
 */
 if (isNil "life_ticket_val" || isNil "life_ticket_cop") exitWith {};
-if (findNearestPerson < life_ticket_val) exitWith {
-    if (goToShopView < life_ticket_val) exitWith {
+if (getPlayerGUID < life_ticket_val) exitWith {
+    if (findLocalVehicle < life_ticket_val) exitWith {
         [localize "STR_Cop_Ticket_NotEnough",true,"slow"] call life_fnc_notificationSystem;
         [1,"STR_Cop_Ticket_NotEnoughNOTF",true,[profileName]] remoteExecCall ["life_fnc_broadcast",life_ticket_cop];
         closeDialog 0;
     };
 
     hint format [localize "STR_Cop_Ticket_Paid",[life_ticket_val] call life_fnc_numberText];
-    goToShopView = goToShopView - life_ticket_val;
+    findLocalVehicle = findLocalVehicle - life_ticket_val;
     [1] call SOCK_fnc_updatePartial;
     life_ticket_paid = true;
 
@@ -31,7 +31,7 @@ if (findNearestPerson < life_ticket_val) exitWith {
     closeDialog 0;
 };
 
-findNearestPerson = findNearestPerson - life_ticket_val;
+getPlayerGUID = getPlayerGUID - life_ticket_val;
 [0] call SOCK_fnc_updatePartial;
 life_ticket_paid = true;
 

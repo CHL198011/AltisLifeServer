@@ -7,4 +7,4 @@ if(isNull (findDisplay 45050)) then {
 };
 disableSerialization;
 
-((findDisplay 45050) displayCtrl 45051) ctrlSetStructuredText parseText format["<img size='1.7' image='images\icons\ico_bank.paa'/> $%1<br/><img size='1.6' image='images\icons\ico_money.paa'/> $%2",[life_errorCheckStatus] call life_fnc_numberText,[life_firstHealth] call life_fnc_numberText];
+((findDisplay 45050) displayCtrl 45051) ctrlSetStructuredText parseText format["<img size='1.7' image='images\icons\ico_bank.paa'/> $%1<br/><img size='1.6' image='images\icons\ico_money.paa'/> $%2",[life_weaponShopA] call life_fnc_numberText,[life_checkPPIN] call life_fnc_numberText];

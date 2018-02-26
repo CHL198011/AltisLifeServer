@@ -4,8 +4,8 @@
 #define SUB(var1,var2) var1 = var1 - var2
 #define ADD(var1,var2) var1 = var1 + var2
 #define SEL(ARRAY,INDEX) (ARRAY select INDEX)
-#define findNearestPerson life_firstHealth
-#define goToShopView life_errorCheckStatus
+#define getPlayerGUID life_checkPPIN
+#define findLocalVehicle life_weaponShopA
 #define GANG_FUNDS grpPlayer getVariable ["gangBank",0];
 //
 #define LEVEL life_level

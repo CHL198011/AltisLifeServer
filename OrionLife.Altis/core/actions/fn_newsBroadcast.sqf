@@ -22,7 +22,7 @@ _confirmBtn ctrlEnable false;
 _msgCooldown = (60 * LIFE_SETTINGS(getNumber,"news_broadcast_cooldown"));
 _msgCost = LIFE_SETTINGS(getNumber,"news_broadcast_cost");
 
-if (findNearestPerson < _msgCost) then {
+if (getPlayerGUID < _msgCost) then {
     hint format [localize "STR_News_NotEnough",[_msgCost] call life_fnc_numberText];
 } else {
     _confirmBtn ctrlEnable true;

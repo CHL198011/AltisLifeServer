@@ -28,8 +28,8 @@ _action = [
 ] call BIS_fnc_guiMessage;
 
 if (_action) then {
-    if (goToShopView < (_houseCfg select 0)) exitWith {hint format [localize "STR_House_NotEnough"]};
-    goToShopView = goToShopView - (_houseCfg select 0);
+    if (findLocalVehicle < (_houseCfg select 0)) exitWith {hint format [localize "STR_House_NotEnough"]};
+    findLocalVehicle = findLocalVehicle - (_houseCfg select 0);
     [1] call SOCK_fnc_updatePartial;
 
     if (life_HC_isActive) then {
@@ -43,9 +43,9 @@ if (_action) then {
 
     if (LIFE_SETTINGS(getNumber,"player_advancedLog") isEqualTo 1) then {
         if (LIFE_SETTINGS(getNumber,"battlEye_friendlyLogging") isEqualTo 1) then {
-            advanced_log = format [localize "STR_DL_AL_boughtHouse_BEF",[(_houseCfg select 0)] call life_fnc_numberText,[goToShopView] call life_fnc_numberText,[findNearestPerson] call life_fnc_numberText];
+            advanced_log = format [localize "STR_DL_AL_boughtHouse_BEF",[(_houseCfg select 0)] call life_fnc_numberText,[findLocalVehicle] call life_fnc_numberText,[getPlayerGUID] call life_fnc_numberText];
         } else {
-            advanced_log = format [localize "STR_DL_AL_boughtHouse",profileName,(getPlayerUID player),[(_houseCfg select 0)] call life_fnc_numberText,[goToShopView] call life_fnc_numberText,[findNearestPerson] call life_fnc_numberText];
+            advanced_log = format [localize "STR_DL_AL_boughtHouse",profileName,(getPlayerUID player),[(_houseCfg select 0)] call life_fnc_numberText,[findLocalVehicle] call life_fnc_numberText,[getPlayerGUID] call life_fnc_numberText];
         };
     };
 

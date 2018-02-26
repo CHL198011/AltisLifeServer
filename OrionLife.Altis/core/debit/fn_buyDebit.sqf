@@ -11,8 +11,8 @@ _id = getPlayerUID player;
 _debitPrice = LIFE_SETTINGS(getNumber,"debit_price");
 if (life_has_debit isEqualTo true) exitWith {[localize "STR_Debit_AlreadyOwned",true,"slow"] call life_fnc_notificationSystem;};
 if ((LIFE_SETTINGS(getNumber,"item_debit") isEqualTo 1) && (life_inv_debitcard > 0)) exitWith {[localize "STR_Debit_AlreadyOwned",true,"slow"] call life_fnc_notificationSystem;};
-if (_debitPrice > findNearestPerson) exitWith {hint format [localize "STR_Debit_NotEnoughCash",[_debitPrice - findNearestPerson] call life_fnc_numberText];};
-findNearestPerson = findNearestPerson - _debitPrice;
+if (_debitPrice > getPlayerGUID) exitWith {hint format [localize "STR_Debit_NotEnoughCash",[_debitPrice - getPlayerGUID] call life_fnc_numberText];};
+getPlayerGUID = getPlayerGUID - _debitPrice;
 
 if (life_HC_isActive) then {
     [_id] remoteExecCall ["HC_fnc_debitBought",HC_Life];

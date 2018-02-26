@@ -27,7 +27,7 @@ switch (_mode) do
 			"%1 accepted one of your offers, you recieved<br/>
 			<t color='#228B22'>%3%2</t><br/>", name _seller,[_price]call life_fnc_numberText,"$"
 		];
-		goToShopView = goToShopView + _price;
+		findLocalVehicle = findLocalVehicle + _price;
 	};
 
 };

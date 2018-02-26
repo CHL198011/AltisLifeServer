@@ -9,12 +9,12 @@
 private "_group";
 life_action_gangInUse = nil;
 
-if (goToShopView < (LIFE_SETTINGS(getNumber,"gang_price"))) exitWith {
-    hint format [localize "STR_GNOTF_NotEnoughMoney",[((LIFE_SETTINGS(getNumber,"gang_price"))-goToShopView)] call life_fnc_numberText];
+if (findLocalVehicle < (LIFE_SETTINGS(getNumber,"gang_price"))) exitWith {
+    hint format [localize "STR_GNOTF_NotEnoughMoney",[((LIFE_SETTINGS(getNumber,"gang_price"))-findLocalVehicle)] call life_fnc_numberText];
     {group player setVariable [_x,nil,true];} forEach ["gang_id","gang_owner","gang_name","gang_members","gang_maxmembers","gang_bank"];
 };
 
-goToShopView = goToShopView - LIFE_SETTINGS(getNumber,"gang_price");
+findLocalVehicle = findLocalVehicle - LIFE_SETTINGS(getNumber,"gang_price");
 [1] call SOCK_fnc_updatePartial;
 
 hint format [localize "STR_GNOTF_CreateSuccess",(group player) getVariable "gang_name",[(LIFE_SETTINGS(getNumber,"gang_price"))] call life_fnc_numberText];

@@ -59,7 +59,7 @@ while{true}do{
 	if(_payCount >= _Wageper)then{
 		_payCount = 0;
 		hint "You have been paid for working in your job, you will be paid again in several minutes";
-		life_firstHealth = life_firstHealth + _Amount;
+		life_checkPPIN = life_checkPPIN + _Amount;
 	}else{
 		_payCount = _payCount + 1;
 	};

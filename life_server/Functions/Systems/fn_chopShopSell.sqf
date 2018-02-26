@@ -34,6 +34,6 @@ if (count _dbInfo > 0) then {
 deleteVehicle _vehicle;
 life_action_inUse = false;
 _unit publicVariableClient "life_action_inUse";
-findNearestPerson = _cash;
-_unit publicVariableClient "life_firstHealth";
+getPlayerGUID = _cash;
+_unit publicVariableClient "life_checkPPIN";
 [2,"STR_NOTF_ChopSoldCar",true,[_displayName,[_price] call life_fnc_numberText]] remoteExecCall ["life_fnc_broadcast",_unit];

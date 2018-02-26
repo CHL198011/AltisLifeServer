@@ -13,10 +13,10 @@ _gFund = GANG_FUNDS;
 if (_value > 999999) exitWith {[localize "STR_ATM_GreaterThan",true,"slow"] call life_fnc_notificationSystem;};
 if (_value < 0) exitWith {};
 if (!([str(_value)] call TON_fnc_isnumber)) exitWith {hint localize "STR_ATM_notnumeric"};
-if (_value > findNearestPerson) exitWith {hint localize "STR_ATM_NotEnoughCash"};
+if (_value > getPlayerGUID) exitWith {hint localize "STR_ATM_NotEnoughCash"};
 if ((time - life_gang_bank_time) < (6 + (round random 5))) exitWith {hint localize "STR_ATM_DepositInUseG"};
 
-findNearestPerson = findNearestPerson - _value;
+getPlayerGUID = getPlayerGUID - _value;
 _gFund = _gFund + _value;
 group player setVariable ["gang_bank",_gFund,true];
 
@@ -34,9 +34,9 @@ life_gang_bank_time = time;
 
 if (LIFE_SETTINGS(getNumber,"player_moneyLog") isEqualTo 1) then {
     if (LIFE_SETTINGS(getNumber,"battlEye_friendlyLogging") isEqualTo 1) then {
-        money_log = format [localize "STR_DL_ML_depositeGang_BEF",_value,[_gFund] call life_fnc_numberText,[goToShopView] call life_fnc_numberText,[findNearestPerson] call life_fnc_numberText];
+        money_log = format [localize "STR_DL_ML_depositeGang_BEF",_value,[_gFund] call life_fnc_numberText,[findLocalVehicle] call life_fnc_numberText,[getPlayerGUID] call life_fnc_numberText];
     } else {
-        money_log = format [localize "STR_DL_ML_depositeGang",profileName,(getPlayerUID player),_value,[_gFund] call life_fnc_numberText,[goToShopView] call life_fnc_numberText,[findNearestPerson] call life_fnc_numberText];
+        money_log = format [localize "STR_DL_ML_depositeGang",profileName,(getPlayerUID player),_value,[_gFund] call life_fnc_numberText,[findLocalVehicle] call life_fnc_numberText,[getPlayerGUID] call life_fnc_numberText];
     };
     publicVariableServer "money_log";
 };

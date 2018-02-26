@@ -25,7 +25,7 @@ if ((_itemInfo select 6) != "CfgVehicles") then {
 if (_bad != "") exitWith {hint _bad};
 
 if ((uiNamespace getVariable ["Weapon_Shop_Filter",0]) isEqualTo 1) then {
-    goToShopView = goToShopView + _price;
+    findLocalVehicle = findLocalVehicle + _price;
 	[1] call SOCK_fnc_updatePartial;
     [_item,false] call life_fnc_handleItem;
     hint parseText format [localize "STR_Debit_Weapon_Sold",_itemInfo select 1,[_price] call life_fnc_numberText];
@@ -41,7 +41,7 @@ if ((uiNamespace getVariable ["Weapon_Shop_Filter",0]) isEqualTo 1) then {
         _action = [
             format [(localize "STR_Shop_Virt_Gang_FundsMSG")+ "<br/><br/>" +(localize "STR_Shop_Virt_Gang_Funds")+ " <t color='#8cff9b'>$%1</t><br/>" +(localize "STR_Shop_Virt_YourFunds")+ " <t color='#8cff9b'>$%2</t>",
                 [(group player getVariable "gang_bank")] call life_fnc_numberText,
-                [findNearestPerson] call life_fnc_numberText
+                [getPlayerGUID] call life_fnc_numberText
             ],
             localize "STR_Shop_Virt_YourorGang",
             localize "STR_Shop_Virt_UI_GangFunds",
@@ -62,24 +62,24 @@ if ((uiNamespace getVariable ["Weapon_Shop_Filter",0]) isEqualTo 1) then {
             };
 		} else {
 			try {
-				if (findNearestPerson < _price) then {
-					if (goToShopView < _price) then {
+				if (getPlayerGUID < _price) then {
+					if (findLocalVehicle < _price) then {
 						[localize "STR_NOTF_NotEnoughMoney",true,"slow"] call life_fnc_notificationSystem;
 						throw "No money";
 					};
 				};
 				
-				if ((goToShopView > _price) && (findNearestPerson < _price)) then {
+				if ((findLocalVehicle > _price) && (getPlayerGUID < _price)) then {
 					if (LIFE_SETTINGS(getNumber,"debit_tax") isEqualTo 1) then {
 						_debitTax = LIFE_SETTINGS(getNumber,"debit_taxAmount");
 						_realTaxAmount = _debitTax * _price;
 						_priceAfterTax = _price + _realTaxAmount;
-						goToShopView = goToShopView - _priceAfterTax;
+						findLocalVehicle = findLocalVehicle - _priceAfterTax;
 						[1] call SOCK_fnc_updatePartial;
 						hint parseText format [localize "STR_Debit_BoughtItemTax",_itemInfo select 1,[_price] call life_fnc_numberText,[_realTaxAmount] call life_fnc_numberText];
 						[_item,true] spawn life_fnc_handleItem;
 					} else {
-						goToShopView = goToShopView - _price;
+						findLocalVehicle = findLocalVehicle - _price;
 						[1] call SOCK_fnc_updatePartial;
 						hint parseText format [localize "STR_Debit_BoughtItem",_itemInfo select 1,[_price] call life_fnc_numberText];
 						[_item,true] spawn life_fnc_handleItem;
@@ -88,11 +88,11 @@ if ((uiNamespace getVariable ["Weapon_Shop_Filter",0]) isEqualTo 1) then {
 					} else {
 						if (life_has_debit isEqualTo true) then {
 							hint parseText format [localize "STR_Debit_UsedOnHandCash",_itemInfo select 1,[_price] call life_fnc_numberText];
-							findNearestPerson = findNearestPerson - _price;
+							getPlayerGUID = getPlayerGUID - _price;
 							[0] call SOCK_fnc_updatePartial;
 							[_item,true] spawn life_fnc_handleItem;
 						} else {
-							findNearestPerson = findNearestPerson - _price;
+							getPlayerGUID = getPlayerGUID - _price;
 							[0] call SOCK_fnc_updatePartial;
 							hint parseText format [localize "STR_Shop_Weapon_BoughtItem",_itemInfo select 1,[_price] call life_fnc_numberText];
 							[_item,true] spawn life_fnc_handleItem;
@@ -104,24 +104,24 @@ if ((uiNamespace getVariable ["Weapon_Shop_Filter",0]) isEqualTo 1) then {
 	
 	} else {
 		try {
-			if (findNearestPerson < _price) then {
-				if (goToShopView < _price) then {
+			if (getPlayerGUID < _price) then {
+				if (findLocalVehicle < _price) then {
 					[localize "STR_NOTF_NotEnoughMoney",true,"slow"] call life_fnc_notificationSystem;
 					throw "No money";
 				};
 			};
 			
-			if ((goToShopView > _price) && (findNearestPerson < _price)) then {
+			if ((findLocalVehicle > _price) && (getPlayerGUID < _price)) then {
 				if (LIFE_SETTINGS(getNumber,"debit_tax") isEqualTo 1) then {
 					_debitTax = LIFE_SETTINGS(getNumber,"debit_taxAmount");
 					_realTaxAmount = _debitTax * _price;
 					_priceAfterTax = _price + _realTaxAmount;
-					goToShopView = goToShopView - _priceAfterTax;
+					findLocalVehicle = findLocalVehicle - _priceAfterTax;
 					[1] call SOCK_fnc_updatePartial;
 					hint parseText format [localize "STR_Debit_BoughtItemTax",_itemInfo select 1,[_price] call life_fnc_numberText,[_realTaxAmount] call life_fnc_numberText];
 					[_item,true] spawn life_fnc_handleItem;
 				} else {
-					goToShopView = goToShopView - _price;
+					findLocalVehicle = findLocalVehicle - _price;
 					[1] call SOCK_fnc_updatePartial;
 					hint parseText format [localize "STR_Debit_BoughtItem",_itemInfo select 1,[_price] call life_fnc_numberText];
 					[_item,true] spawn life_fnc_handleItem;
@@ -130,11 +130,11 @@ if ((uiNamespace getVariable ["Weapon_Shop_Filter",0]) isEqualTo 1) then {
 				} else {
 					if (life_has_debit isEqualTo true) then {
 						hint parseText format [localize "STR_Debit_UsedOnHandCash",_itemInfo select 1,[_price] call life_fnc_numberText];
-						findNearestPerson = findNearestPerson - _price;
+						getPlayerGUID = getPlayerGUID - _price;
 						[0] call SOCK_fnc_updatePartial;
 						[_item,true] spawn life_fnc_handleItem;
 					} else {
-						findNearestPerson = findNearestPerson - _price;
+						getPlayerGUID = getPlayerGUID - _price;
 						[0] call SOCK_fnc_updatePartial;
 						hint parseText format [localize "STR_Shop_Weapon_BoughtItem",_itemInfo select 1,[_price] call life_fnc_numberText];
 						[_item,true] spawn life_fnc_handleItem;
