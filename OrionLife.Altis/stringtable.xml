@@ -12920,85 +12920,106 @@
             <German>%1 - %2 hat $%3 auf sein Bankkonto eingezahlt. Bankkonto: $%4  Bargeld: $%5</German>
         </Key>
     </Package>
-    <!--
- Add this at the end of the file, right before </Project>
--->
-<Package name="BankingText">
-    <Key ID="STR_Banking_InsertCard_Title">
-        <Original>Please insert your card to continue.</Original>
-        <French>Veuillez insérer votre carte pour continuer.</French>
-    </Key>
-    <Key ID="STR_Banking_InsertCard">
-        <Original>Insert card</Original>
-        <French>Insérer la carte</French>
-    </Key>
-    <Key ID="STR_Banking_InsertPin_Title">
-        <Original>Please enter your PIN to access your account</Original>
-        <French>Veuillez entre votre NIP pour accéder à votre compte</French>
-    </Key>
-    <Key ID="STR_Banking_NoCancel">
-        <Original>You need to create your bank account first.</Original>
-        <French>Vous devez créer votre compte bancaire avant de pouvoir quitter.</French>
-    </Key>
-    <Key ID="STR_Banking_CreatePin">
-        <Original>Please enter a PIN for your new bank account</Original>
-        <French>Veuillez entrer un NIP pour votre compte bancaire</French>
-    </Key>
-    <Key ID="STR_Banking_ConfirmPin">
-        <Original>Please confirm your PIN</Original>
-        <French>Veuillez confirmer votre NIP</French>
-    </Key>
-    <Key ID="STR_Banking_Correct">
-        <Original>Correct</Original>
-        <French>Corriger</French>
-    </Key>
-    <Key ID="STR_Banking_Enter">
-        <Original>Enter</Original>
-        <French>Entrer</French>
-    </Key>
-    <Key ID="STR_Banking_Back">
-        <Original>Back</Original>
-        <French>Retour</French>
-    </Key>
-    <Key ID="STR_Banking_Balance">
-        <Original>Balance</Original>
-        <French>Solde</French>
-    </Key>
-    <Key ID="STR_Banking_Withdraw">
-        <Original>Withdraw</Original>
-        <French>Retrait</French>
-    </Key>
-    <Key ID="STR_Banking_Deposit">
-        <Original>Deposit</Original>
-        <French>Dépôt</French>
-    </Key>
-    <Key ID="STR_Banking_Transfer">
-        <Original>Transfer</Original>
-        <French>Transfert</French>
-    </Key>
-    <Key ID="STR_Banking_GangDeposit">
-        <Original>Gang Deposit</Original>
-        <French>Dépôt de gang</French>
-    </Key>
-    <Key ID="STR_Banking_GangWithdraw">
-        <Original>Gang Withdraw</Original>
-        <French>Retrait de gang</French>
-    </Key>
-    <Key ID="STR_Banking_InvalidPin">
-        <Original>Invalid PIN! It must contain 4 digits.</Original>
-        <French>NIP invalide! Il doit comporter 4 caractères.</French>
-    </Key>
-    <Key ID="STR_Banking_WrongPinConfirm">
-        <Original>Wrong PIN! Please enter the same PIN you entered before.</Original>
-        <French>NIP incorrect! Veuillez entrer le même NIP que vous avez entré précédemment.</French>
-    </Key>
-    <Key ID="STR_Banking_WrongPin">
-        <Original>Wrong PIN! Please try again...</Original>
-        <French>NIP incorrect! Veuillez réessayer...</French>
-    </Key>
-    <Key ID="STR_Banking_PinSuccess">
-        <Original>PIN successfully set! Try it at an ATM now!</Original>
-        <French>Le NIP a été activé! Vous pouvez l'essayer à un ATM dès maintenant.</French>
-    </Key>
-</Package>
+    <Package name="BankingText">
+        <Key ID="STR_Banking_InsertCard_Title">
+            <Original>Please insert your card to continue.</Original>
+            <French>Veuillez insérer votre carte pour continuer.</French>
+        </Key>
+        <Key ID="STR_Banking_InsertCard">
+            <Original>Insert card</Original>
+            <French>Insérer la carte</French>
+        </Key>
+        <Key ID="STR_Banking_InsertPin_Title">
+            <Original>Please enter your PIN to access your account</Original>
+            <French>Veuillez entre votre NIP pour accéder à votre compte</French>
+        </Key>
+        <Key ID="STR_Banking_NoCancel">
+            <Original>You need to create your bank account first.</Original>
+            <French>Vous devez créer votre compte bancaire avant de pouvoir quitter.</French>
+        </Key>
+        <Key ID="STR_Banking_CreatePin">
+            <Original>Please enter a PIN for your new bank account</Original>
+            <French>Veuillez entrer un NIP pour votre compte bancaire</French>
+        </Key>
+        <Key ID="STR_Banking_ConfirmPin">
+            <Original>Please confirm your PIN</Original>
+            <French>Veuillez confirmer votre NIP</French>
+        </Key>
+        <Key ID="STR_Banking_Correct">
+            <Original>Correct</Original>
+            <French>Corriger</French>
+        </Key>
+        <Key ID="STR_Banking_Enter">
+            <Original>Enter</Original>
+            <French>Entrer</French>
+        </Key>
+        <Key ID="STR_Banking_Back">
+            <Original>Back</Original>
+            <French>Retour</French>
+        </Key>
+        <Key ID="STR_Banking_Balance">
+            <Original>Balance</Original>
+            <French>Solde</French>
+        </Key>
+        <Key ID="STR_Banking_Withdraw">
+            <Original>Withdraw</Original>
+            <French>Retrait</French>
+        </Key>
+        <Key ID="STR_Banking_Deposit">
+            <Original>Deposit</Original>
+            <French>Dépôt</French>
+        </Key>
+        <Key ID="STR_Banking_Transfer">
+            <Original>Transfer</Original>
+            <French>Transfert</French>
+        </Key>
+        <Key ID="STR_Banking_GangDeposit">
+            <Original>Gang Deposit</Original>
+            <French>Dépôt de gang</French>
+        </Key>
+        <Key ID="STR_Banking_GangWithdraw">
+            <Original>Gang Withdraw</Original>
+            <French>Retrait de gang</French>
+        </Key>
+        <Key ID="STR_Banking_InvalidPin">
+            <Original>Invalid PIN! It must contain 4 digits.</Original>
+            <French>NIP invalide! Il doit comporter 4 caractères.</French>
+        </Key>
+        <Key ID="STR_Banking_WrongPinConfirm">
+            <Original>Wrong PIN! Please enter the same PIN you entered before.</Original>
+            <French>NIP incorrect! Veuillez entrer le même NIP que vous avez entré précédemment.</French>
+        </Key>
+        <Key ID="STR_Banking_WrongPin">
+            <Original>Wrong PIN! Please try again...</Original>
+            <French>NIP incorrect! Veuillez réessayer...</French>
+        </Key>
+        <Key ID="STR_Banking_PinSuccess">
+            <Original>PIN successfully set! Try it at an ATM now!</Original>
+            <French>Le NIP a été activé! Vous pouvez l'essayer à un ATM dès maintenant.</French>
+        </Key>
+        <Key ID="STR_KilledPlayer">
+            <Original>You just Killed %1! (%2)</Original>
+                <Czech>%1 - %2 uloženy $%3 do své banky. Banka Zůstatek: $%4 po zralé úvaze rukou: $%5</Czech>
+                <French>%1 - %2 a déposé $%3 dans sa Banque. Solde bancaire $%4 Argent en poche : $%5</French>
+                <Spanish>%1 - %2 depositó $%3 a su cuenta de banco. Saldo Bancario: $%4 Saldo en Efectivo: $%5</Spanish>
+                <Italian></Italian>
+                <Polish></Polish>
+                <Portuguese>%1 - %2 depositou R$%3 no seu banco. Quantia no Banco: R$%4 Quantia na Mão: R$%5</Portuguese>
+                <Russian>%1 - %2 депозит в размере $%3 в свой банк. Банковский баланс: $%4 на руку Баланс: $%5</Russian>
+                <German>%1 - %2 hat $%3 auf sein Bankkonto eingezahlt. Bankkonto: $%4  Bargeld: $%5</German>
+        </Key>
+    </Package>
+    <Package name="FlabbyThings">
+        <Key ID="STR_KilledPlayer">
+            <Original>You just Killed %1! (%2)</Original>
+            <Czech>Jenom jsi zabil %1! (%2)</Czech>
+            <French>Vous venez de tuer %1! (%2)</French>
+            <Spanish>Usted acaba de matar %1! (%2)</Spanish>
+            <Italian>Hai appena ucciso %1! (%2)</Italian>
+            <Polish>Po prostu zabiłeś %1! (%2)</Polish>
+            <Portuguese>Você acabou de matar %1! (%2)</Portuguese>
+            <Russian>Вы только что убили %1! (%2)</Russian>
+            <German>Du hast gerade getötet %1! (%2)</German>
+        </Key>
+    </Package>
 </Project>
