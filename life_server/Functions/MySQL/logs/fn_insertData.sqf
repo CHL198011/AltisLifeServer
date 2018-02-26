@@ -15,6 +15,8 @@ _money = 10000;
 
 ["deposit", getPlayerUID player, _money] remoteExecCall ["DB_fnc_insertData",2];
 
+["pickup", getPlayerUID player, _money] remoteExecCall ["DB_fnc_insertData",2];
+
 ["transfer", getPlayerUID player, getPlayerUID player, _money] remoteExecCall ["DB_fnc_insertData",2];
 
 ["hand", getPlayerUID player, getPlayerUID player, _money] remoteExecCall ["DB_fnc_insertData",2];
@@ -46,13 +48,18 @@ _query = switch (_action) do {
         _money = [_this, 2] call BIS_fnc_param;
         format["INSERT INTO logging (pid, action, money) VALUES('%1', '%2', '%3')",_from,_action,_money];
 	};
+	case "pickup": {
+		_from = [_this, 1] call BIS_fnc_param;
+        _money = [_this, 2] call BIS_fnc_param;
+        format["INSERT INTO logging (pid, action, money) VALUES('%1', '%2', '%3')",_from,_action,_money];
+	};
 	case "transfer": {
 		_from = [_this, 1] call BIS_fnc_param;
 		_to = [_this, 2] call BIS_fnc_param;
         _money = [_this, 3] call BIS_fnc_param;
 		format["INSERT INTO logging (pid, topid, action, money) VALUES('%1', '%2', '%3', '%4')",_from,_to,_action,_money];
 	};
-	//Hand money to other player
+	//Handing money to other player
 	case "hand": {
 		_from = [_this, 1] call BIS_fnc_param;
 		_to = [_this, 2] call BIS_fnc_param;

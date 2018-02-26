@@ -12,9 +12,8 @@ if((time - life_action_delay) < 1.5) exitWith {
 		_this select 0 setVariable["inUse",false,true];
 	};
 };
-private["_obj","_val"];
-_obj = param [0,ObjNull,[ObjNull]];
-_val = (_obj getVariable "item") select 1;
+private _obj = param [0,ObjNull,[ObjNull]];
+private _val = (_obj getVariable "item") select 1;
 if(isNil {_val}) exitWith {};
 if(isNull _obj || player distance _obj > 3) exitWith {if(!isNull _obj) then {_obj setVariable["inUse",false,true];};};
 if((_obj getVariable["PickedUp",false])) exitWith {deleteVehicle _obj;};
@@ -33,6 +32,7 @@ if(!isNil {_val}) then
     titleText[format [localize "STR_NOTF_PickedMoney",[_val] call life_fnc_numberText],"PLAIN"];
     getPlayerGUID = getPlayerGUID + _val;
     [0] call SOCK_fnc_updatePartial;
+	["pickup", getPlayerUID player, _val] remoteExecCall ["DB_fnc_insertData",2];
 	life_action_delay = time;
 };
 [] spawn life_fnc_pickupItems;
