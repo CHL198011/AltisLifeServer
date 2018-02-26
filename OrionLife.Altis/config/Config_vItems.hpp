@@ -200,7 +200,13 @@ class VirtualShops {
         conditions = "";
         items[] = {"kidney" };
     };
-
+//Alcohol
+	class OrionsSpirits {
+        name = "Orion's Spirits & Liquor Store";
+        side = "civ";
+        conditions = "";
+        items[] = { "beer", "whiskey", "moonshine" };
+    };
 };
 
 class VirtualItems {
@@ -288,7 +294,7 @@ class VirtualItems {
         displayName = "STR_Item_oilSupplies";
         weight = 20;
         buyPrice = -1;
-        sellPrice = 12500;
+        sellPrice = 22500;
         illegal = true;
         edible = -1;
         icon = "images\icons\ico_oilSupplies.paa";
@@ -298,7 +304,7 @@ class VirtualItems {
         variable = "speedbomb";
         displayName = "STR_Item_speedbomb";
         weight = 8;
-        buyPrice = 250000;
+        buyPrice = 550000;
         sellPrice = 25000;
         illegal = true;
         edible = -1;
@@ -389,7 +395,7 @@ class VirtualItems {
         displayName = "STR_Item_LSD";
         weight = 5;
         buyPrice = -1;
-        sellPrice = 7000;
+        sellPrice = 5000;
         illegal = true;
         edible = -1;
         icon = "images\icons\ico_LSD.paa";
@@ -527,7 +533,7 @@ class VirtualItems {
         weight = 4;
         buyPrice = 6000;
         sellPrice = 3000;
-        illegal = true;
+        illegal = false;
         edible = -1;
         icon = "images\icons\ico_protest.paa";
     };
@@ -572,7 +578,7 @@ class VirtualItems {
         displayName = "STR_Item_uranium";
         weight = 4;
         buyPrice = -1;
-        sellPrice = 6000;
+        sellPrice = 5250;
         illegal = true;
         edible = -1;
         icon = "images\icons\ico_uraniumP.paa";
@@ -903,7 +909,7 @@ class VirtualItems {
 		sellPrice = -1;
 		illegal = false;
 		edible = -1;
-		icon = "images\icons\ico_beer.paa";
+		icon = "images\icons\OrionsSpirits\barley.paa";
 	};
 	
     class starch {
@@ -914,18 +920,19 @@ class VirtualItems {
 		sellPrice = -1;
 		illegal = false;
 		edible = 100;
-		icon = "images\icons\ico_beer.paa";
+		icon = "images\icons\OrionsSpirits\starch.paa";
 	};
 
-    class bitterwort {
-		variable = "bitterwort";
-		displayName = "Bitter Wort";
+    class hops {
+		variable = "hops";
+		displayName = "Hops";
 		weight = 2;
 		buyPrice = -1;
 		sellPrice = -1;
 		illegal = false;
 		edible = 100;
-		icon = "images\icons\ico_beer.paa";	
+		icon = "images\icons\OrionsSpirits\hops.paa";
+    };
 //beer
 //Whiskey
 	class whiskey {
@@ -947,7 +954,7 @@ class VirtualItems {
 		sellPrice = -1;
 		illegal = true;
 		edible = -1;
-		icon = "images\icons\ico_whiskey.paa";
+		icon = "images\icons\OrionsSpirits\distilledwhiskey.paa";
 	};
 	
 	class mixedwhiskey {
@@ -958,7 +965,7 @@ class VirtualItems {
 		sellPrice = -1;
 		illegal = true;
 		edible = -1;
-		icon = "images\icons\ico_whiskey.paa";
+		icon = "images\icons\OrionsSpirits\mixedwhiskey.paa";
 	};	
 	
 	class yeast {
@@ -969,7 +976,7 @@ class VirtualItems {
 		sellPrice = -1;
 		illegal = false;
 		edible = -1;
-		icon = "images\icons\ico_whiskey.paa";
+		icon = "images\icons\OrionsSpirits\yeast.paa";
 	};	
 //Whiskey
 //moonshine
@@ -981,7 +988,7 @@ class VirtualItems {
 		sellPrice = -1;
 		illegal = false;
 		edible = 100;
-		icon = "images\icons\ico_moonshine.paa";
+		icon = "images\icons\OrionsSpirits\corn.paa";
 	};
 
 	class mash {
@@ -992,7 +999,7 @@ class VirtualItems {
 		sellPrice = -1;
 		illegal = false;
 		edible = 100;
-		icon = "images\icons\ico_moonshine.paa";
+		icon = "images\icons\OrionsSpirits\mash.paa";
 	};
 
 	class fermentedmash {
@@ -1003,7 +1010,7 @@ class VirtualItems {
 		sellPrice = -1;
 		illegal = false;
 		edible = 100;
-		icon = "images\icons\ico_moonshine.paa";
+		icon = "images\icons\OrionsSpirits\fermmash.paa";
 	};
 	
 	class moonshine {
@@ -1642,7 +1649,7 @@ class VirtualItems {
         displayName = "STR_Item_OilP";
         weight = 4;
         buyPrice = -1;
-        sellPrice = 5850;
+        sellPrice = 3250;
         illegal = false;
         edible = -1;
         icon = "images\icons\ico_oilProcessed.paa";
@@ -1798,7 +1805,7 @@ class VirtualItems {
         displayName = "STR_Item_HeroinP";
         weight = 4;
         buyPrice = 6500;
-        sellPrice = 5750;
+        sellPrice = 4750;
         illegal = true;
         edible = -1;
         icon = "images\icons\ico_heroinProcessed.paa";
@@ -1820,8 +1827,8 @@ class VirtualItems {
         variable = "marijuana";
         displayName = "STR_Item_Marijuana";
         weight = 2;
-        buyPrice = 4200;
-        sellPrice = 3675;
+        buyPrice = 4750;
+        sellPrice = 4500;
         illegal = true;
         edible = -1;
         icon = "images\icons\ico_marijuana.paa";
@@ -1844,7 +1851,7 @@ class VirtualItems {
         displayName = "STR_Item_CocaineP";
         weight = 4;
         buyPrice = -1;
-        sellPrice = 6000;
+        sellPrice = 5250;
         illegal = true;
         edible = -1;
         icon = "images\icons\ico_cocaineProcessed.paa";

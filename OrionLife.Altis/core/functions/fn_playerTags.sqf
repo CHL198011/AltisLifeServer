@@ -21,7 +21,7 @@ if (isNull _ui) then {
     _ui = uiNamespace getVariable ["Life_HUD_nameTags",displayNull];
 };
 
-_units = nearestObjects[(visiblePosition player),["Man","Land_Pallet_MilBoxes_F","Land_Sink_F"],50];
+_units = nearestObjects[(visiblePosition player),["Man"/*,"Land_Pallet_MilBoxes_F","Land_Sink_F"*/],50];
 _units = _units - [player];
 
 _masks = LIFE_SETTINGS(getArray,"clothing_masks");
@@ -40,7 +40,6 @@ private _index = -1;
         _distance = _pos distance player;
         
         if (count _sPos > 1 && {_distance < 15}) then {
-            //_name = format ["<t color='#e6e6e6'>%1</t><br>",name _x];
             _pid = format ["<t color='#e6e6e6'>%1</t>",getPlayerUID _x];
             // Daryl - When a player gets restrained it puts a stop sign and big blue letters notifying others around them that the player is restrained.
             if (_x getVariable  ["restrained",true]) then {_pid = "<t align='center'><t size='2' color='#0000ff'>Restrained</t><br/><img size='3' color='#ffffff' image='images\icons\ico_handcuffsign.paa'/></t><br/><t align='center' color='#e6e6e6' " + _pid;};

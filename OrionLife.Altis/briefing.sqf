@@ -12,6 +12,7 @@ player createDiarySubject ["safezones","Safe Zones (No Killing)"];
 player createDiarySubject ["redzones","Red Zones (KOS)"];
 player createDiarySubject ["illegalitems","Illegal Activity"];
 //player createDiarySubject ["terrorrules","Terrorism Rules"];
+player createDiarySubject ["gatherprocess","Gathering & Processing"];
 player createDiarySubject ["controls","Controls"];
 
 /*  Example
@@ -810,7 +811,46 @@ The following items are illegal to posses:<br/><br/>
                 "
         ]
     ];
+//Gather & Process Section
 
+	player createDiaryRecord ["gatherprocess",
+		[
+			"Gathering & Processing",
+				"
+Legal: 
+Apple: Apple Field > Any Market <br/>
+Peach: Peach Field > Any Market <br/>
+Iron: Iron Mine > Iron Processing > Iron / Copper Trader <br/>
+Copper: Copper Mine > Copper Processing > Iron / Copper Trader <br/>
+Ruby: Ruby Mine > Ruby Cutting > Jeweler <br/>
+Diamond: Diamond Mine > Diamond Processing > Diamond Trader <br/>
+Cement: Rock Quarry > Rock Processing > Cement Trader <br/>
+Salt: Salt Mine > Salt Processing > Salt Trader <br/>
+Oil: Oil Field > Oil Processing > Oil Trader <br/>
+Cloth: Abandoned Sheep Farm > Cloth Weaving > Any Market <br/>
+Glass: Sand Mine > Sand Processing > Glass Trader <br/>
+or <br/>
+Glass: Sand Mine > Sand Processing > Glass Blowing Factory > Fine Crafted Glass Trader <br/>
+Lumber: Any Tree > Lumber Processing > Any Market <br/>
+Steel Plate: Steel Bar Storage > Steel Armor Plate Factory <br/>
+Oil Supplies: Oil Rig > Oil Rig Supplies Trader <br/><br/>
+Crafting Ingredients: <br/>
+Rubber: Rubber Trees > Rubber Processing > Rubber <br/> 
+C4: Nitroamine Mine > C4 Block Processing > C4 <br/>
+Gold Coins: Pirate Ship Doubloons > Gold Coins <br/>
+Coins can be sold at Market or can be Used for Crafting <br/><br/>
+Illegal: <br/>
+Uranium: Uranium Mine > Uranium Processing > Uranium Dealer <br/>
+Tobacco: Tobacco Field > Tobacco Processing > Tobacco Leaf Processing > Cigar Shop <br/>
+Weed: Cannabis > Weed Processing > Drug Dealer <br/>
+Cocaine: Coca Field > Cocaine Processing > Drug Dealer <br/>
+Heroin: Opium Poppy Field > Heroin Processing > Drug Dealer <br/>
+LSD: Mushroom Field > LSD Processing > Drug Dealer <br/>
+Turtle: Turtle Poaching > Turtle Dealer <br/>
+				"
+		]
+	];
+				
 // Controls Section
 
     player createDiaryRecord ["controls",
@@ -852,6 +892,10 @@ Left Ctrl + H: Revert holster action.<br/>
 Shift + Spacebar: Jump.<br/>
 Left Shift + O: (un)fade sound (ear plugs).<br/>
 Pullout Players: Automine with Tempest Device<br/>
+G: Warning Indicators.<br/>
+Q: Left Turn Signal (in Vehicle).<br/>
+E: Right Turn Signal (in Vehicle).<br/>
+Windows Key: Gather/Interact with Vehicle.<br/>
                 "
         ]
     ];
