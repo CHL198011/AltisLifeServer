@@ -152,7 +152,7 @@ if (LIFE_SETTINGS(getNumber,"player_advancedLog") isEqualTo 1) then {
     };
     publicVariableServer "advanced_log";
 };
-["buy", getPlayerUID player, "vehicle", getText(configFile >> "CfgVehicles" >> _className >> "displayName"), _purchasePrice] remoteExecCall ["DB_fnc_insertData",2];
+["buy", getPlayerUID player, "vehicle", _className, _purchasePrice] remoteExecCall ["DB_fnc_insertData",2];
 [player,"buy"] remoteexeccall ["say3D",0];
 ["VehiclePurchased"] spawn mav_ttm_fnc_addExp;
 closeDialog 0; //Exit the menu.

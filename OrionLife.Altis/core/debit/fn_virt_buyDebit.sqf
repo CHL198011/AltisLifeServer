@@ -68,10 +68,12 @@ if ([true,_type,_amount] call life_fnc_handleInv) then {
 						_realTaxAmount = _debitTax * _realPrice;
 						_priceAfterTax = _realPrice + _realTaxAmount;
 						findLocalVehicle = findLocalVehicle - _priceAfterTax;
+        				["buy", getPlayerUID player, "virtual", _type, _priceAfterTax] remoteExecCall ["DB_fnc_insertData",2];
 						[1] call SOCK_fnc_updatePartial;
 						hint parseText format [localize "STR_Debit_Virt_BoughtItemTax",_amount,(localize _name),[_realPrice] call life_fnc_numberText,[_realTaxAmount] call life_fnc_numberText];
 					} else {
 						findLocalVehicle = findLocalVehicle - _realPrice;
+        				["buy", getPlayerUID player, "virtual", _type, _realPrice] remoteExecCall ["DB_fnc_insertData",2];
 						hint parseText format [localize "STR_Debit_Virt_BoughtItem",_amount,(localize _name),[_realPrice] call life_fnc_numberText];
 						[1] call SOCK_fnc_updatePartial;
 					};
@@ -79,9 +81,11 @@ if ([true,_type,_amount] call life_fnc_handleInv) then {
 						if (life_has_debit isEqualTo true) then {
 							hint parseText format [localize "STR_Debit_Virt_UsedOnHandCash",_amount,(localize _name),[_realPrice] call life_fnc_numberText];
 							getPlayerGUID = getPlayerGUID - _realPrice;
+        					["buy", getPlayerUID player, "virtual", _type, _realPrice] remoteExecCall ["DB_fnc_insertData",2];
 							[0] call SOCK_fnc_updatePartial;
 						} else {
 							getPlayerGUID = getPlayerGUID - _realPrice;
+        					["buy", getPlayerUID player, "virtual", _type, _realPrice] remoteExecCall ["DB_fnc_insertData",2];
 							[0] call SOCK_fnc_updatePartial;
 						};
 					};
@@ -103,12 +107,14 @@ if ([true,_type,_amount] call life_fnc_handleInv) then {
 						_realTaxAmount = _debitTax * _realPrice;
 						_priceAfterTax = _realPrice + _realTaxAmount;
 						findLocalVehicle = findLocalVehicle - _priceAfterTax;
+        				["buy", getPlayerUID player, "virtual", _type, _priceAfterTax] remoteExecCall ["DB_fnc_insertData",2];
 						[1] call SOCK_fnc_updatePartial;
 						hint parseText format [localize "STR_Debit_Virt_BoughtItemTax",_amount,(localize _name),[_realPrice] call life_fnc_numberText,[_realTaxAmount] call life_fnc_numberText];
 						[player,"buy"] remoteexeccall ["say3D",0];
 					} else {
 						findLocalVehicle = findLocalVehicle - _realPrice;
 						hint parseText format [localize "STR_Debit_Virt_BoughtItem",_amount,(localize _name),[_realPrice] call life_fnc_numberText];
+        				["buy", getPlayerUID player, "virtual", _type, _realPrice] remoteExecCall ["DB_fnc_insertData",2];
 						[player,"buy"] remoteexeccall ["say3D",0];
 						[1] call SOCK_fnc_updatePartial;
 					};
@@ -116,10 +122,12 @@ if ([true,_type,_amount] call life_fnc_handleInv) then {
 						if (life_has_debit isEqualTo true) then {
 							hint parseText format [localize "STR_Debit_Virt_UsedOnHandCash",_amount,(localize _name),[_realPrice] call life_fnc_numberText];
 							getPlayerGUID = getPlayerGUID - _realPrice;
+        					["buy", getPlayerUID player, "virtual", _type, _realPrice] remoteExecCall ["DB_fnc_insertData",2];
 							[player,"buy"] remoteexeccall ["say3D",0];
 							[0] call SOCK_fnc_updatePartial;
 						} else {
 							getPlayerGUID = getPlayerGUID - _realPrice;
+        					["buy", getPlayerUID player, "virtual", _type, _realPrice] remoteExecCall ["DB_fnc_insertData",2];
 							[player,"buy"] remoteexeccall ["say3D",0];
 							[0] call SOCK_fnc_updatePartial;
 						};

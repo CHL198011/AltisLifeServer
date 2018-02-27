@@ -181,14 +181,7 @@ if (_mode) then {
     };
 };
 
-if (LIFE_SETTINGS(getNumber,"player_advancedLog") isEqualTo 1) then {
-    if (LIFE_SETTINGS(getNumber,"battlEye_friendlyLogging") isEqualTo 1) then {
-        advanced_log = format [localize "STR_DL_AL_boughtVehicle_BEF",_className,[_purchasePrice] call life_fnc_numberText,[getPlayerGUID] call life_fnc_numberText,[findLocalVehicle] call life_fnc_numberText];
-    } else {
-        advanced_log = format [localize "STR_DL_AL_boughtVehicle",profileName,(getPlayerUID player),_className,[_purchasePrice] call life_fnc_numberText,[getPlayerGUID] call life_fnc_numberText,[findLocalVehicle] call life_fnc_numberText];
-    };
-    publicVariableServer "advanced_log";
-};
+["buy", getPlayerUID player, "vehicle", _className, _purchasePrice] remoteExecCall ["DB_fnc_insertData",2];
 [player,"buy"] remoteexeccall ["say3D",0];
 ["VehiclePurchased"] spawn mav_ttm_fnc_addExp;
 closeDialog 0; //Exit the menu.
