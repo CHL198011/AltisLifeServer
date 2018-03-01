@@ -11,7 +11,7 @@ _handle = [] spawn life_fnc_stripDownPlayer;
 waitUntil {scriptDone _handle};
 
 player ForceaddUniform "U_Rangemaster";
-player addBackpack "B_Caryall_cbr";
+player addBackpack "B_Carryall_cbr";
 player addHeadgear "H_Cap_marshal";
 player linkItem "ItemMap";
 player linkItem "ItemCompass";
