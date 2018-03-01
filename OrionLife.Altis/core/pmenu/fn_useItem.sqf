@@ -128,15 +128,15 @@ switch (true) do {
 
     case (_item isEqualTo "campfire"):
 	{
+		if (safezone) exitWith { ["Can't place a campfire in safezone!",false,"fast"] call life_fnc_notificationSystem; };
 		if (vehicle player != player) exitWith{ _exit = true; ["Starting a fire in a vehicle is hazardous to your health!",false,"slow"] call life_fnc_notificationSystem;};
-		//if (player distance (getMarkerPos "city") < 1000 || player distance (getMarkerPos "civ_spawn_2") < 1000 || player distance (getMarkerPos "civ_spawn_3") < 500 || player distance (getMarkerPos "civ_spawn_4") < 500) exitWith { ["Creating campfires too close to a city center is prohibited!",false,"slow"] call life_fnc_notificationSystem; };
 		if (count (nearestObjects [player, ["Land_Campfire_F"], 25]) > 0) exitWith { ["There's already a campfire nearby!",false,"slow"] call life_fnc_notificationSystem; };
 		if(([false,_item,1] call life_fnc_handleInv)) then
 		{
-			titleText["You create a simple campfire using the contents of a campfire kit.","PLAIN"];
+			titleText["You created a simple campfire using the contents of a campfire kit.","PLAIN"];
 			_fire = "Land_Campfire_F" createVehicle (getPos player);
 			_fire setVariable ["owner", player, true];
-			_fire addAction["Cook Raw Meat",life_fnc_cookMeat,cursorObject,-1,false,false,"",'!isNull cursorObject && (player distance cursorObject) < 4 && (typeOf cursorObject) == "Land_Campfire_F" && inflamed cursorObject && (life_inv_chicken > 0 || life_inv_sheep > 0 || life_inv_goat > 0) '];
+			//_fire addAction["Cook Raw Meat",life_fnc_cookMeat,cursorObject,-1,false,false,"",'!isNull cursorObject && (player distance cursorObject) < 4 && (typeOf cursorObject) == "Land_Campfire_F" && inflamed cursorObject && (life_inv_chicken > 0 || life_inv_sheep > 0 || life_inv_goat > 0) '];
 			_fire addAction["Clean Up Campfire",{deleteVehicle cursorObject},cursorObject,-1,false,false,"",'!isNull cursorObject && (player distance cursorObject) < 4 && (typeOf cursorObject) == "Land_Campfire_F" '];
 		};
 	};
