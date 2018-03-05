@@ -13,7 +13,7 @@ _price = _control lbValue (lbCurSel _control);
 _vehicle = _control lbData (lbCurSel _control);
 _vehicle = call compile format ["%1", _vehicle];
 _chopable = LIFE_SETTINGS(getArray,"chopShop_vehicles");
-_nearVehicles = nearestObjects [getMarkerPos life_chopShop,_chopable,25];
+_nearVehicles = nearestObjects [getMarkerPos life_chopShop,_chopable,30];
 _vehicle = (_nearVehicles select _vehicle);
 if (isNull _vehicle) exitWith {};
 
