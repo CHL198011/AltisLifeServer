@@ -29,7 +29,7 @@ _zone12dis = 65;
 _inArea = false;
 
 _enterText = "You are now entering a safezone!";
-_leaveText = "You have left the Safezone!";
+_leaveText = "STR_SafezoneLeave!";
 
 switch (playerSide) do
 {
@@ -42,14 +42,14 @@ switch (playerSide) do
 				if (((_zone1 distance player < _zone1dis) || (_zone2 distance player < _zone2dis) || (_zone3 distance player < _zone3dis) || (_zone4 distance player < _zone4dis) || (_zone5 distance player < _zone5dis) || (_zone6 distance player < _zone6dis) || (_zone7 distance player < _zone7dis) || (_zone8 distance player < _zone8dis) || (_zone9 distance player < _zone9dis) || (_zone10 distance player < _zone10dis) || (_zone11 distance player < _zone11dis) || (_zone12 distance player < _zone12dis)) && (!_inArea)) then
 				{
 					_inArea = true;
-					["You are Entering a Safezone, you must now follow our safezone rules",false,"slow"] call life_fnc_notificationSystem;
+					["STR_SafezoneEnter",false,"slow"] call life_fnc_notificationSystem;
 					player allowDamage false;
 					safezone = true;
 				};
 				if (((_zone1 distance player > _zone1dis) && (_zone2 distance player > _zone2dis) && (_zone3 distance player > _zone3dis) && (_zone4 distance player > _zone4dis) && (_zone5 distance player > _zone5dis) && (_zone6 distance player > _zone6dis) && (_zone7 distance player > _zone7dis) && (_zone8 distance player > _zone8dis) && (_zone9 distance player > _zone9dis) && (_zone10 distance player > _zone10dis) && (_zone11 distance player > _zone11dis) && (_zone12 distance player > _zone12dis)) && (_inArea)) then
 				{
 					_inArea = false;
-					["You have left the Safezone",false,"slow"] call life_fnc_notificationSystem;
+					["STR_SafezoneLeave",false,"slow"] call life_fnc_notificationSystem;
 					player allowDamage true;
 					safezone = false;
 				};
@@ -66,17 +66,15 @@ switch (playerSide) do
 			{
 				if (((_zone1 distance player < _zone1dis) || (_zone2 distance player < _zone2dis) || (_zone3 distance player < _zone3dis) || (_zone4 distance player < _zone4dis) || (_zone5 distance player < _zone5dis) || (_zone6 distance player < _zone6dis) || (_zone7 distance player < _zone7dis) || (_zone8 distance player < _zone8dis) || (_zone9 distance player < _zone9dis) || (_zone10 distance player < _zone10dis) || (_zone11 distance player < _zone11dis) || (_zone12 distance player < _zone12dis)) && (!_inArea)) then
 				{
-					_eh1 = player addEventHandler ["fired", {deleteVehicle (_this select 6);}];
 					_inArea = true;
-					["You are Entering a Safezone, you must now follow our safezone rules",false,"slow"] call life_fnc_notificationSystem;
+					["STR_SafezoneEnter",false,"slow"] call life_fnc_notificationSystem;
 					player allowDamage false;
 					safezone = true;
 				};
 				if (((_zone1 distance player > _zone1dis) && (_zone2 distance player > _zone2dis) && (_zone3 distance player > _zone3dis) && (_zone4 distance player > _zone4dis) &&(_zone5 distance player > _zone5dis) && (_zone6 distance player > _zone6dis) && (_zone7 distance player > _zone7dis) && (_zone8 distance player > _zone8dis) && (_zone9 distance player > _zone9dis) && (_zone10 distance player > _zone10dis) && (_zone11 distance player > _zone11dis) && (_zone12 distance player > _zone12dis)) && (_inArea)) then
 				{
-					player removeEventHandler ["fired", _eh1];
 					_inArea = false;
-					["You have left the Safezone",false,"slow"] call life_fnc_notificationSystem;
+					["STR_SafezoneLeave",false,"slow"] call life_fnc_notificationSystem;
 					player allowDamage true;
 					safezone = false;
 				};
@@ -94,7 +92,7 @@ switch (playerSide) do
 				if (((_zone1 distance player < _zone1dis) || (_zone2 distance player < _zone2dis) || (_zone3 distance player < _zone3dis) || (_zone4 distance player < _zone4dis) || (_zone5 distance player < _zone5dis) || (_zone6 distance player < _zone6dis) || (_zone7 distance player < _zone7dis) || (_zone8 distance player < _zone8dis) || (_zone9 distance player < _zone9dis) || (_zone10 distance player < _zone10dis) || (_zone11 distance player < _zone11dis) || (_zone12 distance player < _zone12dis)) && (!_inArea)) then
 				{
 					_inArea = true;
-					["You are Entering a Safezone, you must now follow our safezone rules",false,"slow"] call life_fnc_notificationSystem;
+					["STR_SafezoneEnter",false,"slow"] call life_fnc_notificationSystem;
 					player allowDamage false;
 					safezone = true;
 					imAuto = false;
@@ -102,7 +100,7 @@ switch (playerSide) do
 				if (((_zone1 distance player > _zone1dis) && (_zone2 distance player > _zone2dis) && (_zone3 distance player > _zone3dis) && (_zone4 distance player > _zone4dis) &&(_zone5 distance player > _zone5dis) && (_zone6 distance player > _zone6dis) && (_zone7 distance player > _zone7dis) && (_zone8 distance player > _zone8dis) && (_zone9 distance player > _zone9dis) && (_zone10 distance player > _zone10dis) && (_zone11 distance player > _zone11dis) && (_zone12 distance player > _zone12dis)) && (_inArea)) then
 				{
 					_inArea = false;
-					["You have left the Safezone",false,"slow"] call life_fnc_notificationSystem;
+					["STR_SafezoneLeave",false,"slow"] call life_fnc_notificationSystem;
 					player allowDamage true;
 					safezone = false;
 					imAuto = true;
