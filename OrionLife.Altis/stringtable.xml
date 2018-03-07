@@ -13021,5 +13021,38 @@
             <Russian>Вы только что убили %1! (%2)</Russian>
             <German>Du hast gerade getötet %1! (%2)</German>
         </Key>
+        <Key ID="STR_SafezoneEnter">
+            <Original>You are Entering a Safezone, you must now follow our safezone rules!</Original>
+            <Czech>Vstupujete do Safezone, musíte nyní dodržovat naše pravidla safezone!</Czech>
+            <French>Vous entrez dans un Safezone, vous devez maintenant suivre nos règles de safezone!</French>
+            <Spanish>Estás ingresando a Safezone, ¡ahora debes seguir nuestras reglas de zona segura!</Spanish>
+            <Italian>Stai entrando in una zona sicura, ora devi seguire le nostre regole sulla zona di sicurezza!</Italian>
+            <Polish>Wchodzisz do Safezone, musisz teraz przestrzegać naszych zasad bezpieczeństwa!</Polish>
+            <Portuguese>Você está entrando em um Safezone, agora você deve seguir nossas regras de safezone!</Portuguese>
+            <Russian>Вы входите в безопасную зону, теперь вы должны следовать нашим правилам безопасности!</Russian>
+            <German>Sie betreten eine Sicherheitszone, Sie müssen nun unseren Sicherheitszonenregeln folgen!</German>
+        </Key>
+        <Key ID="STR_SafezoneLeave">
+            <Original>You have left the Safezone!</Original>
+            <Czech>Zanechal jste Safezone!</Czech>
+            <French>Vous avez quitté le Safezone!</French>
+            <Spanish>Has dejado Safezone!</Spanish>
+            <Italian>Hai lasciato la zona sicura!</Italian>
+            <Polish>Opuściłeś Safezone!</Polish>
+            <Portuguese>Você deixou o Safezone!</Portuguese>
+            <Russian>Вы покинули Safezone!</Russian>
+            <German>Sie haben die Safezone verlassen!</German>
+        </Key>
+        <Key ID="STR_SafezoneShooting">
+            <Original>You are not allowed to shoot in safezone!</Original>
+            <Czech>Nemáte povoleno střílet v safezone!</Czech>
+            <French>Vous n'êtes pas autorisé à tirer en safezone!</French>
+            <Spanish>No puedes disparar en safezone!</Spanish>
+            <Italian>Non ti è permesso sparare in safezone!</Italian>
+            <Polish>Nie możesz strzelać w safezone!</Polish>
+            <Portuguese>Você não tem permissão para atirar em safezone!</Portuguese>
+            <Russian>Вы не можете стрелять в безопасную зону!</Russian>
+            <German>Du darfst nicht in safezone schießen!</German>
+        </Key>
     </Package>
 </Project>
