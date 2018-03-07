@@ -17,6 +17,7 @@ _data = call compile format ["%1", _data];
 if (isNil "_data") exitWith {};
 if (!(_data isEqualType [])) exitWith {};
 if (_data isEqualTo []) exitWith {};
+if((call life_coplevel) <= 2) exitWith {closeDialog 0; ["You need to be a Senior Officer to Pardon.",false,"slow"] call life_fnc_notificationSystem;};
 
 if (life_HC_isActive) then {
     [(_data select 0)] remoteExecCall ["HC_fnc_wantedRemove",HC_Life];
