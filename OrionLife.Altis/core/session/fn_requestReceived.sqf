@@ -43,6 +43,8 @@ if (LIFE_SETTINGS(getNumber,"donor_level") isEqualTo 1) then {
 
 life_bankingpin = parseNumber (_this select 16);
 
+player setVariable ["dbid",parseNumber (_this select 17)];
+
 //Loop through licenses
 if (count (_this select 6) > 0) then {
     {missionNamespace setVariable [(_x select 0),(_x select 1)];} forEach (_this select 6);

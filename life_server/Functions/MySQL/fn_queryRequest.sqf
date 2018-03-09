@@ -21,11 +21,11 @@ _ownerID = owner _ownerID;
 
 _query = switch (_side) do {
     // West - 11 entries returned
-    case west: {format ["SELECT pid, name, cash, bankacc, adminlevel, donorlevel, cop_licenses, coplevel, cop_gear, blacklist, cop_stats, playtime, banking_pin FROM players WHERE pid='%1'",_uid];};
+    case west: {format ["SELECT pid, name, cash, bankacc, adminlevel, donorlevel, cop_licenses, coplevel, cop_gear, blacklist, cop_stats, playtime, banking_pin, uid FROM players WHERE pid='%1'",_uid];};
     // Civilian - 12 entries returned
-    case civilian: {format ["SELECT pid, name, cash, bankacc, adminlevel, donorlevel, civ_licenses, arrested, civ_gear, civ_stats, civ_alive, civ_position, playtime, banking_pin FROM players WHERE pid='%1'",_uid];};
+    case civilian: {format ["SELECT pid, name, cash, bankacc, adminlevel, donorlevel, civ_licenses, arrested, civ_gear, civ_stats, civ_alive, civ_position, playtime, banking_pin, uid FROM players WHERE pid='%1'",_uid];};
     // Independent - 10 entries returned
-    case independent: {format ["SELECT pid, name, cash, bankacc, adminlevel, donorlevel, med_licenses, mediclevel, med_gear, med_stats, playtime, banking_pin FROM players WHERE pid='%1'",_uid];};
+    case independent: {format ["SELECT pid, name, cash, bankacc, adminlevel, donorlevel, med_licenses, mediclevel, med_gear, med_stats, playtime, banking_pin, uid FROM players WHERE pid='%1'",_uid];};
 };
 
 _tickTime = diag_tickTime;
@@ -73,6 +73,10 @@ _queryResult set[8,_new];
 //Parse data for specific side.
 switch (_side) do {
     case west: {
+        //Database ID
+        _queryResult set[17,[_queryResult select 13] call DB_fnc_numberSafe];
+
+        //Banking PIN
         _tmp = _queryResult select 12;
         _queryResult set[16,[_tmp] call DB_fnc_numberSafe];
         _queryResult set[9,([_queryResult select 9,1] call DB_fnc_bool)];
@@ -99,6 +103,10 @@ switch (_side) do {
     case civilian: {
         _queryResult set[7,([_queryResult select 7,1] call DB_fnc_bool)];
 
+        //Database ID
+        _queryResult set[17,[_queryResult select 13] call DB_fnc_numberSafe];
+
+        //Banking PIN
         _tmp = _queryResult select 13;
         _queryResult set[16,[_tmp] call DB_fnc_numberSafe];
 
@@ -142,6 +150,10 @@ switch (_side) do {
         if (_new isEqualType "") then {_new = call compile format ["%1", _new];};
         _queryResult set[9,_new];
 
+        //Database ID
+        _queryResult set[17,[_queryResult select 13] call DB_fnc_numberSafe];
+
+        //Banking PIN
         _tmp = _queryResult select 11;
         _queryResult set[16,[_tmp] call DB_fnc_numberSafe];
 
