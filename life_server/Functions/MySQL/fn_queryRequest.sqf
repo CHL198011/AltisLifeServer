@@ -104,7 +104,7 @@ switch (_side) do {
         _queryResult set[7,([_queryResult select 7,1] call DB_fnc_bool)];
 
         //Database ID
-        _queryResult set[17,[_queryResult select 13] call DB_fnc_numberSafe];
+        _queryResult set[17,[_queryResult select 14] call DB_fnc_numberSafe];
 
         //Banking PIN
         _tmp = _queryResult select 13;
@@ -151,7 +151,7 @@ switch (_side) do {
         _queryResult set[9,_new];
 
         //Database ID
-        _queryResult set[17,[_queryResult select 13] call DB_fnc_numberSafe];
+        _queryResult set[17,[_queryResult select 12] call DB_fnc_numberSafe];
 
         //Banking PIN
         _tmp = _queryResult select 11;

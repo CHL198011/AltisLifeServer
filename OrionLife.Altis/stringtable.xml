@@ -12997,17 +12997,6 @@
             <Original>PIN successfully set! Try it at an ATM now!</Original>
             <French>Le NIP a été activé! Vous pouvez l'essayer à un ATM dès maintenant.</French>
         </Key>
-        <Key ID="STR_KilledPlayer">
-            <Original>You just Killed %1! (%2)</Original>
-                <Czech>%1 - %2 uloženy $%3 do své banky. Banka Zůstatek: $%4 po zralé úvaze rukou: $%5</Czech>
-                <French>%1 - %2 a déposé $%3 dans sa Banque. Solde bancaire $%4 Argent en poche : $%5</French>
-                <Spanish>%1 - %2 depositó $%3 a su cuenta de banco. Saldo Bancario: $%4 Saldo en Efectivo: $%5</Spanish>
-                <Italian></Italian>
-                <Polish></Polish>
-                <Portuguese>%1 - %2 depositou R$%3 no seu banco. Quantia no Banco: R$%4 Quantia na Mão: R$%5</Portuguese>
-                <Russian>%1 - %2 депозит в размере $%3 в свой банк. Банковский баланс: $%4 на руку Баланс: $%5</Russian>
-                <German>%1 - %2 hat $%3 auf sein Bankkonto eingezahlt. Bankkonto: $%4  Bargeld: $%5</German>
-        </Key>
     </Package>
     <Package name="FlabbyThings">
         <Key ID="STR_KilledPlayer">

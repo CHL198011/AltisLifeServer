@@ -51,7 +51,7 @@ if (playerSide isEqualTo civilian) then {
 if((playerside isEqualTo civilian) && safeZone) then {
 	deleteVehicle _projectile;
 	[] spawn life_fnc_forceHolster;
-	["STR_SafezoneShooting",false,"fast"] call life_fnc_notificationSystem;
+	[localize "STR_SafezoneShooting",false,"fast"] call life_fnc_notificationSystem;
 };
 
 //Teargas
