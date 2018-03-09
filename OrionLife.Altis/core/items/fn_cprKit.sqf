@@ -3,9 +3,9 @@
 private["_target","_revivable","_targetName","_ui","_progressBar","_titleText","_cP","_title"];
 _target = cursorTarget;
 if(isNull _target) exitWith {};
-if (alive _target) exitWith {};
+if (_target getVariable ["restrained",false]) exitWith {};
 
-_revivable = _target getVariable ["Revive",FALSE];
+_revivable = _target getVariable ["Revive",false];
 if(_revivable) exitWith {};
 if(player distance _target > 5) exitWith {};
 if(life_action_inUse) exitWith {};
@@ -16,7 +16,7 @@ _title = format[localize "STR_CPR_Progress"];
 life_action_inUse = true;
 if(_target == player) exitWith {};
 
-_target setVariable ["Reviving",player,TRUE];
+_target setVariable ["Reviving",player,true];
 
 disableSerialization;
 5 cutRsc ["life_progress","PLAIN"];
@@ -43,17 +43,17 @@ while {true} do {
     if(life_interrupted) exitWith {};
     if((player getVariable ["restrained",false])) exitWith {};
     if(player distance _target > 4) exitWith {_badDistance = true;};
-    if(_target getVariable ["Revive",FALSE]) exitWith {};
     if(_target getVariable ["Reviving",ObjNull] != player) exitWith {};
+    if (_target getVariable ["Revive",false]) exitWith {[localize "STR_Medic_RevivedRespawned",true,"slow"] call life_fnc_notificationSystem;};
 };
 
 5 cutText ["","PLAIN"];
 player playActionNow "stop";
 
-_target setVariable ["Reviving",NIL,TRUE];
+_target setVariable ["Reviving",NIL,true];
 
 if(!alive player OR life_istazed OR life_isknocked) exitWith {life_action_inUse = false;};
-if(_target getVariable ["Revive",FALSE]) exitWith {hint localize "STR_Medic_RevivedRespawned"};
+if(_target getVariable ["Revive",false]) exitWith {hint localize "STR_Medic_RevivedRespawned"};
 if((player getVariable ["restrained",false])) exitWith {life_action_inUse = false;};
 if(!isNil "_badDistance") exitWith {titleText[localize "STR_Medic_TooFar","PLAIN"]; life_action_inUse = false;};
 if(life_interrupted) exitWith {life_interrupted = false; titleText[localize "STR_NOTF_ActionCancel","PLAIN"]; life_action_inUse = false;};
@@ -64,7 +64,7 @@ _break = floor (random 100);
 
 if (_break < 65) exitWith {[] spawn life_fnc_cprkit;};
 
-_target setVariable ["Revive",TRUE,TRUE];
+_target setVariable ["Revive",true,true];
 [profileName] remoteExecCall ["life_fnc_cprrevived",_target];
 
 sleep .6;
