@@ -228,28 +228,28 @@ class Life_Settings {
     /* Wanted System Settings *
     /* crimes[] = {String, Bounty, Code} */
     crimes[] = {
-		{"STR_Crime_11","1500","11"}, // Failure to Maintain Altitude
-		{"STR_Crime_12","1500","12"}, // Illegal Landing
-		{"STR_Crime_13","1500","13"}, // Failure to use Collision Lights
-		{"STR_Crime_14","1000","14"}, // Flying without a Pilot's License
+		{"STR_Crime_11","20000","11"}, // Failure to Maintain Altitude
+		{"STR_Crime_12","20000","12"}, // Illegal Landing
+		{"STR_Crime_13","20000","13"}, // Failure to use Collision Lights
+		{"STR_Crime_14","25000","14"}, // Flying without a Pilot's License
 		{"STR_Crime_100","1000","100"}, // Disorderly Conduct
 		{"STR_Crime_101","1250","101"}, // Indecent Exposure
-		{"STR_Crime_102","1500","102"}, // Insuranc Fraud
-		{"STR_Crime_103","1100","103"}, // Concealing Identity
-		{"STR_Crime_104","1000","104"}, // Disturbing the Peace
-		{"STR_Crime_105","1500","105"}, // Possession of Illegal Items
+		{"STR_Crime_102","25000","102"}, // Insuranc Fraud
+		{"STR_Crime_103","10000","103"}, // Concealing Identity
+		{"STR_Crime_104","10000","104"}, // Disturbing the Peace
+		{"STR_Crime_105","10000","105"}, // Possession of Illegal Items
 		{"STR_Crime_106","1250","106"}, // Failure to Comply with Officer
-		{"STR_Crime_107","1250","107"}, // Obstruction of Justice
-		{"STR_Crime_108","1250","108"}, // Possession of Police Equipment
+		{"STR_Crime_107","10000","107"}, // Obstruction of Justice
+		{"STR_Crime_108","15000","108"}, // Possession of Police Equipment
 		{"STR_Crime_109","1500","109"}, // Impersonatig a Police Officer
 		{"STR_Crime_110","1000","110"}, // Trespassing on Private Property
 		{"STR_Crime_110P","1200","110P"}, // Trespassing on Police Property
 		{"STR_Crime_111","1500","111"}, // Threatening a Civilian
 		{"STR_Crime_111P","1500","111P"}, // Threatening an Officer
-		{"STR_Crime_187","5500","187"}, // Manslaughter
-		{"STR_Crime_187P","7500","187P"}, // Manslaughter of a LEO
-		{"STR_Crime_188","2750","188"}, // Attp. Manslaughter
-		{"STR_Crime_188P","3750","188P"}, // Attp. Manslaughter of a LEO
+		{"STR_Crime_187","10000","187"}, // Manslaughter
+		{"STR_Crime_187P","15000","187P"}, // Manslaughter of a LEO
+		{"STR_Crime_188","5000","188"}, // Attp. Manslaughter
+		{"STR_Crime_188P","7500","188P"}, // Attp. Manslaughter of a LEO
 		{"STR_Crime_189","2000","189"}, // Evading Arrest on Foot
 		{"STR_Crime_189V","2000","189V"}, // Evading Arrest in a Vehicle
 		{"STR_Crime_190","1500","190"}, // Breaking and Entering unowned Property
@@ -261,12 +261,12 @@ class Life_Settings {
 		{"STR_Crime_220","1500","220"}, // Theft
 		{"STR_Crime_221","1000","221"}, // Attp. Robbery
 		{"STR_Crime_222","1500","222"}, // Robbery 211
-		{"STR_Crime_481","2450","481"}, // Misdemeanor Drug Possession
+		{"STR_Crime_481","5000","481"}, // Misdemeanor Drug Possession
 		{"STR_Crime_482","3500","482"}, // Felony Drug Possession
 		{"STR_Crime_483","3500","483"}, // Drug Trafficking
 		{"STR_Crime_484","3500","484"}, // Drug Dealing
 		{"STR_Crime_485","3500","485"}, // Intent To Distribute 482
-		{"STR_Crime_390","500","390"}, // Public Intoxication
+		{"STR_Crime_390","3000","390"}, // Public Intoxication
 		{"STR_Crime_390D","1500","390D"}, // Driving Under The Influence
 		{"STR_Crime_400","1800","400"}, // Attp. Kidnapping
 		{"STR_Crime_400P","2700","400P"}, // Attp. Kidnapping of a LEO
@@ -278,28 +278,28 @@ class Life_Settings {
 		{"STR_Crime_901A","5000","901A"}, // Aiding in a Jailbreak
 		{"STR_Crime_666","10000","666"}, // Terrorism 667
 		{"STR_Crime_700","2000","700"}, // Possession of Hostages
-		{"STR_Crime_701","1500","701"}, // Assault
-		{"STR_Crime_701P","1800","701P"}, // Assualt of a LEO
-		{"STR_Crime_4","2500","4"}, // Speeding Inside City Limits 4
-		{"STR_Crime_4O","3500","4O"}, // Speeding Outside City Limits
-		{"STR_Crime_2","750","2"}, // Reckless Driving
-		{"STR_Crime_1","1000","1"}, // Driving Without a License
-		{"STR_Crime_5","2000","5"}, // Failure to use Headlights
-		{"STR_Crime_3","1000","3"}, // Failure to Stop for Police/EMS
+		{"STR_Crime_701","2500","701"}, // Assault
+		{"STR_Crime_701P","5000","701P"}, // Assualt of a LEO
+		{"STR_Crime_4","10000","4"}, // Speeding Inside City Limits 4
+		{"STR_Crime_4O","15000","4O"}, // Speeding Outside City Limits
+		{"STR_Crime_2","25000","2"}, // Reckless Driving
+		{"STR_Crime_1","2500","1"}, // Driving Without a License
+		{"STR_Crime_5","5000","5"}, // Failure to use Headlights
+		{"STR_Crime_3","15000","3"}, // Failure to Stop for Police/EMS
 		{"STR_Crime_8","2000","8"}, // Driving an Illegal Vehicle
 		{"STR_Crime_186","2750","186"}, // Attp. Vehicular Manslaughter
 		{"STR_Crime_186P","3750","186P"}, // Attp. Vehicular Manslaughter of a LEO
 		{"STR_Crime_187V","1500","187V"}, // Vehicluar Manslaughter
 		{"STR_Crime_187VP","1500","187VP"}, // Vehicluar Manslaughter of a LEO
-		{"STR_Crime_480","750","480"}, // Hit and Run Property 480
+		{"STR_Crime_480","5000","480"}, // Hit and Run Property 480
 		{"STR_Crime_480b","500","480b"}, // Hit and Run Personal Injury
-		{"STR_Crime_15","1000","15"}, // Obstruction of Traffic
-		{"STR_Crime_16","1000","16"}, // Obstruction of an Entryway
-		{"STR_Crime_17","500","17"}, // Driving without a Helmet
-		{"STR_Crime_18","1000","18"}, // Possession of a Firearm without a License 14
-		{"STR_Crime_19","2500","19"}, // Possession of an Illegal Firearm 15
-		{"STR_Crime_20","500","20"}, // Discharging a Firearm inside City Limits
-		{"STR_Crime_21","750","21"}, // Brandishing a Firearm in Public
+		{"STR_Crime_15","10000","15"}, // Obstruction of Traffic
+		{"STR_Crime_16","15000","16"}, // Obstruction of an Entryway
+		{"STR_Crime_17","5000","17"}, // Driving without a Helmet
+		{"STR_Crime_18","20000","18"}, // Possession of a Firearm without a License 14
+		{"STR_Crime_19","50000","19"}, // Possession of an Illegal Firearm 15
+		{"STR_Crime_20","25000","20"}, // Discharging a Firearm inside City Limits
+		{"STR_Crime_21","5000","21"}, // Brandishing a Firearm in Public
 		{"STR_Crime_21","5000","919"} // Stealing Kidneys
     };
 };
