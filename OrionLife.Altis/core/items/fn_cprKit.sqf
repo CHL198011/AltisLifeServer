@@ -4,7 +4,10 @@ private["_target","_revivable","_targetName","_ui","_progressBar","_titleText","
 _target = cursorTarget;
 if(isNull _target) exitWith {};
 <<<<<<< HEAD
+<<<<<<< HEAD
 if (alive _target) exitWith {};
+=======
+>>>>>>> parent of e17f9a6... Fix CPRKit Bug
 =======
 >>>>>>> parent of e17f9a6... Fix CPRKit Bug
 
