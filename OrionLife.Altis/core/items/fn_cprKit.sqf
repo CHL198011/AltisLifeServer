@@ -3,7 +3,10 @@
 private["_target","_revivable","_targetName","_ui","_progressBar","_titleText","_cP","_title"];
 _target = cursorTarget;
 if(isNull _target) exitWith {};
+<<<<<<< HEAD
 if (alive _target) exitWith {};
+=======
+>>>>>>> parent of e17f9a6... Fix CPRKit Bug
 
 _revivable = _target getVariable ["Revive",FALSE];
 if(_revivable) exitWith {};
