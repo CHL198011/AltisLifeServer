@@ -3,24 +3,11 @@
 private["_target","_revivable","_targetName","_ui","_progressBar","_titleText","_cP","_title"];
 _target = cursorTarget;
 if(isNull _target) exitWith {};
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-if (alive _target) exitWith {};
-=======
->>>>>>> parent of e17f9a6... Fix CPRKit Bug
-=======
->>>>>>> parent of e17f9a6... Fix CPRKit Bug
-=======
 if (_target getVariable ["restrained",false]) exitWith {};
->>>>>>> parent of 8a93615... Revert "cpr kit - try tomorrow"
 
 _revivable = _target getVariable ["Revive",false];
-=======
 
 _revivable = _target getVariable ["Revive",FALSE];
->>>>>>> parent of e17f9a6... Fix CPRKit Bug
 if(_revivable) exitWith {};
 if(player distance _target > 5) exitWith {};
 if(life_action_inUse) exitWith {};
@@ -31,11 +18,8 @@ _title = format[localize "STR_CPR_Progress"];
 life_action_inUse = true;
 if(_target == player) exitWith {};
 
-<<<<<<< HEAD
 _target setVariable ["Reviving",player,true];
-=======
 _target setVariable ["Reviving",player,TRUE];
->>>>>>> parent of e17f9a6... Fix CPRKit Bug
 
 disableSerialization;
 5 cutRsc ["life_progress","PLAIN"];
@@ -62,13 +46,10 @@ while {true} do {
     if(life_interrupted) exitWith {};
     if((player getVariable ["restrained",false])) exitWith {};
     if(player distance _target > 4) exitWith {_badDistance = true;};
-<<<<<<< HEAD
     if(_target getVariable ["Reviving",ObjNull] != player) exitWith {};
     if (_target getVariable ["Revive",false]) exitWith {[localize "STR_Medic_RevivedRespawned",true,"slow"] call life_fnc_notificationSystem;};
-=======
     if(_target getVariable ["Revive",FALSE]) exitWith {};
     if(_target getVariable ["Reviving",ObjNull] != player) exitWith {};
->>>>>>> parent of e17f9a6... Fix CPRKit Bug
 };
 
 5 cutText ["","PLAIN"];
@@ -77,11 +58,8 @@ player playActionNow "stop";
 _target setVariable ["Reviving",NIL,true];
 
 if(!alive player OR life_istazed OR life_isknocked) exitWith {life_action_inUse = false;};
-<<<<<<< HEAD
 if(_target getVariable ["Revive",false]) exitWith {hint localize "STR_Medic_RevivedRespawned"};
-=======
 if(_target getVariable ["Revive",FALSE]) exitWith {hint localize "STR_Medic_RevivedRespawned"};
->>>>>>> parent of e17f9a6... Fix CPRKit Bug
 if((player getVariable ["restrained",false])) exitWith {life_action_inUse = false;};
 if(!isNil "_badDistance") exitWith {titleText[localize "STR_Medic_TooFar","PLAIN"]; life_action_inUse = false;};
 if(life_interrupted) exitWith {life_interrupted = false; titleText[localize "STR_NOTF_ActionCancel","PLAIN"]; life_action_inUse = false;};
